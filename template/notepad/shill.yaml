@@ -1,0 +1,5 @@
+name: "Notepad++"
+description: |
+    original file from Samson Havercamp.
+    The XML file supports syntax highlighting.  The API file
+    supports auto-completion (ctrl-space).

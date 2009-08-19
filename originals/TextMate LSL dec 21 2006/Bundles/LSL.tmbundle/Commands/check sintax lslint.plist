@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>TM_TMPFILE="$(mktemp /tmp/tm_lslint_XXXXXX.txt)" || exit
+~/Library/Application\ Support/TextMate/lslint &amp;&gt; "$TM_TMPFILE" 
+lslintout=`/usr/bin/head -1 $TM_TMPFILE`
+rm -f "$TM_TMPFILE" 
+lslinterr=`echo $lslintout | /usr/bin/cut -f2-222 -d\)`
+lslinterrtype=`echo $lslintout | /usr/bin/cut -f1-1 -d:`
+
+# I HATE SHELL !!!
+osascript &lt;&lt;-APPLESCRIPT
+set a to "$lslintout"
+	tell application "TextMate"
+		if a does not contain "ERROR::" and a does not contain "WARN::" then
+			set a to "No Errors or Warnings"
+		else
+			get url "txmt://open?line=" &amp; second word of a &amp; "&amp;column=" &amp; third word of a
+			set a to "$lslinterrtype"&amp;"$lslinterr"
+		end if
+	end tell
+return a
+APPLESCRIPT</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>^l</string>
+	<key>name</key>
+	<string>check syntax</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>uuid</key>
+	<string>BBDDE6DB-89A7-41F2-A753-DA0ED1CD695D</string>
+</dict>
+</plist>

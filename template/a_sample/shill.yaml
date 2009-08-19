@@ -1,0 +1,4 @@
+name: "sample file"
+description: |
+    text file including all LSL flow control, data types, constants, events, and
+    functions, one per line

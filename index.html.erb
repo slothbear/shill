@@ -1,0 +1,357 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Shill (Second Life LSL editor syntax files)</title>
+	<meta name="generator" content="BBEdit 8.2" />
+</head>
+<body>
+
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-2442226-1");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>	
+	
+	<table style="text-align: left; width: 631px; height: 30px;"
+	 border="0" cellpadding="2" cellspacing="2">
+	    <tr>
+	      <td>
+			<img src="images/shill.jpg" alt="shill logo" />
+			<br/>
+			<img src="images/navbar.jpg" alt="semi up-to-date LSL editing for all" />
+		  </td>
+	      <td align='right'>
+		    <img src="images/shillelagh.jpg" alt="picture of a shillelagh." />
+		  </td>
+		  <td>
+	  
+<!-- SiteSearch Google -->
+<form method="get" action="http://www.google.com/custom" target="_top">
+<table border="0" bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+<a href="http://www.google.com/">
+<img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
+<br/>
+<input type="hidden" name="domains" value="adammarker.org"></input>
+<label for="sbi" style="display: none">Enter your search terms</label>
+<input type="text" name="q" size="31" maxlength="255" value="" id="sbi"></input>
+<label for="sbb" style="display: none">Submit search form</label>
+<input type="submit" name="sa" value="Search" id="sbb"></input>
+</td></tr>
+<tr>
+<td nowrap="nowrap">
+<table>
+<tr>
+<td>
+<input type="radio" name="sitesearch" value="" checked id="ss0"></input>
+<label for="ss0" title="Search the Web"><font size="-1" color="#000000">Web</font></label></td>
+<td>
+<input type="radio" name="sitesearch" value="adammarker.org" id="ss1"></input>
+<label for="ss1" title="Search adammarker.org"><font size="-1" color="#000000">adammarker.org</font></label></td>
+</tr>
+</table>
+<input type="hidden" name="client" value="pub-2068987368686989"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1"></input>
+<input type="hidden" name="hl" value="en"></input>
+</td></tr></table>
+</form>
+<!-- SiteSearch Google -->
+		  
+		  </td>
+	    </tr>
+	</table>	
+
+
+<p/>
+
+
+<p/>
+<b>Shill</b> updates syntax files for a variety of editors used for 
+Linden Scripting Language (LSL) code.  With these files, you'll enjoy proper
+syntax highlighting in your favorite editor.  <i>New in this version</i>: the 
+Shill keyword lists are now based on source files from the Second Life client.
+
+
+<p/>
+Included here are files I found
+at the
+<a href="http://wiki.secondlife.com/wiki/LSL_Alternate_Editors">
+LSL Alternate Editors</a>
+page at the 
+<a href="http://wiki.secondlife.com/wiki/LSL_Portal">
+LSL Portal</a>,
+along with some I saw mentioned in various forums.
+My sincere thanks to all syntax file authors. I've included the origin
+of each file if known.
+
+Follow the instructions at the Wiki for installation, including updated files
+from here as appropriate.
+
+<p/>
+See below for more
+details on the automated process that generates these files.
+Please contact me with comments,
+suggestions, and requests to update these or other syntax files.  You are also invited
+to discuss
+<b>Shill</b>
+at the <a href="http://forums.secondlife.com/showthread.php?t=108821">
+Second Life Forums</a>. 
+
+<br/>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-2068987368686989";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+google_ad_channel = "";
+google_color_border = "6699CC";
+google_color_bg = "003366";
+google_color_link = "FFFFFF";
+google_color_text = "AECCEB";
+google_color_url = "AECCEB";
+google_ui_features = "rc:10";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+
+<h3>files for Second Life 1.23.4 (updated 19 August 2009)</h3>
+
+<table summary="LSL syntax files" bgcolor="#D3EEFF" cellspacing="6" cellpadding="6" rules="rows">
+
+	<tr bgcolor="#78B2EB">
+		<td>editor</td>
+		<td>files</td>
+		<td>notes</td>	
+	</tr>
+
+<!-- ERB generated table: <%= Time.new %> -->
+    
+	<%  require "yaml"
+
+		# Create/refresh all editor syntax files.
+		`ruby make_yaml.rb`
+		`ruby shill.rb template/*/*`
+
+		cycle_row = false
+
+		editors = Dir['template/*/shill.yaml']
+		editors.each do |editor|
+			settings = YAML::load_file(editor)
+
+			files = Dir[File.dirname(editor) + "/*"]
+	%>
+
+	<tr <%= cycle_row = !cycle_row
+
+	 		cycle_row ? %q{bgcolor="#C3DEEF"} : "" %>>
+		<td>
+		   <b><%= settings["name"] %></b>
+		</td>
+		<td>
+		<% files.each do |file|
+				next if file =~ /shill.yaml/ 
+				file_path = file.split('/', 2).last
+		%>
+				<a href="<%= file_path %>"
+onClick="pageTracker._trackEvent("download", "shill", "<%= file_path %>");"
+				>
+				<%= File.basename(file) + "<br/>" %>
+				</a>
+			<% end %>
+		</td>
+		<td>
+			<%= settings["description"] %>
+		</td>
+	</tr>
+	<%  end %>
+<!-- ERB END -->	
+</table>
+
+<p/>
+
+<table summary="LSL files hosted at shill" bgcolor="#8888FF" cellspacing="6" cellpadding="6" rules="rows">
+
+
+	<tr>
+		<td><b>the Shill master files</b></td>
+		<td><a href="keywords.yaml">keywords.yaml</a>
+		<br/>
+		<a href="signatures.yaml">signatures.yaml</a>
+		<br/>
+		</td>
+		<td>
+		Shill's master lists of functions, events, and constants.  They are formatted
+		using
+		<a href="http://yaml.org">YAML</a>, a simple markup language.
+		<b><em>keywords</em></b> contains just the event, function, and constant names.
+		<b><em>signatures</em></b> has signatures and short help
+		for functions and events
+		(currently only used by SciTE-ez).
+		See <em>implementation notes</em> below for more details.
+		</td>
+	</tr>	
+
+</table>
+<p/>
+
+<br/>
+<table cellspacing="4" cellpadding="5" bgcolor="#D3EEFF" border="1">
+	<tr>
+		<td>
+		<p/>
+<em>
+If you just want to update your editor keyword list, grab your files from up 
+above and enjoy.  If you have a file that you would like me to include
+in the Shill automatic update, please send it to me.  If you're interested updating your own files,
+or are just curious about the internals of Shill, read on.
+
+
+</em></td>
+	</tr>
+</table>
+
+
+<h4>implementation notes (<em>and how to run Shill yourself</em>)</h4>
+<p/>
+Download the entire Shill system in one archive (236K):
+<a href="shill.zip">shill.zip</a>
+<p/>
+I welcome your feedback.  IM or email
+<a href="mailto:adam@adammarker.org">Adam Marker</a>.
+<p/>
+Shill is implemented using several Ruby programs, two keyword files,
+and a fixed folder hierarchy for holding template and output files.  Shill reads files
+from the <i>template</i> directory, inserts current LSL keywords, and deposits the 
+new file in the <i>site</i> directory.
+The setup looks like this:
+<pre>
+<b><em>template/</em></b>
+   <b><em>vim/</em></b>
+      lsl.vim
+      lsl.dict
+   <b><em>smultron/</em></b>
+      lsl.plist
+      
+<b><em>site/</em></b>
+   <b><em>vim/</em></b>
+      lsl.vim
+      lsl.dict
+   <b><em>smultron/</em></b>
+      lsl.plist
+</pre>
+Typical shill command invocations:
+<pre>
+   erb index.html.erb >site/index.html  (does everything)
+
+   ruby make_yaml.rb           (extract keywords from LL source files)
+   ruby shill.rb template/*/*        (to generate all syntax files)
+   ruby shill.rb template/jedit/*    (to generate just the jedit files)
+</pre>
+The erb file knows how to find everything, convert everything, then insert
+everything into a ready-to-publish HTML file.  You can also perform the
+steps one-by-one if you like.
+<p/>
+make_yaml reads the keyword and function lists from Second Life client
+source files, and writes two YAML files.  keywords.yaml contains three lists
+of names, one each for constants, events, and functions.  
+<p/>
+shill.rb reads each template specified on the command line, and produces
+a new file with the same filename, in an output folder called "site".  There
+is no configuration file of editor and file names; it is all inferred from
+the folder hierarchy.  For example:
+<pre>
+      template/smultron/lsl.plist -->> site/smultron/lsl.plist
+</pre>
+A template file may contain RDoc and erb
+code.  If you don't know what that means, skip the rest of this paragraph.
+Take a look at <tt>template/vim/lsl.api</tt> for basic use of RDoc,
+and <tt>template/notepad/userDefineLang.xml</tt> for an erb sample.
+The template is passed first through RDoc, then erb.  RDoc is sufficient
+for most templates (one keyword per line, sometimes with extra text on
+the line), and erb can handle advanced formatting and selection needs.
+For erb, three arrays are defined to hold LSL
+events, functions, and constants.  There is also a hash that holds event
+and function signatures.  <tt>notepad/userDefineLang.xml</tt> uses the arrays;
+<tt>scite/lsl.api</tt> uses both the arrays and hash.
+<p/>
+If you have no experience with Ruby, I think you can still use Shill to create
+or update editor syntax files.  Here is a basic example, taken
+from
+<tt>template/bbedit/lsl.plist</tt>:
+<pre>
+START:functions
+		&lt;string&gt;%name%&lt;/string&gt;
+END:functions
+</pre>
+START: and END: (which <em>must</em> begin in column 1) tell Shill where to
+insert a keyword list, and which list to use -- in this case 'functions'.
+If the editor requires it, you can have other text on the line, like the
+XML tags in this example.  The line is repeated once per keyword, 
+substituting a keyword in place of %name%, generating something like:
+<pre>
+		&lt;string&gt;llShout&lt;/string&gt;
+		&lt;string&gt;llSin&lt;/string&gt;
+		&lt;string&gt;llSitTarget&lt;/string&gt;
+</pre>
+Each of the files now contains a Shill update notice, in addition to any other 
+version history the original author may have provided.  A template may include
+the following line (along with proper syntax for a comment):
+<pre>
+     %SHILL_UPDATE_NOTICE%
+</pre>
+and generates an update notice like this:
+<pre>
+     LSL keywords updated 19 Dec 2006 for LSL 1.13 by http://adammarker.org/shill
+</pre>
+You may also want to update the keyword lists.  Take a look at the two YAML
+files -- you will find it easy to adapt to YAML formatting.
+<p/>
+
+<p/>
+The name <b>Shill</b>:
+<ul>
+<li>includes the letters:  L, S, L.</li>
+<li>From The Oxford American Dictionary:
+<em>The intention of the
+shill is, using crowd psychology, to encourage other potential customers, unaware
+of the set-up, to purchase said good or service.</em>  This set-up isn't very
+secret, but maybe people will be encouraged to use the various LSL editors
+if they are up to date.  (No slight intended towards the original authors; I know
+it is a pain to keep them current.)  "Shill" really isn't short for shillelagh, but
+it made for a nice mascot for this site.
+</li>
+</ul>
+
+<p/>
+<hr/>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-2068987368686989";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_cpa_choice = "CAEQ5M_rpAMQABoI3FLnOAhSyN8ozM-ZvwEozM-ZvwE4AVANULMDUAg";
+google_kw = "second life";
+google_kw_type = "broad";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+</body>
+</html>

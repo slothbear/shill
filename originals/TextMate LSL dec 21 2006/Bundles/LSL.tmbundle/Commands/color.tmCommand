@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>res=$(osascript &lt;&lt;-APPLESCRIPT
+tell app "TextMate"
+try
+set {r, g, b} to choose color default color {65535, 65535, 65535}
+"&lt;" &amp; (((r / 65535) * 100000) as integer) / 100000 &amp; ", " &amp; (((g / 65535) * 100000) as integer) / 100000 &amp; ", " &amp; (((b / 65535) * 100000) as integer) / 100000 &amp; "&gt;"
+on error
+return ""
+end try
+end tell
+APPLESCRIPT)
+echo -n "$res"
+osascript -e 'tell app "TextMate" to activate' &amp;&gt;/dev/null &amp;</string>
+	<key>fallbackInput</key>
+	<string>none</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^~@r</string>
+	<key>name</key>
+	<string>Insert Color</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>uuid</key>
+	<string>D09950FF-45FD-4634-B7BE-933A4E97F5AE</string>
+</dict>
+</plist>

@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>completions</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>settings</key>
+	<dict>
+		<key>completions</key>
+		<array>
+			<string>llGetObjectDetails(key id, list params)</string>
+			<string>OBJECT_NAME</string>
+			<string>OBJECT_DESC</string>
+			<string>OBJECT_POS</string>
+			<string>OBJECT_ROT</string>
+			<string>OBJECT_VELOCITY</string>
+			<string>OBJECT_OWNER</string>
+			<string>OBJECT_GROUP</string>
+			<string>OBJECT_CREATOR</string>
+			<string>ACTIVE</string>
+			<string>AGENT</string>
+			<string>AGENT_ALWAYS_RUN</string>
+			<string>AGENT_ATTACHMENTS</string>
+			<string>AGENT_AWAY</string>
+			<string>AGENT_BUSY</string>
+			<string>AGENT_CROUCHING</string>
+			<string>AGENT_FLYING</string>
+			<string>AGENT_IN_AIR</string>
+			<string>AGENT_MOUSELOOK</string>
+			<string>AGENT_ON_OBJECT</string>
+			<string>AGENT_SCRIPTED</string>
+			<string>AGENT_SITTING</string>
+			<string>AGENT_TYPING</string>
+			<string>AGENT_WALKING</string>
+			<string>ALL_SIDES</string>
+			<string>ANIM_ON</string>
+			<string>ATTACH_BACK</string>
+			<string>ATTACH_BELLY</string>
+			<string>ATTACH_CHEST</string>
+			<string>ATTACH_CHIN</string>
+			<string>ATTACH_HEAD</string>
+			<string>ATTACH_LEAR</string>
+			<string>ATTACH_LEYE</string>
+			<string>ATTACH_LFOOT</string>
+			<string>ATTACH_LHAND</string>
+			<string>ATTACH_LHIP</string>
+			<string>ATTACH_LLARM</string>
+			<string>ATTACH_LLLEG</string>
+			<string>ATTACH_LPEC</string>
+			<string>ATTACH_LSHOULDER</string>
+			<string>ATTACH_LUARM</string>
+			<string>ATTACH_LULEG</string>
+			<string>ATTACH_MOUTH</string>
+			<string>ATTACH_NOSE</string>
+			<string>ATTACH_PELVIS</string>
+			<string>ATTACH_REAR</string>
+			<string>ATTACH_REYE</string>
+			<string>ATTACH_RFOOT</string>
+			<string>ATTACH_RHAND</string>
+			<string>ATTACH_RHIP</string>
+			<string>ATTACH_RLARM</string>
+			<string>ATTACH_RLLEG</string>
+			<string>ATTACH_RPEC</string>
+			<string>ATTACH_RSHOULDER</string>
+			<string>ATTACH_RUARM</string>
+			<string>ATTACH_RULEG</string>
+			<string>CAMERA_ACTIVE</string>
+			<string>CAMERA_BEHINDNESS_ANGLE</string>
+			<string>CAMERA_BEHINDNESS_LAG</string>
+			<string>CAMERA_DISTANCE</string>
+			<string>CAMERA_FOCUS</string>
+			<string>CAMERA_FOCUS_LAG</string>
+			<string>CAMERA_FOCUS_LOCKED</string>
+			<string>CAMERA_FOCUS_OFFSET</string>
+			<string>CAMERA_FOCUS_THRESHOLD</string>
+			<string>CAMERA_PITCH</string>
+			<string>CAMERA_POSITION</string>
+			<string>CAMERA_POSITION_LAG</string>
+			<string>CAMERA_POSITION_LOCKED</string>
+			<string>CAMERA_POSITION_THRESHOLD</string>
+			<string>CHANGED_ALLOWED_DROP</string>
+			<string>CHANGED_COLOR</string>
+			<string>CHANGED_INVENTORY</string>
+			<string>CHANGED_LINK</string>
+			<string>CHANGED_SCALE</string>
+			<string>CHANGED_SHAPE</string>
+			<string>CHANGED_TEXTURE</string>
+			<string>CONTROL_BACK</string>
+			<string>CONTROL_DOWN</string>
+			<string>CONTROL_FWD</string>
+			<string>CONTROL_LBUTTON</string>
+			<string>CONTROL_LEFT</string>
+			<string>CONTROL_ML_LBUTTON</string>
+			<string>CONTROL_RIGHT</string>
+			<string>CONTROL_ROT_LEFT</string>
+			<string>CONTROL_ROT_RIGHT</string>
+			<string>CONTROL_UP</string>
+			<string>DATA_BORN</string>
+			<string>DATA_NAME</string>
+			<string>DATA_ONLINE</string>
+			<string>DATA_PAYINFO</string>
+			<string>DATA_RATING</string>
+			<string>DATA_SIM_POS</string>
+			<string>DATA_SIM_RATING</string>
+			<string>DATA_SIM_STATUS</string>
+			<string>DEBUG_CHANNEL</string>
+			<string>DEG_TO_RAD</string>
+			<string>EOF</string>
+			<string>FALSE</string>
+			<string>HTTP_BODY_MAXLENGTH</string>
+			<string>HTTP_BODY_TRUNCATED</string>
+			<string>HTTP_METHOD</string>
+			<string>HTTP_MIMETYPE</string>
+			<string>HTTP_VERIFY_CERT</string>
+			<string>INVENTORY_ALL</string>
+			<string>INVENTORY_ANIMATION</string>
+			<string>INVENTORY_BODYPART</string>
+			<string>INVENTORY_CLOTHING</string>
+			<string>INVENTORY_GESTURE</string>
+			<string>INVENTORY_LANDMARK</string>
+			<string>INVENTORY_NOTECARD</string>
+			<string>INVENTORY_OBJECT</string>
+			<string>INVENTORY_SCRIPT</string>
+			<string>INVENTORY_SOUND</string>
+			<string>INVENTORY_TEXTURE</string>
+			<string>LAND_LARGE_BRUSH</string>
+			<string>LAND_LEVEL</string>
+			<string>LAND_LOWER</string>
+			<string>LAND_MEDIUM_BRUSH</string>
+			<string>LAND_NOISE</string>
+			<string>LAND_RAISE</string>
+			<string>LAND_REVERT</string>
+			<string>LAND_SMALL_BRUSH</string>
+			<string>LAND_SMOOTH</string>
+			<string>LINK_ALL_CHILDREN</string>
+			<string>LINK_ALL_OTHERS</string>
+			<string>LINK_ROOT</string>
+			<string>LINK_SET</string>
+			<string>LINK_THIS</string>
+			<string>LIST_STAT_GEOMETRIC_MEAN</string>
+			<string>LIST_STAT_MAX</string>
+			<string>LIST_STAT_MEAN</string>
+			<string>LIST_STAT_MEDIAN</string>
+			<string>LIST_STAT_MIN</string>
+			<string>LIST_STAT_NUM_COUNT</string>
+			<string>LIST_STAT_RANGE</string>
+			<string>LIST_STAT_STD_DEV</string>
+			<string>LIST_STAT_SUM</string>
+			<string>LIST_STAT_SUM_SQUARES</string>
+			<string>LOOP</string>
+			<string>MASK_BASE</string>
+			<string>MASK_EVERYONE</string>
+			<string>MASK_GROUP</string>
+			<string>MASK_NEXT</string>
+			<string>MASK_OWNER</string>
+			<string>NULL_KEY</string>
+			<string>PARCEL_COUNT_GROUP</string>
+			<string>PARCEL_COUNT_OTHER</string>
+			<string>PARCEL_COUNT_OWNER</string>
+			<string>PARCEL_COUNT_SELECTED</string>
+			<string>PARCEL_COUNT_TEMP</string>
+			<string>PARCEL_COUNT_TOTAL</string>
+			<string>PARCEL_DETAILS_AREA</string>
+			<string>PARCEL_DETAILS_GROUP</string>
+			<string>PARCEL_DETAILS_NAME</string>
+			<string>PARCEL_DETAILS_OWNER</string>
+			<string>PARCEL_FLAG_ALLOW_ALL_OBJECT_ENTRY</string>
+			<string>PARCEL_FLAG_ALLOW_CREATE_OBJECTS</string>
+			<string>PARCEL_FLAG_ALLOW_DAMAGE</string>
+			<string>PARCEL_FLAG_ALLOW_FLY</string>
+			<string>PARCEL_FLAG_ALLOW_GROUP_OBJECT_ENTRY</string>
+			<string>PARCEL_FLAG_ALLOW_LANDMARK</string>
+			<string>PARCEL_FLAG_ALLOW_SCRIPTS</string>
+			<string>PARCEL_FLAG_ALLOW_TERRAFORM</string>
+			<string>PARCEL_FLAG_LOCAL_SOUND_ONLY</string>
+			<string>PARCEL_FLAG_RESTRICT_PUSHOBJECT</string>
+			<string>PARCEL_FLAG_USE_ACCESS_GROUP</string>
+			<string>PARCEL_FLAG_USE_ACCESS_LIST</string>
+			<string>PARCEL_FLAG_USE_BAN_LIST</string>
+			<string>PARCEL_FLAG_USE_LAND_PASS_LIST</string>
+			<string>PARCEL_MEDIA_COMMAND_AGENT</string>
+			<string>PARCEL_MEDIA_COMMAND_AUTO_ALIGN</string>
+			<string>PARCEL_MEDIA_COMMAND_LOOP</string>
+			<string>PARCEL_MEDIA_COMMAND_PAUSE</string>
+			<string>PARCEL_MEDIA_COMMAND_PLAY</string>
+			<string>PARCEL_MEDIA_COMMAND_STOP</string>
+			<string>PARCEL_MEDIA_COMMAND_TEXTURE</string>
+			<string>PARCEL_MEDIA_COMMAND_TIME</string>
+			<string>PARCEL_MEDIA_COMMAND_UNLOAD</string>
+			<string>PARCEL_MEDIA_COMMAND_URL</string>
+			<string>PASSIVE</string>
+			<string>PAY_DEFAULT</string>
+			<string>PAY_HIDE</string>
+			<string>PERMISSION_ATTACH</string>
+			<string>PERMISSION_CHANGE_LINKS</string>
+			<string>PERMISSION_CONTROL_CAMERA</string>
+			<string>PERMISSION_DEBIT</string>
+			<string>PERMISSION_TAKE_CONTROLS</string>
+			<string>PERMISSION_TRACK_CAMERA</string>
+			<string>PERMISSION_TRIGGER_ANIMATION</string>
+			<string>PERM_ALL</string>
+			<string>PERM_COPY</string>
+			<string>PERM_MODIFY</string>
+			<string>PERM_MOVE</string>
+			<string>PERM_TRANSFER</string>
+			<string>PI</string>
+			<string>PING_PONG</string>
+			<string>PI_BY_TWO</string>
+			<string>PRIM_BUMP_BARK</string>
+			<string>PRIM_BUMP_BLOBS</string>
+			<string>PRIM_BUMP_BRICKS</string>
+			<string>PRIM_BUMP_BRIGHT</string>
+			<string>PRIM_BUMP_CHECKER</string>
+			<string>PRIM_BUMP_CONCRETE</string>
+			<string>PRIM_BUMP_DARK</string>
+			<string>PRIM_BUMP_DISKS</string>
+			<string>PRIM_BUMP_GRAVEL</string>
+			<string>PRIM_BUMP_LARGETILE</string>
+			<string>PRIM_BUMP_NONE</string>
+			<string>PRIM_BUMP_SHINY</string>
+			<string>PRIM_BUMP_SIDING</string>
+			<string>PRIM_BUMP_STONE</string>
+			<string>PRIM_BUMP_STUCCO</string>
+			<string>PRIM_BUMP_SUCTION</string>
+			<string>PRIM_BUMP_TILE</string>
+			<string>PRIM_BUMP_WEAVE</string>
+			<string>PRIM_BUMP_WOOD</string>
+			<string>PRIM_COLOR</string>
+			<string>PRIM_FLEXIBLE</string>
+			<string>PRIM_HOLE_CIRCLE</string>
+			<string>PRIM_HOLE_DEFAULT</string>
+			<string>PRIM_HOLE_SQUARE</string>
+			<string>PRIM_HOLE_TRIANGLE</string>
+			<string>PRIM_MATERIAL</string>
+			<string>PRIM_MATERIAL_FLESH</string>
+			<string>PRIM_MATERIAL_GLASS</string>
+			<string>PRIM_MATERIAL_LIGHT</string>
+			<string>PRIM_MATERIAL_METAL</string>
+			<string>PRIM_MATERIAL_PLASTIC</string>
+			<string>PRIM_MATERIAL_RUBBER</string>
+			<string>PRIM_MATERIAL_STONE</string>
+			<string>PRIM_MATERIAL_WOOD</string>
+			<string>PRIM_PHANTOM</string>
+			<string>PRIM_PHYSICS</string>
+			<string>PRIM_POINT_LIGHT</string>
+			<string>PRIM_POSITION</string>
+			<string>PRIM_ROTATION</string>
+			<string>PRIM_SHINY_HIGH</string>
+			<string>PRIM_SHINY_LOW</string>
+			<string>PRIM_SHINY_MEDIUM</string>
+			<string>PRIM_SHINY_NONE</string>
+			<string>PRIM_SIZE</string>
+			<string>PRIM_TEMP_ON_REZ</string>
+			<string>PRIM_TEXGEN_DEFAULT</string>
+			<string>PRIM_TEXGEN_PLANAR</string>
+			<string>PRIM_TEXTURE</string>
+			<string>PRIM_TYPE</string>
+			<string>PRIM_TYPE_BOX</string>
+			<string>PRIM_TYPE_CYLINDER</string>
+			<string>PRIM_TYPE_PRISM</string>
+			<string>PRIM_TYPE_RING</string>
+			<string>PRIM_TYPE_SPHERE</string>
+			<string>PRIM_TYPE_TORUS</string>
+			<string>PRIM_TYPE_TUBE</string>
+			<string>PSYS_PART_BOUNCE_MASK</string>
+			<string>PSYS_PART_EMISSIVE_MASK</string>
+			<string>PSYS_PART_END_ALPHA</string>
+			<string>PSYS_PART_END_COLOR</string>
+			<string>PSYS_PART_END_SCALE</string>
+			<string>PSYS_PART_FLAGS</string>
+			<string>PSYS_PART_FOLLOW_SRC_MASK</string>
+			<string>PSYS_PART_FOLLOW_VELOCITY_MASK</string>
+			<string>PSYS_PART_INTERP_COLOR_MASK</string>
+			<string>PSYS_PART_INTERP_SCALE_MASK</string>
+			<string>PSYS_PART_MAX_AGE</string>
+			<string>PSYS_PART_START_ALPHA</string>
+			<string>PSYS_PART_START_COLOR</string>
+			<string>PSYS_PART_START_SCALE</string>
+			<string>PSYS_PART_TARGET_LINEAR_MASK</string>
+			<string>PSYS_PART_TARGET_POS_MASK</string>
+			<string>PSYS_PART_WIND_MASK</string>
+			<string>PSYS_SRC_ACCEL</string>
+			<string>PSYS_SRC_ANGLE_BEGIN</string>
+			<string>PSYS_SRC_ANGLE_END</string>
+			<string>PSYS_SRC_BURST_PART_COUNT</string>
+			<string>PSYS_SRC_BURST_RADIUS</string>
+			<string>PSYS_SRC_BURST_RATE</string>
+			<string>PSYS_SRC_BURST_SPEED_MAX</string>
+			<string>PSYS_SRC_BURST_SPEED_MIN</string>
+			<string>PSYS_SRC_INNERANGLE</string>
+			<string>PSYS_SRC_MAX_AGE</string>
+			<string>PSYS_SRC_OMEGA</string>
+			<string>PSYS_SRC_OUTERANGLE</string>
+			<string>PSYS_SRC_PATTERN</string>
+			<string>PSYS_SRC_PATTERN_ANGLE</string>
+			<string>PSYS_SRC_PATTERN_ANGLE_CONE</string>
+			<string>PSYS_SRC_PATTERN_ANGLE_CONE_EMPTY</string>
+			<string>PSYS_SRC_PATTERN_DROP</string>
+			<string>PSYS_SRC_PATTERN_EXPLODE</string>
+			<string>PSYS_SRC_TARGET_KEY</string>
+			<string>PSYS_SRC_TEXTURE</string>
+			<string>RAD_TO_DEG</string>
+			<string>REGION_FLAG_ALLOW_DAMAGE</string>
+			<string>REGION_FLAG_ALLOW_DIRECT_TELEPORT</string>
+			<string>REGION_FLAG_BLOCK_FLY</string>
+			<string>REGION_FLAG_BLOCK_TERRAFORM</string>
+			<string>REGION_FLAG_DISABLE_COLLISIONS</string>
+			<string>REGION_FLAG_DISABLE_PHYSICS</string>
+			<string>REGION_FLAG_FIXED_SUN</string>
+			<string>REGION_FLAG_RESTRICT_PUSHOBJECT</string>
+			<string>REGION_FLAG_SANDBOX</string>
+			<string>REMOTE_DATA_CHANNEL</string>
+			<string>REMOTE_DATA_REPLY</string>
+			<string>REMOTE_DATA_REQUEST</string>
+			<string>REVERSE</string>
+			<string>ROTATE</string>
+			<string>SCALE</string>
+			<string>SCRIPTED</string>
+			<string>SMOOTH</string>
+			<string>SQRT2</string>
+			<string>STATUS_BLOCK_GRAB</string>
+			<string>STATUS_DIE_AT_EDGE</string>
+			<string>STATUS_PHANTOM</string>
+			<string>STATUS_PHYSICS</string>
+			<string>STATUS_RETURN_AT_EDGE</string>
+			<string>STATUS_ROTATE_X</string>
+			<string>STATUS_ROTATE_Y</string>
+			<string>STATUS_ROTATE_Z</string>
+			<string>STATUS_SANDBOX</string>
+			<string>STRING_TRIM</string>
+			<string>STRING_TRIM_HEAD</string>
+			<string>STRING_TRIM_TAIL</string>
+			<string>TRUE</string>
+			<string>TWO_PI</string>
+			<string>TYPE_FLOAT</string>
+			<string>TYPE_INTEGER</string>
+			<string>TYPE_INVALID</string>
+			<string>TYPE_KEY</string>
+			<string>TYPE_ROTATION</string>
+			<string>TYPE_STRING</string>
+			<string>TYPE_VECTOR</string>
+			<string>VEHICLE_ANGULAR_DEFLECTION_EFFICIENCY</string>
+			<string>VEHICLE_ANGULAR_DEFLECTION_TIMESCALE</string>
+			<string>VEHICLE_ANGULAR_FRICTION_TIMESCALE</string>
+			<string>VEHICLE_ANGULAR_MOTOR_DECAY_TIMESCALE</string>
+			<string>VEHICLE_ANGULAR_MOTOR_DIRECTION</string>
+			<string>VEHICLE_ANGULAR_MOTOR_TIMESCALE</string>
+			<string>VEHICLE_BANKING_EFFICIENCY</string>
+			<string>VEHICLE_BANKING_MIX</string>
+			<string>VEHICLE_BANKING_TIMESCALE</string>
+			<string>VEHICLE_BUOYANCY</string>
+			<string>VEHICLE_FLAG_CAMERA_DECOUPLED</string>
+			<string>VEHICLE_FLAG_HOVER_GLOBAL_HEIGHT</string>
+			<string>VEHICLE_FLAG_HOVER_TERRAIN_ONLY</string>
+			<string>VEHICLE_FLAG_HOVER_UP_ONLY</string>
+			<string>VEHICLE_FLAG_HOVER_WATER_ONLY</string>
+			<string>VEHICLE_FLAG_LIMIT_MOTOR_UP</string>
+			<string>VEHICLE_FLAG_LIMIT_ROLL_ONLY</string>
+			<string>VEHICLE_FLAG_MOUSELOOK_BANK</string>
+			<string>VEHICLE_FLAG_MOUSELOOK_STEER</string>
+			<string>VEHICLE_FLAG_NO_DEFLECTION_UP</string>
+			<string>VEHICLE_HOVER_EFFICIENCY</string>
+			<string>VEHICLE_HOVER_HEIGHT</string>
+			<string>VEHICLE_HOVER_TIMESCALE</string>
+			<string>VEHICLE_LINEAR_DEFLECTION_EFFICIENCY</string>
+			<string>VEHICLE_LINEAR_DEFLECTION_TIMESCALE</string>
+			<string>VEHICLE_LINEAR_FRICTION_TIMESCALE</string>
+			<string>VEHICLE_LINEAR_MOTOR_DECAY_TIMESCALE</string>
+			<string>VEHICLE_LINEAR_MOTOR_DIRECTION</string>
+			<string>VEHICLE_LINEAR_MOTOR_OFFSET</string>
+			<string>VEHICLE_LINEAR_MOTOR_TIMESCALE</string>
+			<string>VEHICLE_REFERENCE_FRAME</string>
+			<string>VEHICLE_TYPE_AIRPLANE</string>
+			<string>VEHICLE_TYPE_BALLOON</string>
+			<string>VEHICLE_TYPE_BOAT</string>
+			<string>VEHICLE_TYPE_CAR</string>
+			<string>VEHICLE_TYPE_NONE</string>
+			<string>VEHICLE_TYPE_SLED</string>
+			<string>VEHICLE_VERTICAL_ATTRACTION_EFFICIENCY</string>
+			<string>VEHICLE_VERTICAL_ATTRACTION_TIMESCALE</string>
+			<string>ZERO_ROTATION</string>
+			<string>ZERO_VECTOR</string>
+			<string>at_rot_target(integer number, rotation target_rotation, rotation our_rotation)</string>
+			<string>at_target(integer number, vector target_position, vector our_position)</string>
+			<string>attach(key attached)</string>
+			<string>changed(integer changed)</string>
+			<string>collision(integer total_number)</string>
+			<string>collision_end(integer total_number)</string>
+			<string>collision_start(integer total_number)</string>
+			<string>control(key name, integer levels, integer edges)</string>
+			<string>dataserver(key requested, string data)</string>
+			<string>default</string>
+			<string>do</string>
+			<string>else</string>
+			<string>email(string time, string address, string subject, string body, integer remaining)</string>
+			<string>float </string>
+			<string>for</string>
+			<string>function </string>
+			<string>http_response(key request_id, integer status, list metadata, string body)</string>
+			<string>if</string>
+			<string>integer </string>
+			<string>jump</string>
+			<string>key </string>
+			<string>land_collision(vector position)</string>
+			<string>land_collision_end(vector position)</string>
+			<string>land_collision_start(vector position)</string>
+			<string>link_message(integer sender_number, integer number, string message, key id)</string>
+			<string>list </string>
+			<string>listen(integer channel, string name, key id, string message)</string>
+			<string>llAbs((integer) val)</string>
+			<string>llAcos((float) val)</string>
+			<string>llAddToLandPassList((key) avatar, (float) hours)</string>
+			<string>llAdjustSoundVolume((float) volume)</string>
+			<string>llAllowInventoryDrop((integer) add)</string>
+			<string>llAngleBetween((rotation) a, (rotation) b)</string>
+			<string>llApplyImpulse((vector) force, (integer) local)</string>
+			<string>llApplyRotationalImpulse((vector) force, (integer) local)</string>
+			<string>llAsin((float) val)</string>
+			<string>llAtan2((float) y, (float) x)</string>
+			<string>llAttachToAvatar((key) avatar, (integer) attachment)</string>
+			<string>llAvatarOnSitTarget()</string>
+			<string>llAxes2Rot((vector) fwd, (vector) left, (vector) up)</string>
+			<string>llAxisAngle2Rot((vector) axis, (float) angle)</string>
+			<string>llBase64ToString((string) str)</string>
+			<string>llBreakAllLinks()</string>
+			<string>llBreakLink((integer) linknum)</string>
+			<string>llCSV2List((string) src)</string>
+			<string>llCeil((float) val)</string>
+			<string>llClearCameraParams()</string>
+			<string>llCloseRemoteDataChannel((key) channel)</string>
+			<string>llCloud((vector) offset)</string>
+			<string>llCollisionFilter((string) name, (key) id, (integer) accept)</string>
+			<string>llCollisionSound((string) impact_sound, (float) impact_volume)</string>
+			<string>llCollisionSprite((string) impact_sprite)</string>
+			<string>llCos((float) theta)</string>
+			<string>llCreateLink((key) target, (integer) parent)</string>
+			<string>llDeleteSubList((list) src, (integer) start, (integer) end)</string>
+			<string>llDeleteSubString((string) src, (integer) start, (integer) end)</string>
+			<string>llDetachFromAvatar((key) avatar)</string>
+			<string>llDetectedGrab((integer) number)</string>
+			<string>llDetectedGroup((integer) number)</string>
+			<string>llDetectedKey((integer) number)</string>
+			<string>llDetectedLinkNumber((integer) number)</string>
+			<string>llDetectedName((integer) number)</string>
+			<string>llDetectedOwner((integer) number)</string>
+			<string>llDetectedPos((integer) number)</string>
+			<string>llDetectedRot((integer) number)</string>
+			<string>llDetectedType((integer) number)</string>
+			<string>llDetectedVel((integer) number)</string>
+			<string>llDialog((key) avatar, (string) message, (list) buttons, (integer) channel)</string>
+			<string>llDie()</string>
+			<string>llDumpList2String((list) src, (string) separator)</string>
+			<string>llEdgeOfWorld((vector) pos, (vector) dir)</string>
+			<string>llEjectFromLand((key) pest)</string>
+			<string>llEmail((string) address, (string) subject, (string) message)</string>
+			<string>llEscapeURL((string) url)</string>
+			<string>llEuler2Rot((vector) vec)</string>
+			<string>llFabs((float) val)</string>
+			<string>llFloor((float) val)</string>
+			<string>llForceMouselook((integer) mouselook)</string>
+			<string>llFrand((float) mag)</string>
+			<string>llGetAccel()</string>
+			<string>llGetAgentInfo((key) id)</string>
+			<string>llGetAgentSize((key) id)</string>
+			<string>llGetAlpha((integer) face)</string>
+			<string>llGetAndResetTime()</string>
+			<string>llGetAnimation((key) id)</string>
+			<string>llGetAnimationList((key) id)</string>
+			<string>llGetAttached()</string>
+			<string>llGetBoundingBox((key) object)</string>
+			<string>llGetCameraPos()</string>
+			<string>llGetCameraRot()</string>
+			<string>llGetCenterOfMass()</string>
+			<string>llGetColor((integer) face)</string>
+			<string>llGetCreator()</string>
+			<string>llGetDate()</string>
+			<string>llGetEnergy()</string>
+			<string>llGetForce()</string>
+			<string>llGetFreeMemory()</string>
+			<string>llGetGMTclock()</string>
+			<string>llGetGeometricCenter()</string>
+			<string>llGetInventoryCreator((string) name)</string>
+			<string>llGetInventoryKey((string) name)</string>
+			<string>llGetInventoryName((integer) type, (integer) number)</string>
+			<string>llGetInventoryNumber((integer) type)</string>
+			<string>llGetInventoryPermMask((string) item, (integer) mask)</string>
+			<string>llGetInventoryType((string) name)</string>
+			<string>llGetKey()</string>
+			<string>llGetLandOwnerAt((vector) pos)</string>
+			<string>llGetLinkKey((integer) linknum)</string>
+			<string>llGetLinkName((integer) linknum)</string>
+			<string>llGetLinkNumber()</string>
+			<string>llGetListEntryType((list) src, (integer) index)</string>
+			<string>llGetListLength((list) src)</string>
+			<string>llGetLocalPos()</string>
+			<string>llGetLocalRot()</string>
+			<string>llGetMass()</string>
+			<string>llGetNextEmail((string) address, (string) subject)</string>
+			<string>llGetNotecardLine((string) name, (integer) line)</string>
+			<string>llGetNumberOfNotecardLines((string) name)</string>
+			<string>llGetNumberOfPrims()</string>
+			<string>llGetNumberOfSides()</string>
+			<string>llGetObjectDesc()</string>
+			<string>llGetObjectMass((key) id)</string>
+			<string>llGetObjectName()</string>
+			<string>llGetObjectPermMask((integer) mask)</string>
+			<string>llGetObjectPrimCount((key) id)</string>
+			<string>llGetOmega()</string>
+			<string>llGetOwner()</string>
+			<string>llGetOwnerKey((key) id)</string>
+			<string>llGetParcelDetails((vector) pos, (list) details)</string>
+			<string>llGetParcelFlags((vector) pos)</string>
+			<string>llGetParcelMaxPrims((vector) pos, (integer) sim_wide)</string>
+			<string>llGetParcelPrimCount((vector) pos, (integer) category, (integer) sim_wide)</string>
+			<string>llGetParcelPrimOwners((vector) pos)</string>
+			<string>llGetPermissions()</string>
+			<string>llGetPermissionsKey()</string>
+			<string>llGetPos()</string>
+			<string>llGetPrimitiveParams((list) parameters)</string>
+			<string>llGetRegionCorner()</string>
+			<string>llGetRegionFPS()</string>
+			<string>llGetRegionFlags()</string>
+			<string>llGetRegionName()</string>
+			<string>llGetRegionTimeDilation()</string>
+			<string>llGetRootPosition()</string>
+			<string>llGetRootRotation()</string>
+			<string>llGetRot()</string>
+			<string>llGetScale()</string>
+			<string>llGetScriptName()</string>
+			<string>llGetScriptState((string) name)</string>
+			<string>llGetStartParameter()</string>
+			<string>llGetStatus((integer) status)</string>
+			<string>llGetSubString((string) src, (integer) start, (integer) end)</string>
+			<string>llGetSunDirection()</string>
+			<string>llGetTexture((integer) face)</string>
+			<string>llGetTextureOffset((integer) side)</string>
+			<string>llGetTextureRot((integer) side)</string>
+			<string>llGetTextureScale((integer) side)</string>
+			<string>llGetTime()</string>
+			<string>llGetTimeOfDay()</string>
+			<string>llGetTimestamp()</string>
+			<string>llGetTorque()</string>
+			<string>llGetUnixTime()</string>
+			<string>llGetVel()</string>
+			<string>llGetWallclock()</string>
+			<string>llGiveInventory((key) destination, (string) inventory)</string>
+			<string>llGiveInventoryList((key) destination, (string) category, (list) inventory)</string>
+			<string>llGiveMoney((key) destination, (integer) amount)</string>
+			<string>llGround((vector) offset)</string>
+			<string>llGroundContour((vector) offset)</string>
+			<string>llGroundNormal((vector) offset)</string>
+			<string>llGroundRepel((float) height, (integer) water, (float) tau)</string>
+			<string>llGroundSlope((vector) offset)</string>
+			<string>llHTTPRequest((string) url, (list) parameters, (string) body)</string>
+			<string>llInsertString((string) dst, (integer) position, (string) src)</string>
+			<string>llInstantMessage((key) user, (string) message)</string>
+			<string>llKey2Name((key) id)</string>
+			<string>llList2CSV((list) src)</string>
+			<string>llList2Float((list) src, (integer) index)</string>
+			<string>llList2Integer((list) src, (integer) index)</string>
+			<string>llList2Key((list) src, (integer) index)</string>
+			<string>llList2List((list) src, (integer) start, (integer) end)</string>
+			<string>llList2ListStrided((list) src, (integer) start, (integer) end, (integer) stride)</string>
+			<string>llList2Rot((list) src, (integer) index)</string>
+			<string>llList2String((list) src, (integer) index)</string>
+			<string>llList2Vector((list) src, (integer) index)</string>
+			<string>llListFindList((list) src, (list) test)</string>
+			<string>llListInsertList((list) dest, (list) src, (integer) pos)</string>
+			<string>llListRandomize((list) src, (integer) stride)</string>
+			<string>llListReplaceList((list) dest, (list) src, (integer) start, (integer) end)</string>
+			<string>llListSort((list) src, (integer) stride, (integer) ascending)</string>
+			<string>llListStatistics((integer) operation, (list) input)</string>
+			<string>llListen((integer) channel, (string) name, (key) id, (string) msg)</string>
+			<string>llListenControl((integer) number, (integer) active)</string>
+			<string>llListenRemove((integer) number)</string>
+			<string>llLoadURL((key) avatar_id, (string) message, (string) url)</string>
+			<string>llLog((float) val)</string>
+			<string>llLog10((float) val)</string>
+			<string>llLookAt((vector) target, (float) strength, (float) damping)</string>
+			<string>llLoopSound((string) sound, (float) volume)</string>
+			<string>llLoopSoundMaster((string) sound, (float) volume)</string>
+			<string>llLoopSoundSlave((string) sound, (float) volume)</string>
+			<string>llMD5String((string) str, (integer) nonce)</string>
+			<string>llMakeExplosion((integer) particles, (float) scale, (float) velocity, (float) lifetime, (float) arc, (string) texture, (vector) offset)</string>
+			<string>llMakeFire((integer) particles, (float) scale, (float) velocity, (float) lifetime, (float) arc, (string) texture, (vector) offset)</string>
+			<string>llMakeFountain((integer) particles, (float) scale, (float) velocity, (float) lifetime, (float) arc, (string) texture, (vector) offset)</string>
+			<string>llMakeSmoke((integer) particles, (float) scale, (float) velocity, (float) lifetime, (float) arc, (string) texture, (vector) offset)</string>
+			<string>llMessageLinked((integer) linknum, (integer) num, (string) str, (key) id)</string>
+			<string>llMinEventDelay((float) delay)</string>
+			<string>llModPow((integer) a, (integer) b, (integer) c)</string>
+			<string>llModifyLand((integer) action, (integer) size)</string>
+			<string>llMoveToTarget((vector) target, (float) tau)</string>
+			<string>llOffsetTexture((float) offset_s, (float) offset_t, (integer) face)</string>
+			<string>llOpenRemoteDataChannel()</string>
+			<string>llOverMyLand((key) id)</string>
+			<string>llOwnerSay((string) text)</string>
+			<string>llParcelMediaCommandList((list) command_list)</string>
+			<string>llParcelMediaQuery((list) query_list)</string>
+			<string>llParseString2List((string) src, (list) separators, (list) spacers)</string>
+			<string>llParseStringKeepNulls((string) src, (list) separators, (list) spacers)</string>
+			<string>llParticleSystem((list) parameters)</string>
+			<string>llPassCollisions((integer) pass)</string>
+			<string>llPassTouches((integer) pass)</string>
+			<string>llPlaySound((string) sound, (float) volume)</string>
+			<string>llPlaySoundSlave((string) sound, (float) volume)</string>
+			<string>llPointAt((vector) pos)</string>
+			<string>llPow((float) base, (float) exp)</string>
+			<string>llPreloadSound((string) sound)</string>
+			<string>llPushObject((key) id, (vector) impulse, (vector) angular_impulse, (integer) local)</string>
+			<string>llRegionSay((integer) channel, (string) msg)</string>
+			<string>llReleaseControls((key) avatar)</string>
+			<string>llRemoteDataReply((key) channel, (key) message_id, (string) sdata)</string>
+			<string>llRemoteDataSetRegion()</string>
+			<string>llRemoteLoadScript()</string>
+			<string>llRemoteLoadScriptPin((key) target, (string) name, (integer) pin, (integer) running, (integer) param)</string>
+			<string>llRemoveInventory((string) inventory)</string>
+			<string>llRemoveVehicleFlags((integer) flags)</string>
+			<string>llRequestAgentData((key) id, (integer) data)</string>
+			<string>llRequestInventoryData((string) name)</string>
+			<string>llRequestPermissions((key) avatar, (integer) perm)</string>
+			<string>llRequestSimulatorData((string) sim_name, (integer) data)</string>
+			<string>llResetOtherScript((string) name)</string>
+			<string>llResetScript()</string>
+			<string>llResetTime()</string>
+			<string>llRezAtRoot((string) inventory, (vector) pos, (vector) vel, (rotation) rot, (integer) param)</string>
+			<string>llRezObject((string) inventory, (vector) pos, (vector) vel, (rotation) rot, (integer) param)</string>
+			<string>llRot2Angle((rotation) rot)</string>
+			<string>llRot2Axis((rotation) rot)</string>
+			<string>llRot2Euler((rotation) rot)</string>
+			<string>llRot2Fwd((rotation) rot)</string>
+			<string>llRot2Left((rotation) rot)</string>
+			<string>llRot2Up((rotation) rot)</string>
+			<string>llRotBetween((vector) a, (vector) b)</string>
+			<string>llRotLookAt((rotation) rot, (float) strength, (float) damping)</string>
+			<string>llRotTarget((rotation) rot, (float) error)</string>
+			<string>llRotTargetRemove((integer) number)</string>
+			<string>llRotateTexture((float) radians, (integer) face)</string>
+			<string>llRound((float) val)</string>
+			<string>llSameGroup((key) id)</string>
+			<string>llSay((integer) channel, (string) text)</string>
+			<string>llScaleTexture((integer) scale_s, (integer) scale_t, (integer) face)</string>
+			<string>llScriptDanger((vector) pos)</string>
+			<string>llSendRemoteData((string) dest, (integer) idata, (string) sdata)</string>
+			<string>llSensor((string) name, (key) id, (integer) type, (float) range, (float) arc)</string>
+			<string>llSensorRemove()</string>
+			<string>llSensorRepeat((string) name, (key) id, (integer) type, (float) range, (float) arc, (float) rate)</string>
+			<string>llSetAlpha((float) alpha, (integer) face)</string>
+			<string>llSetBuoyancy((float) buoyancy)</string>
+			<string>llSetCameraAtOffset((vector) offset)</string>
+			<string>llSetCameraEyeOffset((vector) offset)</string>
+			<string>llSetCameraParams((list) rules)</string>
+			<string>llSetColor((vector) color, (integer) face)</string>
+			<string>llSetDamage((float) damage)</string>
+			<string>llSetForce((vector) force, (integer) local)</string>
+			<string>llSetForceAndTorque((vector) force, (vector) torque, (integer) local)</string>
+			<string>llSetHoverHeight((float) height, (float) water, (float) tau)</string>
+			<string>llSetLinkAlpha((integer) linknumber, (float) alpha, (integer) face)</string>
+			<string>llSetLinkColor((integer) linknumber, (vector) color, (integer) face)</string>
+			<string>llSetLinkPrimitiveParams((integer) linknumber, (list) rules)</string>
+			<string>llSetLinkTexture((integer) link_pos, (string) texture, (integer) face)</string>
+			<string>llSetLocalRot((rotation) rot)</string>
+			<string>llSetObjectDesc((string) description)</string>
+			<string>llSetObjectName((string) name)</string>
+			<string>llSetParcelMusicURL((string) url)</string>
+			<string>llSetPayPrice((integer) default_price, (list) quick_pay_buttons)</string>
+			<string>llSetPos((vector) pos)</string>
+			<string>llSetPrimitiveParams((list) rules)</string>
+			<string>llSetRemoteScriptAccessPin((integer) pin)</string>
+			<string>llSetRot((rotation) rot)</string>
+			<string>llSetScale((vector) scale)</string>
+			<string>llSetScriptState((string) name, (integer) run)</string>
+			<string>llSetSitText((string) text)</string>
+			<string>llSetSoundQueueing((integer) queue)</string>
+			<string>llSetStatus((integer) status, (integer) value)</string>
+			<string>llSetText((string) text, (vector) color, (float) alpha)</string>
+			<string>llSetTexture((string) texture, (integer) face)</string>
+			<string>llSetTextureAnim((integer) mode, (integer) face, (integer) sizex, (integer) sizey, (float) start, (float) length, (float) rate)</string>
+			<string>llSetTimerEvent((float) sec)</string>
+			<string>llSetTorque((vector) torque, (integer) local)</string>
+			<string>llSetTouchText((string) text)</string>
+			<string>llSetVehicleFlags((integer) flags)</string>
+			<string>llSetVehicleFloatParam((integer) param_name, (float) param_value)</string>
+			<string>llSetVehicleRotationParam((integer) param_name, (rotation) param_value)</string>
+			<string>llSetVehicleType((integer) type)</string>
+			<string>llSetVehicleVectorParam((integer) param_name, (vector) param_value)</string>
+			<string>llShout((integer) channel, (string) text)</string>
+			<string>llSin((float) theta)</string>
+			<string>llSitTarget((vector) offset, (rotation) rot)</string>
+			<string>llSleep((float) sec)</string>
+			<string>llSqrt((float) val)</string>
+			<string>llStartAnimation((string) anim)</string>
+			<string>llStopAnimation((string) anim)</string>
+			<string>llStopHover()</string>
+			<string>llStopLookAt()</string>
+			<string>llStopMoveToTarget()</string>
+			<string>llStopPointAt()</string>
+			<string>llStopSound()</string>
+			<string>llStringLength((string) src)</string>
+			<string>llStringToBase64((string) str)</string>
+			<string>llStringTrim((string) src, (integer) trim_type)</string>
+			<string>llSubStringIndex((string) source, (string) pattern)</string>
+			<string>llTakeControls((integer) controls, (integer) accept, (integer) pass_on)</string>
+			<string>llTan((float) theta)</string>
+			<string>llTarget((vector) position, (float) range)</string>
+			<string>llTargetOmega((vector) axis, (float) spinrate, (float) gain)</string>
+			<string>llTargetRemove((integer) tnumber)</string>
+			<string>llTeleportAgentHome((key) id)</string>
+			<string>llToLower((string) src)</string>
+			<string>llToUpper((string) src)</string>
+			<string>llTriggerSound((string) sound, (float) volume)</string>
+			<string>llTriggerSoundLimited((string) sound, (float) volume, (vector) tne, (vector) bsw)</string>
+			<string>llUnSit((key) id)</string>
+			<string>llUnescapeURL((string) url)</string>
+			<string>llVecDist((vector) a, (vector) b)</string>
+			<string>llVecMag((vector) vec)</string>
+			<string>llVecNorm((vector) vec)</string>
+			<string>llVolumeDetect((integer) detect)</string>
+			<string>llWater((vector) offset)</string>
+			<string>llWhisper((integer) channel, (string) text)</string>
+			<string>llWind((vector) offset)</string>
+			<string>llXorBase64Strings((string) s1, (string) s2)</string>
+			<string>llXorBase64StringsCorrect((string) s1, (string) s2)</string>
+			<string>money(key giver, integer amount)</string>
+			<string>moving_end()</string>
+			<string>moving_start()</string>
+			<string>no_sensor()</string>
+			<string>not_at_rot_target()</string>
+			<string>not_at_target()</string>
+			<string>object_rez(key id)</string>
+			<string>on_rez(integer start_param)</string>
+			<string>remote_data(integer type, key channel, key message_id, string sender, integer ival, string sval)</string>
+			<string>return</string>
+			<string>rotation</string>
+			<string>run_time_permissions(integer permissions)</string>
+			<string>sensor(integer total_number)</string>
+			<string>state </string>
+			<string>state_entry()</string>
+			<string>state_exit()</string>
+			<string>string </string>
+			<string>timer()</string>
+			<string>touch(integer total_number)</string>
+			<string>touch_end(integer total_number)</string>
+			<string>touch_start(integer total_number)</string>
+			<string>vector </string>
+			<string>while</string>
+		</array>
+	</dict>
+	<key>uuid</key>
+	<string>FEC8E189-493C-4385-BFBD-B0190E268044</string>
+</dict>
+</plist>

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!DOCTYPE MODE SYSTEM "xmode.dtd">
+<!-- %SHILL_UPDATE_NOTICE% -->
+
+<MODE>
+	<PROPS>
+		<!-- LSL has no multi-line comments yet.
+		<PROPERTY NAME="commentStart" VALUE="/*" />
+		<PROPERTY NAME="commentEnd" VALUE="*/" /> -->
+		<PROPERTY NAME="lineComment" VALUE="//" />
+		<PROPERTY NAME="wordBreakChars" VALUE=",+-=&lt;&gt;/?^&amp;*" />
+		
+		<!-- Auto indent -->
+		<PROPERTY NAME="indentOpenBrackets" VALUE="{" />
+		<PROPERTY NAME="indentCloseBrackets" VALUE="}" />
+		<PROPERTY NAME="indentNextLine"
+			VALUE="\s*(((if|while|do)\s*\(|else\s*|else\s+if\s*\(|for\s*\(.*\))[^{;]*)" />
+		<!-- set this to 'true' if you want to use GNU coding style -->
+		<PROPERTY NAME="doubleBracketIndent" VALUE="false" />
+		<PROPERTY NAME="lineUpClosingBracket" VALUE="true" />
+	</PROPS>
+	<RULES IGNORE_CASE="TRUE" HIGHLIGHT_DIGITS="TRUE">
+		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="TRUE">
+			<BEGIN>"</BEGIN>
+  			<END>"</END>
+		</SPAN>
+		<EOL_SPAN TYPE="COMMENT1">//</EOL_SPAN>
+		
+		<!-- Unary operators -->
+		<SEQ TYPE="OPERATOR">++</SEQ>
+		<SEQ TYPE="OPERATOR">--</SEQ>
+		
+		<!-- Binary and assignment operators pt. 1 -->
+		<SEQ TYPE="OPERATOR">*=</SEQ>
+		<SEQ TYPE="OPERATOR">+=</SEQ>
+		<SEQ TYPE="OPERATOR">-=</SEQ>
+		<SEQ TYPE="OPERATOR">%=</SEQ>
+		
+		<!-- Boolean operators -->
+		<SEQ TYPE="OPERATOR">&amp;&amp;</SEQ>
+		<SEQ TYPE="OPERATOR">||</SEQ>
+		<SEQ TYPE="OPERATOR">!</SEQ>
+		<SEQ TYPE="OPERATOR">==</SEQ>
+		<SEQ TYPE="OPERATOR">!=</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;=</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;=</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;</SEQ>
+		
+		<!-- Bitwise operators -->
+		<SEQ TYPE="OPERATOR">&amp;</SEQ>
+		<SEQ TYPE="OPERATOR">~</SEQ>
+		<SEQ TYPE="OPERATOR">^</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;&lt;</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;&gt;</SEQ>
+		
+		<!-- Binary and assignment operators pt. 2 -->
+		<!-- These are shorter, so you check for them last -->
+		<SEQ TYPE="OPERATOR">|</SEQ>
+		<SEQ TYPE="OPERATOR">+</SEQ>
+		<SEQ TYPE="OPERATOR">-</SEQ>
+		<SEQ TYPE="OPERATOR">*</SEQ>
+		<SEQ TYPE="OPERATOR">/</SEQ>
+		<SEQ TYPE="OPERATOR">%</SEQ>
+		<SEQ TYPE="OPERATOR">=</SEQ>
+		
+		<!-- Unknown operator -->
+		<!-- It's in the wiki, but if we don't know what it is,
+		should it even be included? -->
+		<SEQ TYPE="OPERATOR">:</SEQ>
+		
+		<KEYWORDS>
+			<!-- Flow control keywords -->
+			<KEYWORD1>if</KEYWORD1>
+  			<KEYWORD1>else</KEYWORD1>
+			<KEYWORD1>do</KEYWORD1>
+  			<KEYWORD1>while</KEYWORD1>
+			<KEYWORD1>for</KEYWORD1>
+  			<KEYWORD1>jump</KEYWORD1>
+  			<KEYWORD1>return</KEYWORD1>
+  			<KEYWORD1>state</KEYWORD1>
+			<KEYWORD1>default</KEYWORD1>
+			
+			<!-- Ack! I ran out of KEYWORDs! -->
+			<!-- Data type keywords -->
+  			<KEYWORD1>integer</KEYWORD1>
+  			<KEYWORD1>float</KEYWORD1>
+			<KEYWORD1>vector</KEYWORD1>
+			<KEYWORD1>rotation</KEYWORD1>
+  			<KEYWORD1>string</KEYWORD1>
+  			<KEYWORD1>key</KEYWORD1>
+			<KEYWORD1>list</KEYWORD1>
+			
+			<!-- Function keywords -->
+START:functions
+			<KEYWORD2>%name%</KEYWORD2>
+END:functions			
+			
+<!-- *** *** *** *** *** *** END FUNCTION LIST *** *** *** *** *** *** -->
+
+START:events
+			<KEYWORD3>%name%</KEYWORD3>
+END:events
+
+START:constants
+			<KEYWORD4>%name%</KEYWORD4>
+END:constants
+			
+		</KEYWORDS>
+	</RULES>
+</MODE>                                  
+
+

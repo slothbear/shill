@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>
+# I HATE SHELL !!!
+res=`osascript &lt;&lt;-APPLESCRIPT
+set tt to "$TM_CURRENT_WORD"set hf to "Applications:Second Life.app:Contents:Resources:lsl_guide.html"
+set hl to "tm-file:///Applications/Second%20Life.app/Contents/Resources/lsl_guide.html#"
+tell application "Finder"
+	set hf to (startup disk as text) &amp; hf
+	set a to read alias hf
+	considering case
+		if a contains (tt &amp; "&lt;") then
+			set oldDelims to AppleScript's text item delimiters
+			set AppleScript's text item delimiters to {(tt &amp; "&lt;")}
+			set a to text items of a
+			set AppleScript's text item delimiters to oldDelims
+			repeat with i in a
+				try
+				set pp to (paragraph -2 of i)
+					if pp begins with "NAME=" then return "&lt;meta http-equiv=\"refresh\" content=\"0;URL="&amp;hl &amp; (word 3 of pp)&amp;"\"&gt;"
+				end try
+			end repeat
+		end if
+	end considering
+	return
+end tell
+APPLESCRIPT`
+if [[ -z "$res" ]]; then
+	exit_show_tool_tip "NOT FOUND"
+else
+ exit_show_html "$res"
+fi
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^~h</string>
+	<key>name</key>
+	<string>offline current word help</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>uuid</key>
+	<string>6759734A-E356-4579-BDC9-D8518CA60AF9</string>
+</dict>
+</plist>

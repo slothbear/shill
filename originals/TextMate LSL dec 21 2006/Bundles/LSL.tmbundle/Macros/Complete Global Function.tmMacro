@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>selectWord:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>command</key>
+				<string>echo -n `egrep -m1 "(\w+\s+)*$TM_CURRENT_WORD\b.*\)" |  perl -pe 's@(float|integer|key|list|rotation|string|vector)@\($1\)@g' |  perl -pe 's@(?:^\(\w+\)\s+)*(.*\)).*@$1@g'`</string>
+				<key>input</key>
+				<string>document</string>
+				<key>output</key>
+				<string>replaceSelectedText</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>moveRight:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>command</key>
+						<string>moveLeft:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>selectBlock:</string>
+					</dict>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>beforeRunningCommand</key>
+							<string>nop</string>
+							<key>command</key>
+							<string>res2=`echo "$TM_SELECTED_TEXT" | perl -pe 's@\"@\\\"@g'`
+res=`osascript &lt;&lt;-APPLESCRIPT
+
+set a to "$res2" as string
+if a is "" then return
+set a to (characters 2 thru -2 of a &amp; "}}" &amp; character -1 of a &amp; "\\$0") as string
+set oldDelims to AppleScript's text item delimiters
+
+set AppleScript's text item delimiters to {"("}
+set a to text items of a
+set AppleScript's text item delimiters to {"\\${*:("}
+set a to a as text
+
+set AppleScript's text item delimiters to {") "}
+set a to text items of a
+set AppleScript's text item delimiters to {") \\${*:"}
+set a to a as text
+
+set AppleScript's text item delimiters to {", "}
+set a to text items of a
+set AppleScript's text item delimiters to {"}}, "}
+set a to a as text
+
+set AppleScript's text item delimiters to oldDelims
+set s to ""
+set j to 1
+repeat with i in a
+	if (i as string) is "*" then
+		set s to s &amp; j
+		set j to j + 1
+	else
+		set s to s &amp; i
+	end if
+end repeat
+set s to "(" &amp; s
+return s
+APPLESCRIPT`
+echo -n "$res"
+</string>
+							<key>fallbackInput</key>
+							<string>none</string>
+							<key>input</key>
+							<string>none</string>
+							<key>name</key>
+							<string>snipetize llfunction</string>
+							<key>output</key>
+							<string>insertAsSnippet</string>
+							<key>scope</key>
+							<string>source.esl, source.lsl</string>
+							<key>uuid</key>
+							<string>91D09CD3-B0A8-4426-BA1B-D1755E36A113</string>
+						</dict>
+						<key>command</key>
+						<string>executeCommandWithOptions:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>^~@f</string>
+	<key>name</key>
+	<string>autocomplete global function</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>uuid</key>
+	<string>C73A6931-31E8-4E46-8C08-57B029A408CD</string>
+</dict>
+</plist>

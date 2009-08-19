@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>global functions in popup</string>
+	<key>scope</key>
+	<string>meta.functions.global.declare.lsl</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>
+      s/\s*(.*)/@ $1/
+   </string>
+	</dict>
+	<key>uuid</key>
+	<string>81946DA9-DCFA-4C18-B227-555AECB25A95</string>
+</dict>
+</plist>

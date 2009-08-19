@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>lslintpath=$HOME'/Library/Application Support/TextMate/lslint'
+if chmod +x "$lslintpath" &amp;&amp; [[ -x "$lslintpath" ]]
+   then echo "$lslintpath is now executable"
+   else echo "FAILED making $lslintpath executable"
+fi</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>make lslint executable in Support/TextMate</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>uuid</key>
+	<string>4209C720-A1B1-464E-B986-1D5663EE4528</string>
+</dict>
+</plist>

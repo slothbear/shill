@@ -1,0 +1,294 @@
+//////////////////////////////////////////////////////////////////////////////
+// LSL -- Linden Scripting Language for SecondLife (www.secondlife.com)
+//
+// v1.0 07/10/2006 First release by Sir Grelling (sir.grelling@yahoo.com)
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+// language name
+
+Language:               LSL
+
+
+//////////////////////////////////////////////////////////////////////////////
+// put whatever you want here, short description, author name, email address..
+
+Description:            LSL scripting language for SecondLife (www.secondlife.com) written by Sir Grelling (sir.grelling@yahoo.com)
+
+
+//////////////////////////////////////////////////////////////////////////////
+// default file filter
+// note: if more than one extension is associated, eg:
+// C/C++ files (*.c,*.cpp,*.h,*.hpp)|*.c;*.cpp;*.h;*.hpp
+
+Filter:                 LSL files (*.lsl) | *.lsl
+
+
+//////////////////////////////////////////////////////////////////////////////
+// help file which will be invokend when F1 is pressed
+
+// Put your path here!!!
+
+HelpFile:               C:\Program Files\SecondLife\help\index.html
+
+
+//////////////////////////////////////////////////////////////////////////////
+// language case sensitivity
+//                      0  - no
+//                      1  - yes
+
+CaseSensitive:          1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// comment type: LineComment - comment to the end of line
+// BlockCommentBeg - block comment begin, it could be
+// multiline
+// BlockCommentEnd - block comment end
+
+LineComment:            //
+BlockCommentBeg:
+BlockCommentEnd:
+
+
+//////////////////////////////////////////////////////////////////////////////
+// identifier characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+
+IdentifierBegChars:     $ a..z A..Z _
+IdentifierChars:        a..z A..Z _ 0..9
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants begin characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstBegChars:       0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// numeric constants characters
+// note: characters shouldn't be delimited, except arrays
+// array of chars could be defined as from_char..to_char
+// number always starts with 0..9 except when NumConstBeg
+// defines other
+
+NumConstChars:          0..9
+
+
+//////////////////////////////////////////////////////////////////////////////
+// escape character
+
+EscapeChar:                 \
+
+
+//////////////////////////////////////////////////////////////////////////////
+// keyword table
+// note: delimited with spaces, lines could be wrapped
+// you may divide keywords into two groups which can be
+// highlighted differently
+
+
+KeyWords1: default state for if else do while jump return
+
+KeyWords2: integer float vector rotation key string list
+
+KeyWords3: llAbs llAcos llAddToLandBanList llAddToLandPassList llAdjustSoundVolume
+           llAllowInventoryDrop llAngleBetween llApplyImpulse llApplyRotationalImpulse
+           llAsin llAtan2 llAttachToAvatar llAvatarOnSitTarget llAxes2Rot llAxisAngle2Rot
+           llBase64ToInteger llBase64ToString llBreakAllLinks llBreakLink
+           llCeil llClearCameraParams llCloseRemoteDataChannel llCloud
+           llCollisionFilter llCollisionSound llCollisionSprite llCos llCreateLink llCSV2List
+           llDeleteSubList llDeleteSubString llDetachFromAvatar llDetectedGrab llDetectedGroup
+           llDetectedKey llDetectedLinkNumber llDetectedName llDetectedOwner llDetectedPos
+           llDetectedRot llDetectedType llDetectedVel llDialog llDie llDumpList2String
+           llEdgeOfWorld llEjectFromLand llEmail llEscapeURL llEuler2Rot
+           llFabs llFloor llForceMouselook llFrand
+           llGetAccel
+           llGetAgentInfo llGetAgentSize llGetAlpha llGetAndResetTime llGetAnimation
+           llGetAnimationList llGetAttached llGetBoundingBox llGetCameraPos
+           llGetCameraRot llGetCenterOfMass llGetCreator llGetColor llGetDate
+           llGetEnergy llGetForce llGetFreeMemory llGetGeometricCenter llGetGMTclock
+           llGetInventoryCreator llGetInventoryKey llGetInventoryName llGetInventoryNumber
+           llGetInventoryPermMask llGetInventoryType llGetKey llGetLandOwnerAt
+           llGetLinkKey llGetLinkName llGetLinkNumber llGetListEntryType llGetListLength
+           llGetLocalPos llGetLocalRot llGetMass llGetNextEmail llGetNotecardLine
+           llGetNumberOfNotecardLines llGetNumberOfPrims llGetNumberOfSides
+           llGetObjectDesc llGetObjectMass llGetObjectName llGetObjectPermMask
+           llGetOmega llGetOwner llGetOwnerKey llGetParcelFlags llGetPermissions
+           llGetPermissionsKey llGetPos llGetPrimitiveParams llGetRegionCorner
+           llGetRegionFlags llGetRegionFPS llGetRegionName llGetRegionTimeDilation
+           llGetRootPosition llGetRootRotation llGetRot llGetScale
+           llGetScriptName llGetScriptState llGetSimulatorHostname llGetStartParameter
+           llGetStatus llGetSubString llGetSunDirection llGetTexture llGetTextureOffset
+           llGetTextureRot llGetTextureScale llGetTime llGetTimeOfDay
+           llGetTimestamp llGetTorque llGetUnixTime llGetVel llGetWallclock
+           llGiveInventory llGiveInventoryList llGiveMoney llGodLikeRezObject
+           llGround llGroundContour llGroundNormal llGroundRepel llGroundSlope
+           llHTTPRequest
+           llInsertString llInstantMessage llIntegerToBase64 llKey2Name
+           llList2CSV llList2Float llList2Integer llList2Key
+           llList2List llList2ListStrided llList2Rot llList2String llList2Vector
+           llListFindList llListInsertList llListRandomize llListReplaceList llListSort
+           llListStatistics llListen llListenControl llListenRemove llLoadURL llLog
+           llLog10 llLookAt llLoopSound llLoopSoundMaster llLoopSoundSlave
+           llMapDestination llMD5String
+           llMessageLinked llMinEventDelay llModifyLand llModPow llMoveToTarget
+           llOffsetTexture llOpenRemoteDataChannel llOverMyLand llOwnerSay
+           llParcelMediaCommandList llParcelMediaQuery llParseString2List
+           llParseStringKeepNulls llParticleSystem llPassCollisions llPassTouches
+           llPlaySound llPlaySoundSlave llPointAt llPow llPreloadSound llPushObject
+           llRefreshPrimURL llReleaseCamera llReleaseControls
+           llRemoteDataReply llRemoteDataSetRegion llRemoteLoadScriptPin
+           llRemoveFromLandBanList llRemoveFromLandPassList llRemoveInventory
+           llRemoveVehicleFlags llRequestAgentData llRequestInventoryData
+           llRequestPermissions llRequestSimulatorData llResetOtherScript
+           llResetScript llResetTime llRezAtRoot llRezObject llRot2Angle
+           llRot2Axis llRot2Euler llRot2Fwd llRot2Left llRot2Up llRotBetween
+           llRotLookAt llRotTarget llRotTargetRemove llRotateTexture llRound
+           llSameGroup llSay llScaleTexture llScriptDanger
+           llSendRemoteData llSensor llSensorRemove llSensorRepeat llSetAlpha
+           llSetBuoyancy llSetCameraAtOffset llSetCameraEyeOffset llSetCameraParams
+           llSetColor llSetDamage llSetForce llSetForceAndTorque llSetHoverHeight
+           llSetLinkAlpha llSetLinkColor llSetLocalRot llSetObjectDesc llSetObjectName
+           llSetParcelMusicURL llSetPayPrice llSetPos llSetPrimURL llSetPrimitiveParams
+           llSetRemoteScriptAccessPin llSetRot llSetScale llSetScriptState llSetSitText
+           llSetSoundQueueing llSetSoundRadius llSetStatus llSetText llSetTexture
+           llSetTextureAnim llSetTimerEvent llSetTorque llSetTouchText llSetVehicleFlags
+           llSetVehicleFloatParam llSetVehicleRotationParam llSetVehicleType
+           llSetVehicleVectorParam llShout llSin llSitTarget llSleep llSqrt
+           llStartAnimation llStopAnimation llStopHover llStopLookAt llStopMoveToTarget
+           llStopPointAt llStopSound llStringLength llStringToBase64 llSubStringIndex
+           llTakeCamera llTakeControls llTan llTarget llTargetOmega llTargetRemove
+           llTeleportAgentHome llToLower llToUpper llTriggerSound llTriggerSoundLimited
+           llUnescapeURL llUnSit
+           llVecDist llVecMag llVecNorm llVolumeDetect
+           llWater llWhisper llWind llXorBase64StringsCorrect
+           llMakeExplosion llMakeFire llMakeFountain
+           llMakeSmoke llSound llSoundPreload llXorBase64Strings
+
+KeyWords4: at_rot_target at_target attach changed
+           collision collision_end collision_start control dataserver email
+           land_collision land_collision_end land_collision_start link_message
+           listen money moving_end moving_start no_sensor not_at_rot_target
+           not_at_target object_rez on_rez remote_data run_time_permissions
+           sensor state_entry state_exit timer touch touch_start touch_end http_response
+
+KeyWords5: PI TWO_PI PI_BY_TWO
+           DEG_TO_RAD RAD_TO_DEG SQRT2 TRUE FALSE NULL_KEY EOF ZERO_ROTATION ZERO_VECTOR AGENT
+           ACTIVE PASSIVE SCRIPTED LINK_SET LINK_THIS LINK_ALL_OTHERS LINK_ROOT DATA_ONLINE
+           DATA_NAME DATA_BORN DATA_RATING INVENTORY_NONE INVENTORY_TEXTURE INVENTORY_SOUND
+           INVENTORY_LANDMARK INVENTORY_CLOTHING INVENTORY_OBJECT INVENTORY_NOTECARD
+           INVENTORY_SCRIPT INVENTORY_BODYPART INVENTORY_ANIMATION INVENTORY_GESTURE
+           PERMISSION_DEBIT PERMISSION_TAKE_CONTROLS PERMISSION_TRIGGER_ANIMATION PERMISSION_ATTACH
+           PERMISSION_CHANGE_LINKS PERMISSION_TRACK_CAMERA PAY_HIDE PAY_DEFAULT
+           PARCEL_MEDIA_COMMAND_STOP PARCEL_MEDIA_COMMAND_PAUSE PARCEL_MEDIA_COMMAND_PLAY
+           PARCEL_MEDIA_COMMAND_LOOP PARCEL_MEDIA_COMMAND_TEXTURE PARCEL_MEDIA_COMMAND_URL
+           PARCEL_MEDIA_COMMAND_TIME PARCEL_MEDIA_COMMAND_AGENT PARCEL_MEDIA_COMMAND_UNLOAD
+           PARCEL_MEDIA_COMMAND_AUTO_ALIGN CHANGED_INVENTORY CHANGED_COLOR CHANGED_SHAPE
+           CHANGED_SCALE CHANGED_TEXTURE CHANGED_LINK CHANGED_ALLOWED_DROP STATUS_PHYSICS
+           STATUS_ROTATE_X STATUS_ROTATE_Y STATUS_ROTATE_Z STATUS_PHANTOM STATUS_SANDBOX
+           STATUS_BLOCK_GRAB STATUS_DIE_AT_EDGE STATUS_RETURN_AT_EDGE PRIM_BUMP_SHINY PRIM_COLOR
+           PRIM_FULLBRIGHT PRIM_MATERIAL PRIM_PHANTOM PRIM_PHYSICS PRIM_POSITION PRIM_ROTATION
+           PRIM_SIZE PRIM_TEMP_ON_REZ PRIM_TYPE PRIM_TEXTURE PRIM_TYPE_BOX PRIM_TYPE_CYLINDER
+           PRIM_TYPE_PRISM PRIM_TYPE_SPHERE PRIM_TYPE_TUBE PRIM_TYPE_RING PRIM_HOLE_DEFAULT
+           PRIM_HOLE_SQUARE PRIM_HOLE_CIRCLE PRIM_HOLE_TRIANGLE PRIM_BUMP_NONE PRIM_BUMP_BRIGHT
+           PRIM_BUMP_DARK PRIM_BUMP_WOOD PRIM_BUMP_BARK PRIM_BUMP_BRICKS PRIM_BUMP_CHECKER
+           PRIM_BUMP_CONCRETE PRIM_BUMP_TILE PRIM_BUMP_STONE PRIM_BUMP_DISKS PRIM_BUMP_GRAVEL
+           PRIM_BUMP_BLOBS PRIM_BUMP_SIDING PRIM_BUMP_LARGETILE PRIM_BUMP_STUCCO PRIM_BUMP_SUCTION
+           PRIM_BUMP_WEAVE PRIM_SHINY_NONE PRIM_SHINY_LOW PRIM_SHINY_MEDIUM PRIM_SHINY_HIGH
+           PRIM_MATERIAL_STONE PRIM_MATERIAL_METAL PRIM_MATERIAL_GLASS PRIM_MATERIAL_WOOD
+           PRIM_MATERIAL_FLESH PRIM_MATERIAL_PLASTIC PRIM_MATERIAL_RUBBER PRIM_MATERIAL_LIGHT
+           CONTROL_FWD CONTROL_BACK CONTROL_LEFT CONTROL_RIGHT CONTROL_ROT_LEFT
+           CONTROL_ROT_RIGHT CONTROL_UP CONTROL_DOWN CONTROL_LBUTTON CONTROL_ML_LBUTTON
+           CAMERA_ACTIVE CAMERA_BEHINDNESS_ANGLE
+           CAMERA_BEHINDNESS_LAG CAMERA_DISTANCE CAMERA_FOCUS CAMERA_FOCUS_LAG
+           CAMERA_FOCUS_LOCKED CAMERA_FOCUS_OFFSET CAMERA_FOCUS_THRESHOLD CAMERA_PITCH
+           CAMERA_POSITION CAMERA_POSITION_LAG CAMERA_POSITION_LOCKED CAMERA_POSITION_THRESHOLD
+           LIST_STAT_GEOMETRIC_MEAN LIST_STAT_MAX LIST_STAT_MEAN LIST_STAT_MEDIAN
+           LIST_STAT_MIN LIST_STAT_NUM_COUNT LIST_STAT_RANGE LIST_STAT_STD_DEV LIST_STAT_SUM
+           LIST_STAT_SUM_SQUARES PARCEL_FLAG_ALLOW_CREATE_OBJECTS PARCEL_FLAG_ALLOW_DAMAGE
+           PARCEL_FLAG_ALLOW_FLY PARCEL_FLAG_ALLOW_LANDMARK PARCEL_FLAG_ALLOW_SCRIPTS
+           PARCEL_FLAG_ALLOW_TERRAFORM PARCEL_FLAG_LOCAL_SOUND_ONLY PARCEL_FLAG_USE_ACCESS_GROUP
+           PARCEL_FLAG_USE_ACCESS_LIST PARCEL_FLAG_USE_BAN_LIST PARCEL_FLAG_USE_LAND_PASS_LIST
+           PERMISSION_CONTROL_CAMERA REGION_FLAG_ALLOW_DAMAGE REGION_FLAG_ALLOW_DIRECT_TELEPORT
+           REGION_FLAG_BLOCK_FLY REGION_FLAG_BLOCK_TERRAFORM REGION_FLAG_DISABLE_COLLISIONS
+           REGION_FLAG_DISABLE_PHYSICS REGION_FLAG_FIXED_SUN REGION_FLAG_SANDBOX
+           HTTP_BODY_MAXLENGTH HTTP_METHOD HTTP_MIMETYPE HTTP_VERIFY_CERT
+
+//////////////////////////////////////////////////////////////////////////////
+// string delimiter: StringBegChar - string begin char
+// StringEndChar - string end char
+// MultilineStrings - enables multiline strings, as perl
+// has it
+
+StringBegChar:          "
+StringEndChar:          "
+MultilineStrings:       0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// use preprocessor: 0 - no
+// 1 - yes
+// note: if yes, '#' and statements after it will be
+// highlighted with Preprocessor defined colors
+
+// we use this to make an additional comment
+
+UsePreprocessor:        0
+
+
+//////////////////////////////////////////////////////////////////////////////
+// highlight line: 0 - no
+// 1 - yes
+// note: if yes, current line will be highlighted
+
+CurrLineHighlighted:    1
+
+
+//////////////////////////////////////////////////////////////////////////////
+// colors
+// note:                first value is foreground, second is background color
+//                        and third (optional) represents font attribute:
+//                        B - bold
+//                        I - italic
+//                        U - underline
+//                        S - strike out
+//                        attributes can be combined: eg. B or BI
+//                      as value, it could be used any standard windows color:
+//                        clBlack, clMaroon, clGreen, clOlive, clNavy,
+//                        clPurple, clTeal, clGray, clSilver, clRed, clLime,
+//                        clYellow, clBlue, clFuchsia, clAqua, clLtGray,
+//                        clDkGray, clWhite, clScrollBar, clBackground,
+//                        clActiveCaption, clInactiveCaption, clMenu, clWindow,
+//                        clWindowFrame, clMenuText, clWindowText, clCaptionText,
+//                        clActiveBorder, clInactiveBorder, clAppWorkSpace,
+//                        clHighlight, clHighlightText, clBtnFace, clBtnShadow,
+//                        clGrayText, clBtnText, clInactiveCaptionText,
+//                        clBtnHighlight, cl3DDkShadow, cl3DLight, clInfoText,
+//                        clInfoBk
+//                      as value, it could be used hex numeric constant too:
+//                        $BBGGRR - BB: blue, GG: green, RR: red, eg: $FF6A00
+
+SpaceCol:               clWindowText clWindow
+Keyword1Col:            clBlue clWindow
+Keyword2Col:            $00007700 clWindow
+Keyword3Col:            $000000A0 clWindow
+Keyword4Col:            $00A0A000 clWindow
+Keyword5Col:            $00A00000 clWindow
+IdentifierCol:          clWindowText clWindow
+CommentCol:             $000077FF clWindow
+NumberCol:              clWindowText clWindow
+StringCol:              $0000A000 clWindow
+SymbolCol:              clWindowText clWindow
+PreprocessorCol:        clGray clWindow
+SelectionCol:           clWhite clNavy
+CurrentLineCol:         clBlack $00C0FFFF
+OverrideTxtFgColor:     0
+BlockAutoindent:        1
+BlockBegStr:            {
+BlockEndStr:            }
+MatchedBracesCol:       clFuchsia clWindow

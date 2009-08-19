@@ -1,0 +1,88 @@
+/L10"LSL 1.6.12(6)" Line Comment = // String Chars = "' File Extensions = LSL
+/Delimiters = ~!@%^&*()-+=|\/{}[]:;"'<> ,	.?
+/Function String = "%^([a-zA-Z_0-9]+^)[ ^t]+([^p*, ^t^[^]a-zA-Z_0-9.]++)[~;]"
+/Function String 1 = "%[a-zA-Z_0-9]*::^([a-zA-Z_0-9^~]+^)[ ^t]++([^p*, ^t^[^]/*=:&a-zA-Z_0-9.]++)[~;]"
+/Function String 2 = "%[a-zA-Z_0-9]+[ ^t]+^([a-zA-Z_0-9]+^)[ ^t]++([^p*, ^t^[^]a-zA-Z_0-9.]++)[~;]"
+/Function String 3 = "%[a-zA-Z_0-9"]* ^([a-zA-Z_0-9"]+^)[ ^t]++([^p*, ^t^[^]a-zA-Z_0-9.]++)[~;]"
+/Function String 4 = "%[a-zA-Z_0-9*&$]+[ ^t]+[a-zA-Z_0-9*&$]+[ ^t]+^([a-zA-Z_0-9]+^)[ ^t]++([^p*, ^t^[^]a-zA-Z_0-9.]++)[~;]"
+/Function String 5 = "%^([a-zA-Z_0-9]+^)[ ^t]++([^p*, ^t^[^]a-zA-Z_0-9.]++)[~;]"
+/Indent Strings = "{"
+/Unindent Strings = "}"
+/C1"Keywords"
+do
+else
+for
+if
+jump
+return
+state
+while
+/C2"Events"
+at_rot_target at_target attach
+changed collision collision_end collision_start control
+dataserver
+email
+land_collision land_collision_end land_collision_start link_message listen
+money moving_end moving_start
+no_sensor not_at_rot_target not_at_target
+object_rez on_rez
+remote_data run_time_permissions
+sensor state_entry state_exit
+timer touch touch_end touch_start
+/C3"Operators"
++ ++ +=
+- -- -=
+* *=
+/ /=
+% %=
+& &&
+| ||
+! !=
+> >= >>
+< <= <<
+= ==
+~
+^
+/C4"Functions"
+default
+llAbs llAcos llAddToLandPassList llAdjustSoundVolume llAllowInventoryDrop llAngleBetween llApplyImpulse llApplyRotationalImpulse llAsin llAtan2 llAttachToAvatar llAvatarOnSitTarget llAxes2Rot llAxisAngle2Rot
+llBase64ToInteger llBase64ToString llBreakAllLinks llBreakLink
+llCSV2List llCeil llCloseRemoteDataChannel llCloud llCollisionFilter llCollisionSound llCollisionSprite llCos llCreateLink
+llDeleteSubList llDeleteSubString llDetachFromAvatar llDetectedGrab llDetectedGroup llDetectedKey llDetectedLinkNumber llDetectedName llDetectedOwner llDetectedPos llDetectedRot llDetectedType llDetectedVel llDialog llDie llDumpList2String
+llEdgeOfWorld llEjectFromLand llEmail llEuler2Rot
+llFabs llFloor llForceMouselook llFrand
+llGetAccel llGetAgentInfo llGetAgentSize llGetAlpha llGetAndResetTime llGetAnimation llGetAnimationList llGetAttached llGetBoundingBox llGetCenterOfMass llGetCreator llGetColor llGetDate llGetEnergy llGetForce llGetFreeMemory llGetGeometricCenter llGetGMTclock llGetInventoryCreator llGetInventoryKey llGetInventoryName llGetInventoryNumber llGetInventoryPermMask llGetKey llGetLandOwnerAt llGetLinkKey llGetLinkName llGetLinkNumber llGetListEntryType llGetListLength llGetLocalPos llGetLocalRot llGetMass llGetNextEmail llGetNotecardLine llGetNumberOfNotecardLines llGetNumberOfPrims llGetNumberOfSides llGetObjectDesc llGetObjectMass llGetObjectName llGetObjectPermMask llGetOmega llGetOwner llGetOwnerKey llGetPermissions llGetPermissionsKey llGetPos llGetPrimitiveParams llGetRegionCorner llGetRegionFPS llGetRegionName llGetRegionTimeDilation llGetRootPosition llGetRootRotation llGetRot llGetScale llGetScriptName llGetScriptState llGetSimulatorHostname llGetStartParameter llGetStatus llGetSubString llGetSunDirection llGetTexture llGetTextureOffset llGetTextureRot llGetTextureScale llGetTime llGetTimeOfDay llGetTimestamp llGetTorque llGetVel llGetWallclock llGiveInventory llGiveInventoryList llGiveMoney llGodLikeRezObject llGround llGroundContour llGroundNormal llGroundRepel llGroundSlope
+llInsertString llInstantMessage llIntegerToBase64
+llKey2Name
+llList2CSV llList2Float llList2Integer llList2Key llList2List llList2ListStrided llList2Rot llList2String llList2Vector llListFindList llListInsertList llListRandomize llListReplaceList llListSort llListen llListenControl llListenRemove llLoadURL llLog llLog10 llLookAt llLoopSound llLoopSoundMaster llLoopSoundSlave
+llMakeExplosion llMakeFire llMakeFountain llMakeSmoke llMD5String llMessageLinked llMinEventDelay llModifyLand llModPow llMoveToTarget
+llOffsetTexture llOpenRemoteDataChannel llOverMyLand llOwnerSay
+llParcelMediaCommandList llParcelMediaQuery llParseString2List llParseStringKeepNulls llParticleSystem llPassCollisions llPassTouches llPlaySound llPlaySoundSlave llPointAt llPow llPreloadSound llPushObject
+llReleaseCamera llReleaseControls llRemoteDataReply llRemoteDataSetRegion llRemoteLoadScriptPin llRemoveInventory llRemoveVehicleFlags llRequestAgentData llRequestInventoryData llRequestPermissions llRequestSimulatorData llResetOtherScript llResetScript llResetTime llRezAtRoot llRezObject llRot2Angle llRot2Axis llRot2Euler llRot2Fwd llRot2Left llRot2Up llRotBetween llRotLookAt llRotTarget llRotTargetRemove llRotateTexture llRound
+llSameGroup llSay llScaleTexture llScriptDanger llSendRemoteData llSensor llSensorRemove llSensorRepeat llSetAlpha llSetBuoyancy llSetCameraAtOffset llSetCameraEyeOffset llSetColor llSetDamage llSetForce llSetForceAndTorque llSetHoverHeight llSetLinkAlpha llSetLinkColor llSetLocalRot llSetObjectDesc llSetObjectName llSetParcelMusicURL llSetPos llSetPrimitiveParams llSetRemoteScriptAccessPin llSetRot llSetScale llSetScriptState llSetSitText llSetSoundQueueing llSetSoundRadius llSetStatus llSetText llSetTexture llSetTextureAnim llSetTimerEvent llSetTorque llSetTouchText llSetVehicleFlags llSetVehicleFloatParam llSetVehicleRotationParam llSetVehicleType llSetVehicleVectorParam llShout llSin llSitTarget llSleep llSound llSoundPreload llSqrt llStartAnimation llStopAnimation llStopHover llStopLookAt llStopMoveToTarget llStopPointAt llStopSound llStringLength llStringToBase64 llSubStringIndex
+llTakeCamera llTakeControls llTan llTarget llTargetOmega llTargetRemove llTeleportAgentHome llToLower llToUpper llTriggerSound llTriggerSoundLimited
+llUnSit
+llVecDist llVecMag llVecNorm llVolumeDetect
+llWater llWhisper llWind
+llXorBase64Strings
+/C5"Types"
+float
+integer
+key
+list
+rotation
+string
+vector
+/C6"Constants"
+ACTIVE AGENT
+DEG_TO_RAD
+EOF
+FALSE
+NULL_KEY
+PASSIVE
+PI PI_BY_TWO
+RAD_TO_DEG
+SCRIPTED
+SQRT2
+TRUE TWO_PI
+ZERO_ROTATION ZERO_VECTOR

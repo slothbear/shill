@@ -1,0 +1,5 @@
+name: "TextPad"
+description: |
+    The original files (from Sean Gorham) placed some constants in other categories
+    (e.g. NULL_KEY in events), which I was not able to reproduce.  Also, numeric constants
+    no longer have their own category.

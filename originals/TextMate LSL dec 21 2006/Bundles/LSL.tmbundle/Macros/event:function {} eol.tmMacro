@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>moveToEndOfLine:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>command</key>
+				<string>#!/usr/bin/env ruby
+
+termchar = ENV['TM_LINE_TERMINATOR'] || " {\n"
+
+# short for escape_snippet - escapes special snippet characters in str
+def es(str)
+	str.to_s.gsub(/([$`\\])/, "\\\\\\1")
+end
+
+print es($stdin.read()[/^(.*?);*\s*$/, 1]) + "#{es(termchar)}\t${0:code here}\n}"
+</string>
+				<key>fallbackInput</key>
+				<string>line</string>
+				<key>input</key>
+				<string>none</string>
+				<key>name</key>
+				<string>event/function {}</string>
+				<key>output</key>
+				<string>insertAsSnippet</string>
+				<key>scope</key>
+				<string>source.esl, source.lsl</string>
+				<key>uuid</key>
+				<string>F1DDC894-B86F-42BF-9C95-2A60F166E269</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>^</string>
+	<key>name</key>
+	<string>event/function eol {}</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>uuid</key>
+	<string>90FD1968-5E0E-44CF-B7EC-CB8780590E83</string>
+</dict>
+</plist>

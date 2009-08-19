@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>moveUp:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>command</key>
+						<string>moveToEndOfLine:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>insertNewline:</string>
+					</dict>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>beforeRunningCommand</key>
+							<string>nop</string>
+							<key>command</key>
+							<string>echo -n '// ${0:comment here}'</string>
+							<key>input</key>
+							<string>none</string>
+							<key>name</key>
+							<string>comment down</string>
+							<key>output</key>
+							<string>insertAsSnippet</string>
+							<key>scope</key>
+							<string>source.esl, source.lsl</string>
+							<key>uuid</key>
+							<string>C874CA03-7B78-4228-9747-EAAED82B2173</string>
+						</dict>
+						<key>command</key>
+						<string>executeCommandWithOptions:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>~
+</string>
+	<key>name</key>
+	<string>comment before this line</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>uuid</key>
+	<string>F0D4148E-1CE8-417A-BF37-E029CEFDF308</string>
+</dict>
+</plist>

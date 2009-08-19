@@ -1,0 +1,33 @@
+# %SHILL_UPDATE_NOTICE%
+<%	# 'signatures' is the master dictionary.
+	# Merge in any keywords that are not already in the dictionary (constants).
+	# Complain if a function/event has no tooltip (useful when adding new items).
+	
+#   kwords = events + functions
+#   # make a copy of sigs since we shouldn't be changing (||=) the central source.
+#   sigs = signatures.dup
+#   
+#   puts "These items have no signatures:",
+#   	kwords.reject {|kword| sigs.has_key?(kword) }
+#
+#   kwords.each {|kw| sigs[kw] ||= '' }
+#   
+#   # Start with all the constants -- they never have signatures.
+#   # Then construct the keyword & event signatures from the dictionary.
+#   aro = constants + sigs.collect {|key, tip| key + tip}
+
+	aro = Array.new(constants)
+
+	signatures.each do |func, sig|
+	  ture = sig["signature"]
+	  if ture =~ /^(float|integer|key|list|rotation|string|vector|Deprecated.) (.*)/
+	    ture = "#$2[#$1] "
+	  end
+  
+	  aro << "#{ture}#{sig["synopsis"]}" 
+	end
+
+	# Sort (ignoring case)
+	sorted_keys = aro.sort_by {|itemx| itemx.downcase}
+-%>
+<%= sorted_keys.join("\n") %>

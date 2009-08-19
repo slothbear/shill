@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<!-- %SHILL_UPDATE_NOTICE% -->
+<language _name="LSL" version="1.0" _section="Sources" mimetypes="text/x-c;text/x-chdr;text/x-csrc">
+	
+	<escape-char>\</escape-char>
+
+	<line-comment _name = "Line Comment" style= "Comment">
+		<start-regex>//</start-regex>
+	</line-comment>
+
+	<string _name = "String" style = "String" end-at-line-end = "TRUE">
+		<start-regex>&quot;</start-regex>
+		<end-regex>&quot;</end-regex>
+	</string>
+
+	<keyword-list _name = "Variable types" style = "Variable types" case-sensitive="TRUE">
+		<keyword>integer</keyword>
+		<keyword>float</keyword>
+		<keyword>vector</keyword>
+		<keyword>rotation</keyword>
+		<keyword>string</keyword>
+		<keyword>list</keyword>
+		<keyword>key</keyword>
+	</keyword-list>
+
+	<keyword-list _name = "Constants" style = "Constants" case-sensitive="TRUE">
+START:constants
+		<keyword>%name%</keyword>
+END:constants
+	</keyword-list>
+
+	<keyword-list _name = "Reserved words" style = "Reserved words" case-sensitive="TRUE">
+		<keyword>default</keyword>
+		<keyword>state</keyword>
+		<keyword>for</keyword>
+		<keyword>if</keyword>
+		<keyword>else</keyword>
+		<keyword>do</keyword>
+		<keyword>while</keyword>
+		<keyword>jump</keyword>
+		<keyword>return</keyword>
+	</keyword-list>
+
+	<keyword-list _name = "Events" style = "Events" case-sensitive="TRUE">
+START:events
+		<keyword>%name%</keyword>
+END:events
+	</keyword-list>
+
+	<keyword-list _name = "Internal functions" style = "Internal functions" case-sensitive="TRUE">
+START:functions
+		<keyword>%name%</keyword>
+END:functions
+	</keyword-list>
+
+</language>

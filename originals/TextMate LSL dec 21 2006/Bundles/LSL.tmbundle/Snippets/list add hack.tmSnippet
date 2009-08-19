@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>${1:myList} = (${1:myList}=[]) + ${1:myList} + ${2:[${3:"${4:ListElement}"}]}$0</string>
+	<key>name</key>
+	<string>list add hack</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>tabTrigger</key>
+	<string>l+</string>
+	<key>uuid</key>
+	<string>4865B7D5-604E-4955-9772-E01DEC3AA660</string>
+</dict>
+</plist>

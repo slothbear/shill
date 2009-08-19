@@ -1,0 +1,27 @@
+# %SHILL_UPDATE_NOTICE%
+default
+do
+else
+for
+if
+jump
+return
+state
+while
+float
+integer
+key
+list
+quaternion
+rotation
+string
+vector
+START:constants
+%name%
+END:constants
+START:events
+%name%
+END:events
+START:functions
+%name%
+END:functions

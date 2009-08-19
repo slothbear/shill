@@ -1,0 +1,110 @@
+# LSL syntax file for Code-Genie 3.0.  For use with SecondLife.com Scripting Language.
+# Input by Noel "HB" Wade (aka Tread Whiplash in SecondLife) on 1/16/2005
+# Please feel free to use, copy, modify, etc. - just give credit where its due! :-)
+# %SHILL_UPDATE_NOTICE%
+
+CaseInsensitive  false
+
+KeywordGroup  functions
+START:functions
+    %name%
+END:functions
+
+
+FgColor       functions  #CC0000
+Format        functions  b
+
+
+KeywordGroup  events
+START:events
+    %name%
+END:events
+
+
+FgColor       events  #00A5E0
+Format        events  b
+
+
+KeywordGroup  avoid
+	jump  llSoundPreload  llSound  llMakeExplosion  llMakeFire  llMakeFountain  llMakeSmoke  llRemoteLoadScript
+
+FgColor       avoid  #BCAD00
+Format        avoid  bu
+
+
+KeywordGroup  lang_constr
+    state  for  if  else  return  while  do
+
+FgColor       lang_constr  #0006F6
+Format        lang_constr  b
+
+
+KeywordGroup default
+	default
+FgColor       default  #660000
+Format        default  b
+
+
+KeywordGroup  base_types
+    integer  list  key  string  float  vector  rotation
+
+FgColor       base_types  #008209
+Format        base_types  b
+
+KeywordGroup  constants
+START:constants
+    %name%
+END:constants
+
+
+FgColor       constants  #ED00F0
+Format        constants  b
+
+
+KeywordGroup  user_functions
+
+FgColor       user_functions  #ff6600
+Format        user_functions  b
+
+
+BlockStart   comment_sing  //
+BlockNotEnd  comment_sing  \\n
+BlockEnd     comment_sing  \n
+
+FgColor      comment_sing  #FF9A09
+Format		 comment_sing  i
+
+Operator  ops  !+-=|&><*%.
+FgColor  ops  #0006F6
+Format  ops  b
+
+
+BlockStart   string_1  "
+BlockNotEnd  string_1  \\"
+BlockEnd 	 string_1  \\\\"
+BlockEnd     string_1  "
+
+FgColor      string_1  #00BC0D
+
+
+BlockStart   string_2  '
+BlockNotEnd  string_2  \'
+BlockEnd     string_2  '
+
+FgColor      string_2  #00BC0D
+
+Nest functions
+Nest events
+Nest avoid
+Nest lang_constr
+Nest default
+Nest base_types
+Nest constants
+Nest user_functions
+Nest comment_sing
+Nest ops
+Nest string_1
+Nest string_2
+
+
+# eof

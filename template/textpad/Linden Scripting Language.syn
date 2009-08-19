@@ -1,0 +1,75 @@
+; TextPad keyword syntax file for LindenScriptLanguage
+; %SHILL_UPDATE_NOTICE%
+
+C=1
+
+[Syntax]
+Namespace1 =
+IgnoreCase = No
+InitKeyWordChars = A-Za-z!
+KeyWordChars = A-Za-z0-9_-
+BracketChars = {}()
+OperatorChars = -+*/<>!~%^&|=
+PreprocStart =
+SyntaxStart = 
+SyntaxEnd = 
+HexPrefix = 0x
+CommentStart = 
+CommentEnd = 
+CommentStartAlt =
+CommentEndAlt =
+SingleComment = //
+SingleCommentCol = 
+StringStart = "
+StringEnd = "
+StringAlt =
+StringEsc =
+CharStart =
+CharEnd =
+CharEsc =
+
+; flow control keywords
+[Keywords 1]
+default
+do
+else
+for
+if
+jump
+return
+state
+while
+
+; data types
+[Keywords 2]
+float
+integer
+key
+list
+quaternion
+rotation
+string
+vector
+
+; numeric constants
+[Keywords 3]
+ALL_CONSTANTS_NOW_IN_KEYWORDS6
+
+; functions
+[Keywords 4]
+START:functions
+%name%
+END:functions
+state
+
+; events
+[Keywords 5]
+START:events
+%name%
+END:events
+
+; constants
+[Keywords 6]
+START:constants
+%name%
+END:constants

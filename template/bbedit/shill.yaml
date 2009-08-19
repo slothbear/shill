@@ -1,0 +1,8 @@
+name: "BBEdit / TextWrangler"
+description: |
+    This plist file (original from Captain Barmy) is a "codeless language module" which works with
+    BBEdit 8.x and TextWrangler 2.x. It support syntax highlighting. The update for 1.13
+    also updates BBLMLanguageCode to LLSL as advised by Herbert Hoggard.
+    <br/><br/>
+    BBEdit also supports a binary module, which can enable the function popup
+    and more highlighting. I'll post one of those if I can figure it out.

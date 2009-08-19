@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>echo -n `egrep -m1 "(\w+\s+)*$TM_CURRENT_WORD\b.*\)" |  perl -pe 's@(float|integer|key|list|rotation|string|vector)@\($1\)@g' |  perl -pe 's@(?:^\(\w+\)\s+)*(.*\)).*@$1@g'`</string>
+	<key>input</key>
+	<string>document</string>
+	<key>name</key>
+	<string>complete global function replace selection</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>uuid</key>
+	<string>BF055B1A-FC60-43A9-84C1-B813813442FC</string>
+</dict>
+</plist>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>perl -pe 's@([^"]*\"[^"]*){([^"]*\")@$1o§§o$2@g' | perl -pe 's@([^"]*\"[^"]*)}([^"]*\")@$1c§§c$2@g' | perl -pe 's@({.*)(//+)@$1\n$2@g' | perl -pe 's/\)(\w)/) $1/g' | perl -pe 's@^\s*([{}])@\n$1\n@g' | perl -pe 's@(^[^/\n]+(?!//)\{)([^/\n\}]+(?!//))@$1\n$2@g' | perl -pe 's@(^[^/\n]+(?!//))\}@$1\n\}\n@g' | perl -pe 's/[\t ]+$//g' | perl -pe 's@[ \t]{2,}@ @g' | perl -pe 's@^\s*\n@@g' | perl -pe 's@^\s+@@g' | perl -pe 's@o§§o@{@g' | perl -pe 's@c§§c@}@g' </string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>#^0</string>
+	<key>name</key>
+	<string>cleanup keep comments</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>uuid</key>
+	<string>59ACC5D2-D214-40E1-AFCD-88CF1238A3D4</string>
+</dict>
+</plist>

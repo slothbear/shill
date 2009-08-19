@@ -1,0 +1,6 @@
+name: "vim"
+description: |
+    original file from Keedon Pollack (and updated by others).  <tt>lsl.vim</tt> is the full
+    syntax file.  The deprecated functions list needs to be updated.
+    <tt>lsl.dict</tt> is a vanilla list of all the keywords that can be used with
+    vim's autocomplete function.

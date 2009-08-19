@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- %SHILL_UPDATE_NOTICE% -->
+<plist version="1.0">
+<dict>
+	<key>beginCommand</key>
+	<string></string>
+	<key>endCommand</key>
+	<string></string>
+	<key>beginInstruction</key>
+	<string></string>
+	<key>endInstruction</key>
+	<string></string>
+	<key>beginVariable</key>
+	<string></string>
+	<key>endVariable</key>
+	<string></string>
+	<key>firstString</key>
+	<string>"</string>
+	<key>secondString</key>
+	<string></string>
+	<key>firstSingleLineComment</key>
+	<string>//</string>
+	<key>secondSingleLineComment</key>
+	<string></string>
+	<key>beginFirstMultiLineComment</key>
+	<string>/*</string>
+	<key>endFirstMultiLineComment</key>
+	<string>*/</string>
+	<key>beginSecondMultiLineComment</key>
+	<string></string>
+	<key>endSecondMultiLineComment</key>
+	<string></string>
+	<key>functionDefinition</key>
+	<string>^\s*.*\(.*\)\n?\s*{</string>
+	<key>removeFromFunction</key>
+	<string></string>
+	<key>keywordsCaseSensitive</key>
+	<true/>
+	<key>recolourKeywordIfAlreadyColoured</key>
+	<true/>
+	<key>keywords</key>
+	<array>
+		<string>default</string>
+		<string>delete</string>
+		<string>do</string>
+		<string>else</string>
+		<string>FALSE</string>
+		<string>float</string>
+		<string>for</string>
+		<string>if</string>
+		<string>integer</string>
+		<string>jump</string>
+		<string>key</string>
+		<string>list</string>
+		<string>return</string>
+		<string>rotation</string>
+		<string>state</string>
+		<string>TRUE</string>
+		<string>vector</string>
+		<string>void</string>
+		<string>while</string>
+		<string>NULL</string>
+	</array>
+	<key>autocompleteWords</key>
+	<array>
+START:functions
+		<string>%name%</string>
+END:functions
+START:events
+		<string>%name%</string>
+END:events
+START:constants
+		<string>%name%</string>
+END:constants
+	</array>
+</dict>
+</plist>

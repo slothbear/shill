@@ -1,0 +1,53 @@
+#TITLE=LSL
+; LSL syntax file written by Nargus StreamWarrior
+; This file is required for EditPlus to run correctly.
+; %SHILL_UPDATE_NOTICE%
+
+#DELIMITER=,(){}[]-+*%/="'~!&|<>?:;.#
+#QUOTATION1="
+#QUOTATION2=
+#CONTINUE_QUOTE=n
+#LINECOMMENT=//
+#COMMENTON=
+#COMMENTOFF=
+#ESCAPE=\
+#CASE=y
+#NUMBER_PATTERN=lsl
+#SPECIAL_STX=lsl
+
+#KEYWORD=Constants
+START:constants
+%name%
+END:constants
+
+#KEYWORD=Reserved words
+default
+state
+for
+if
+else
+do
+while
+jump
+return
+
+#KEYWORD=Events
+START:events
+%name%
+END:events
+
+#KEYWORD=Variable Types
+integer
+string
+vector
+rotation
+float
+key
+list
+
+#KEYWORD=Internal Functions
+START:functions
+%name%
+END:functions
+
+#

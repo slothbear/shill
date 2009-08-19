@@ -1,1 +1,23 @@
-# How to use shill, etc.
+How to use shill
+
+If you'd like to use an up-to-date keyword list for your editor, find it in the list, download, and enjoy.
+
+If you'd like to know more about how shill works, read on.
+
+Download the source for the Second Life client.
+ * https://wiki.secondlife.com/wiki/Source_downloads
+
+Extract the source files containing the keywords and functions into /LLsources.
+ * linden/indra/newview/app_settings/keywords.ini
+ * linden/indra/lscript/lscript_library/lscript_library.cpp
+
+Do everything.
+ * cd shill
+ * erb index.html.erb >site/index.html
+
+Find more details at the Shill home page:
+ * http://adammarker.org/shill
+
+Historical note:  For anyone following along, deprecated functions (think llMakeFire)
+have flitted in and out of the Shill lists.  They're back for now, since they are in
+the official source files.

@@ -1,0 +1,7 @@
+name: "Emacs"
+description: |
+    1) <tt>lsl.el</tt> from Phoenix Linden<br/>
+    2) <tt>lsl-mode.el</tt> from Reinhard Neurocam<br/><br/>
+    These files are written in Emacs Lisp, and I cannot figure out how to update them.  If you
+    are an Emacs Guru and would like to see an update, please contact me and I'm sure we can
+    figure it out.

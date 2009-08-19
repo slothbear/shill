@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>selectAll:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>bundlePath</key>
+				<string>/Users/piero/Library/Application Support/TextMate/Bundles/LSL.tmbundle</string>
+				<key>command</key>
+				<string>perl -pe 's@([^"]*\"[^"]*){([^"]*\")@$1o§§o$2@g' | perl -pe 's@([^"]*\"[^"]*)}([^"]*\")@$1c§§c$2@g' | perl -pe 's@//.*\n@\n@g' | perl -pe 's/^\s*\n//g' | perl -pe 's/[\t ]+$//g' | perl -pe 's@([^{};])\n@$1 @g'| perl -pe 's/\)(\w)/) $1/g' |  perl -pe 's@^\s*([{}])@\n$1\n@g' | perl -pe 's@\{@\{\n$2@g' | perl -pe 's@\}@\n\}\n@g' | perl -pe 's/[\t ]+$//g' | perl -pe 's@[ \t]{2,}@ @g' | perl -pe 's@^\s*\n@@g' | perl -pe 's@^\s+@@g' | perl -pe 's@o§§o@{@g' | perl -pe 's@c§§c@}@g' </string>
+				<key>input</key>
+				<string>selection</string>
+				<key>keyEquivalent</key>
+				<string>^#1</string>
+				<key>name</key>
+				<string>cleanup NO comments — LSL</string>
+				<key>output</key>
+				<string>replaceSelectedText</string>
+				<key>scope</key>
+				<string>source.esl, source.lsl</string>
+				<key>uuid</key>
+				<string>835083D1-7632-4524-A421-43DC60053CA4</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>indent:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>@#1</string>
+	<key>name</key>
+	<string>cleanup NO comments COMPACT (ALL)</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>scopeType</key>
+	<string>local</string>
+	<key>uuid</key>
+	<string>FE7C1AFC-2387-45B5-98D2-76417C3E5E2D</string>
+</dict>
+</plist>

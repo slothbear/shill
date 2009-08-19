@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>selectAll:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>bundlePath</key>
+				<string>/Users/piero/Library/Application Support/TextMate/Bundles/LSL.tmbundle</string>
+				<key>command</key>
+				<string>perl -pe 's@([^"]*\"[^"]*){([^"]*\")@$1o§§o$2@g' | perl -pe 's@([^"]*\"[^"]*)}([^"]*\")@$1c§§c$2@g' | perl -pe 's@({.*)(//+)@$1\n$2@g' | perl -pe 's/\)(\w)/) $1/g' | perl -pe 's@^\s*([{}])@\n$1\n@g' | perl -pe 's@(^[^/\n]+(?!//)\{)([^/\n\}]+(?!//))@$1\n$2@g' | perl -pe 's@(^[^/\n]+(?!//))\}@$1\n\}\n@g' | perl -pe 's/[\t ]+$//g' | perl -pe 's@[ \t]{2,}@ @g' | perl -pe 's@^\s*\n@@g' | perl -pe 's@^\s+@@g' | perl -pe 's@o§§o@{@g' | perl -pe 's@c§§c@}@g' </string>
+				<key>input</key>
+				<string>selection</string>
+				<key>keyEquivalent</key>
+				<string>^#0</string>
+				<key>name</key>
+				<string>cleanup keep comments — LSL</string>
+				<key>output</key>
+				<string>replaceSelectedText</string>
+				<key>scope</key>
+				<string>source.esl, source.lsl</string>
+				<key>uuid</key>
+				<string>59ACC5D2-D214-40E1-AFCD-88CF1238A3D4</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>replaceAll</string>
+							<key>findString</key>
+							<string>(//.*)$</string>
+							<key>ignoreCase</key>
+							<true/>
+							<key>regularExpression</key>
+							<true/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>replaceString</key>
+							<string>$1\nkrkprp</string>
+							<key>wrapAround</key>
+							<true/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>replaceAll</string>
+							<key>findString</key>
+							<string>\n[\t ]*{</string>
+							<key>ignoreCase</key>
+							<true/>
+							<key>regularExpression</key>
+							<true/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>replaceString</key>
+							<string> {</string>
+							<key>wrapAround</key>
+							<true/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>replaceAll</string>
+							<key>findString</key>
+							<string>\nkrkprp\n</string>
+							<key>ignoreCase</key>
+							<true/>
+							<key>regularExpression</key>
+							<true/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>replaceString</key>
+							<string>\n</string>
+							<key>wrapAround</key>
+							<true/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>selectAll:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>indent:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>cleanup keep comments (ALL)</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>scopeType</key>
+	<string>local</string>
+	<key>uuid</key>
+	<string>DF5C6ACF-9659-41B3-886A-7FCE7C676171</string>
+</dict>
+</plist>

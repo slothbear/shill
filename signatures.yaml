@@ -1,0 +1,2554 @@
+# LSL keywords updated 19 Aug 2009 for LSL 1.23.4 by http://adammarker.org/shill
+--- 
+at_rot_target: 
+  signature: at_rot_target(integer tnum, rotation targetrot, rotation ourrot)
+  synopsis: Result of LLRotTarget library function call
+at_target: 
+  signature: at_target(integer tnum, vector targetpos, vector ourpos)
+  synopsis: Result of llTarget library function call
+attach: 
+  signature: attach(key id)
+  synopsis: Triggered when an agent attaches or detaches from agent
+changed: 
+  signature: changed( integer change )
+  synopsis: Triggered various event change the task
+collision: 
+  signature: collision(integer num_detected)
+  synopsis: Triggered while task is colliding with another task
+collision_end: 
+  signature: collision_end(integer num_detected)
+  synopsis: Triggered when task stops colliding with another task
+collision_start: 
+  signature: collision_start(integer num_detected)
+  synopsis: Triggered when task starts colliding with another task
+control: 
+  signature: control(key id, integer level, integer edge)
+  synopsis: Result of llTakeControls library function call
+dataserver: 
+  signature: dataserver(key queryid, string data)
+  synopsis: Triggered when task receives asynchronous data
+email: 
+  signature: email(string time, string address, string subj, string message, integer num_left)
+  synopsis: Triggered when task receives email
+http_request: 
+  signature: http_request(key id, string method, string body)
+  synopsis: Triggered when task receives an http request against a public URL
+http_response: 
+  signature: http_response(key request_id, integer status, list metadata, string body)
+  synopsis: Triggered when task receives a response to one of its llHTTPRequests
+land_collision: 
+  signature: land_collision(vector pos)
+  synopsis: Triggered when task is colliding with land
+land_collision_end: 
+  signature: land_collision_end(vector pos)
+  synopsis: Triggered when task stops colliding with land
+land_collision_start: 
+  signature: land_collision_start(vector pos)
+  synopsis: Triggered when task starts colliding with land
+link_message: 
+  signature: link_message(integer sender_num, integer num, string str, key id)
+  synopsis: Triggered when task receives a link message via LLMessageLinked library function call
+listen: 
+  signature: listen(integer channel, string name, key id, string message)
+  synopsis: Result of the llListen library function call
+llAbs: 
+  energy: 10.f
+  params: i
+  returns: i
+  signature: integer llAbs(integer val)
+  sleep: 0.f
+  synopsis: 
+llAcos: 
+  energy: 10.f
+  params: f
+  returns: f
+  signature: float llAcos(float val)
+  sleep: 0.f
+  synopsis: Returns the arccosine in radians of val
+llAddToLandBanList: 
+  energy: 10.f
+  params: kf
+  returns: "NULL"
+  signature: llAddToLandBanList(key avatar, float hours)
+  sleep: 0.1f
+  synopsis: Add avatar to the land ban list for hours
+llAddToLandPassList: 
+  energy: 10.f
+  params: kf
+  returns: "NULL"
+  signature: llAddToLandPassList(key avatar, float hours)
+  sleep: 0.1f
+  synopsis: Add avatar to the land pass list for hours
+llAdjustSoundVolume: 
+  energy: 10.f
+  params: f
+  returns: "NULL"
+  signature: llAdjustSoundVolume(float volume)
+  sleep: 0.1f
+  synopsis: adjusts volume of attached sound (0.0 - 1.0)
+llAllowInventoryDrop: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llAllowInventoryDrop(integer add)
+  sleep: 0.f
+  synopsis: If add == TRUE, users without permissions can still drop inventory items onto task
+llAngleBetween: 
+  energy: 10.f
+  params: qq
+  returns: f
+  signature: float llAngleBetween(rotation a, rotation b)
+  sleep: 0.f
+  synopsis: Returns angle between rotation a and b
+llApplyImpulse: 
+  energy: 10.f
+  params: vi
+  returns: "NULL"
+  signature: llApplyImpulse(vector force, integer local)
+  sleep: 0.f
+  synopsis: applies impulse to object, in local coords if local == TRUE (if the script is physical)
+llApplyRotationalImpulse: 
+  energy: 10.f
+  params: vi
+  returns: "NULL"
+  signature: llApplyRotationalImpulse(vector force, integer local)
+  sleep: 0.f
+  synopsis: applies rotational impulse to object, in local coords if local == TRUE (if the script is physical)
+llAsin: 
+  energy: 10.f
+  params: f
+  returns: f
+  signature: float llAsin(float val)
+  sleep: 0.f
+  synopsis: Returns the arcsine in radians of val
+llAtan2: 
+  energy: 10.f
+  params: ff
+  returns: f
+  signature: float llAtan2(float y, float x)
+  sleep: 0.f
+  synopsis: 
+llAttachToAvatar: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llAttachToAvatar(integer attachment)
+  sleep: 0.f
+  synopsis: Attach to avatar task has permissions for at point attachment
+llAvatarOnSitTarget: 
+  energy: 10.f
+  params: "NULL"
+  returns: k
+  signature: key llAvatarOnSitTarget()
+  sleep: 0.f
+  synopsis: If an avatar is sitting on the sit target, return the avatar's key, NULL_KEY otherwise
+llAxes2Rot: 
+  energy: 10.f
+  params: vvv
+  returns: q
+  signature: rotation llAxes2Rot(vector fwd, vector left, vector up)
+  sleep: 0.f
+  synopsis: returns the rotation defined by the coordinate axes
+llAxisAngle2Rot: 
+  energy: 10.f
+  params: vf
+  returns: q
+  signature: rotation llAxisAngle2Rot(vector axis, float angle)
+  sleep: 0.f
+  synopsis: Returns the rotation generated angle about axis
+llBase64ToInteger: 
+  energy: 10.f
+  params: s
+  returns: i
+  signature: integer llBase64ToInteger(string str)
+  sleep: 0.0f
+  synopsis: Big endian decode of a Base64 string into an integer.
+llBase64ToString: 
+  energy: 10.f
+  params: s
+  returns: s
+  signature: string llBase64ToString(string str)
+  sleep: 0.f
+  synopsis: Converts a Base 64 string to a conventional string.  If the conversion creates any unprintable characters, they are converted to spaces.
+llBreakAllLinks: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llBreakAllLinks()
+  sleep: 0.f
+  synopsis: Delinks all tasks in the link set (requires permission PERMISSION_CHANGE_LINKS be set)
+llBreakLink: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llBreakLink(integer linknum)
+  sleep: 0.f
+  synopsis: Delinks the task with the given link number (requires permission PERMISSION_CHANGE_LINKS be set)
+llCSV2List: 
+  energy: 10.f
+  params: s
+  returns: l
+  signature: list llCSV2List(string src)
+  sleep: 0.f
+  synopsis: Create a list from a string of comma separated values
+llCeil: 
+  energy: 10.f
+  params: f
+  returns: i
+  signature: integer llCeil(float val)
+  sleep: 0.f
+  synopsis: returns smallest integer value >= val
+llClearCameraParams: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llClearCameraParams()
+  sleep: 0.f
+  synopsis: Resets all camera parameters to default values and turns off scripted camera control.
+llCloseRemoteDataChannel: 
+  energy: 10.f
+  params: k
+  returns: "NULL"
+  signature: llCloseRemoteDataChannel(key channel)
+  sleep: 1.f
+  synopsis: Closes XML-RPC channel.
+llCloud: 
+  energy: 10.f
+  params: v
+  returns: f
+  signature: float llCloud(vector v)
+  sleep: 0.f
+  synopsis: returns the cloud density at the object position + v
+llCollisionFilter: 
+  energy: 10.f
+  params: ski
+  returns: "NULL"
+  signature: llCollisionFilter(string name, key id, integer accept)
+  sleep: 0.f
+  synopsis: if accept == TRUE, only accept collisions with objects name and id (either is optional), otherwise with objects not name or id
+llCollisionSound: 
+  energy: 10.f
+  params: sf
+  returns: "NULL"
+  signature: llCollisionSound(string impact_sound, float impact_volume)
+  sleep: 0.f
+  synopsis: Suppress default collision sounds, replace default impact sounds with impact_sound (empty string to just suppress)
+llCollisionSprite: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llCollisionSprite(string impact_sprite)
+  sleep: 0.f
+  synopsis: Suppress default collision sprites, replace default impact sprite with impact_sprite (empty string to just suppress)
+llCos: 
+  energy: 10.f
+  params: f
+  returns: f
+  signature: float llCos(float theta)
+  sleep: 0.f
+  synopsis: theta in radians
+llCreateLink: 
+  energy: 10.f
+  params: ki
+  returns: "NULL"
+  signature: llCreateLink(key target, integer parent)
+  sleep: 1.f
+  synopsis: Attempt to link task script is attached to and target (requires permission PERMISSION_CHANGE_LINKS be set). If parent == TRUE, task script is attached to is the root
+llDeleteSubList: 
+  energy: 10.f
+  params: lii
+  returns: l
+  signature: list llDeleteSubList(list src, integer start, integer end)
+  sleep: 0.f
+  synopsis: Remove the slice from the list and return the remainder
+llDeleteSubString: 
+  energy: 10.f
+  params: sii
+  returns: s
+  signature: string llDeleteSubString(string src, integer start, integer end)
+  sleep: 0.f
+  synopsis: removes the indicated substring and returns the result
+llDetachFromAvatar: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llDetachFromAvatar()
+  sleep: 0.f
+  synopsis: Drop off of avatar
+llDetectedGrab: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llDetectedGrab(integer number)
+  sleep: 0.f
+  synopsis: returns the grab offset of the user touching object (returns <0,0,0> if number is not valid sensed object)
+llDetectedGroup: 
+  energy: 10.f
+  params: i
+  returns: i
+  signature: integer llDetectedGroup(integer number)
+  sleep: 0.f
+  synopsis: Returns TRUE if detected object is part of same group as owner
+llDetectedKey: 
+  energy: 10.f
+  params: i
+  returns: k
+  signature: key llDetectedKey(integer number)
+  sleep: 0.f
+  synopsis: returns the key of detected object number (returns empty key if number is not valid sensed object)
+llDetectedLinkNumber: 
+  energy: 10.f
+  params: i
+  returns: i
+  signature: integer llDetectedLinkNumber(integer number)
+  sleep: 0.f
+  synopsis: returns the link position of the triggered event for touches and collisions only
+llDetectedName: 
+  energy: 10.f
+  params: i
+  returns: s
+  signature: string llDetectedName(integer number)
+  sleep: 0.f
+  synopsis: returns the name of detected object number (returns empty string if number is not valid sensed object)
+llDetectedOwner: 
+  energy: 10.f
+  params: i
+  returns: k
+  signature: key llDetectedOwner(integer number)
+  sleep: 0.f
+  synopsis: returns the key of detected object's owner (returns empty key if number is not valid sensed object)
+llDetectedPos: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llDetectedPos(integer number)
+  sleep: 0.f
+  synopsis: returns the position of detected object number (returns <0,0,0> if number is not valid sensed object)
+llDetectedRot: 
+  energy: 10.f
+  params: i
+  returns: q
+  signature: rotation llDetectedRot(integer number)
+  sleep: 0.f
+  synopsis: returns the rotation of detected object number (returns <0,0,0,1> if number is not valid sensed object)
+llDetectedTouchBinormal: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llDetectedTouchBinormal(integer number)
+  sleep: 0.f
+  synopsis: returns the surface binormal for a triggered touch event
+llDetectedTouchFace: 
+  energy: 10.f
+  params: i
+  returns: i
+  signature: integer llDetectedTouchFace(integer number)
+  sleep: 0.f
+  synopsis: returns the index of the face on the object for a triggered touch event
+llDetectedTouchNormal: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llDetectedTouchNormal(integer number)
+  sleep: 0.f
+  synopsis: returns the surface normal for a triggered touch event
+llDetectedTouchPos: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llDetectedTouchPos(integer number)
+  sleep: 0.f
+  synopsis: returns the position touched for a triggered touch event
+llDetectedTouchST: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llDetectedTouchST(integer number)
+  sleep: 0.f
+  synopsis: returns the s and t coordinates in the first two components of a vector, for a triggered touch event
+llDetectedTouchUV: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llDetectedTouchUV(integer number)
+  sleep: 0.f
+  synopsis: returns the u and v coordinates in the first two components of a vector, for a triggered touch event
+llDetectedType: 
+  energy: 10.f
+  params: i
+  returns: i
+  signature: integer llDetectedType(integer number)
+  sleep: 0.f
+  synopsis: returns the type (AGENT, ACTIVE, PASSIVE, SCRIPTED) of detected object (returns 0 if number is not valid sensed object)
+llDetectedVel: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llDetectedVel(integer number)
+  sleep: 0.f
+  synopsis: returns the velocity of detected object number (returns <0,0,0> if number is not valid sensed object)
+llDialog: 
+  energy: 10.f
+  params: ksli
+  returns: "NULL"
+  signature: llDialog(key avatar, string message, list buttons, integer chat_channel
+  sleep: 1.f
+  synopsis: Shows a dialog box on the avatar's screen with the message.\nUp to 12 strings in the list form buttons.\nIf a button is clicked, the name is chatted on chat_channel.
+llDie: 
+  energy: 0.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llDie()
+  sleep: 0.f
+  synopsis: deletes the object
+llDumpList2String: 
+  energy: 10.f
+  params: ls
+  returns: s
+  signature: string llDumpList2String(list src, string separator)
+  sleep: 0.f
+  synopsis: Write the list out in a single string using separator between values
+llEdgeOfWorld: 
+  energy: 10.f
+  params: vv
+  returns: i
+  signature: integer llEdgeOfWorld(vector pos, vector dir)
+  sleep: 0.f
+  synopsis: Checks to see whether the border hit by dir from pos is the edge of the world (has no neighboring simulator)
+llEjectFromLand: 
+  energy: 10.f
+  params: k
+  returns: "NULL"
+  signature: llEjectFromLand(key pest)
+  sleep: 0.f
+  synopsis: Ejects pest from land that you own
+llEmail: 
+  energy: 10.f
+  params: sss
+  returns: "NULL"
+  signature: llEmail(string address, string subject, string message)
+  sleep: 20.f
+  synopsis: Sends email to address with subject and message
+llEscapeURL: 
+  energy: 10.f
+  params: s
+  returns: s
+  signature: string llEscapeURL(string url)
+  sleep: 0.f
+  synopsis: Returns and escaped/encoded version of url, replacing spaces with %20 etc.
+llEuler2Rot: 
+  energy: 10.f
+  params: v
+  returns: q
+  signature: rotation llEuler2Rot(vector v)
+  sleep: 0.f
+  synopsis: returns the rotation representation of Euler Angles v
+llFabs: 
+  energy: 10.f
+  params: f
+  returns: f
+  signature: float llFabs(float val)
+  sleep: 0.f
+  synopsis: 
+llFloor: 
+  energy: 10.f
+  params: f
+  returns: i
+  signature: integer llFloor(float val)
+  sleep: 0.f
+  synopsis: returns largest integer value <= val
+llForceMouselook: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llForceMouselook(integer mouselook)
+  sleep: 0.f
+  synopsis: If mouselook is TRUE any avatar that sits on this object is forced into mouselook mode
+llFrand: 
+  energy: 10.f
+  params: f
+  returns: f
+  signature: float llFrand(float mag)
+  sleep: 0.f
+  synopsis: returns random number in range [0,mag)
+llGetAccel: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetAccel()
+  sleep: 0.f
+  synopsis: gets the acceleration
+llGetAgentInfo: 
+  energy: 10.f
+  params: k
+  returns: i
+  signature: integer llGetAgentInfo(key id)
+  sleep: 0.f
+  synopsis: Gets information about agent ID.\nReturns AGENT_FLYING, AGENT_ATTACHMENTS, AGENT_SCRIPTED, AGENT_SITTING, AGENT_ON_OBJECT, AGENT_MOUSELOOK, AGENT_AWAY, AGENT_BUSY, AGENT_TYPING, AGENT_CROUCHING, AGENT_ALWAYS_RUN, AGENT_WALKING and/or AGENT_IN_AIR.
+llGetAgentLanguage: 
+  energy: 10.f
+  params: k
+  returns: s
+  signature: string llGetAgentLanguage(key id)
+  sleep: 0.f
+  synopsis: Gets the agents preferred language..
+llGetAgentSize: 
+  energy: 10.f
+  params: k
+  returns: v
+  signature: vector llGetAgentSize(key id)
+  sleep: 0.f
+  synopsis: If the agent is in the same sim as the object, returns the size of the avatar
+llGetAlpha: 
+  energy: 10.f
+  params: i
+  returns: f
+  signature: float llGetAlpha(integer face)
+  sleep: 0.f
+  synopsis: gets the alpha
+llGetAndResetTime: 
+  energy: 10.f
+  params: "NULL"
+  returns: f
+  signature: float llGetAndResetTime()
+  sleep: 0.f
+  synopsis: gets the time in seconds since creation and sets the time to zero
+llGetAnimation: 
+  energy: 10.f
+  params: k
+  returns: s
+  signature: string llGetAnimation(key id)
+  sleep: 0.f
+  synopsis: Get the currently playing locomotion animation for avatar id
+llGetAnimationList: 
+  energy: 10.f
+  params: k
+  returns: l
+  signature: list llGetAnimationList(key id)
+  sleep: 0.f
+  synopsis: Gets a list of all playing animations for avatar id
+llGetAttached: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: integer llGetAttached()
+  sleep: 0.f
+  synopsis: returns the object attachment point or 0 if not attached
+llGetBoundingBox: 
+  energy: 10.f
+  params: k
+  returns: l
+  signature: list llGetBoundingBox(key object)
+  sleep: 0.f
+  synopsis: "Returns the bounding box around an object (including any linked prims) relative to the root prim, in a list:  [ (vector) min_corner, (vector) max_corner ]"
+llGetCameraPos: 
+  energy: 10.f
+  params: ""
+  returns: v
+  signature: vector llGetCameraPos()
+  sleep: 0.f
+  synopsis: Gets current camera position for agent task has permissions for.
+llGetCameraRot: 
+  energy: 10.f
+  params: ""
+  returns: q
+  signature: rotation llGetCameraRot()
+  sleep: 0.f
+  synopsis: Gets current camera orientation for agent task has permissions for.
+llGetCenterOfMass: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetCenterOfMass()
+  sleep: 0.f
+  synopsis: Get the object's center of mass
+llGetColor: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llGetColor(integer face)
+  sleep: 0.f
+  synopsis: gets the color
+llGetCreator: 
+  energy: 10.f
+  params: "NULL"
+  returns: k
+  signature: key llGetCreator()
+  sleep: 0.f
+  synopsis: Returns the creator of the object
+llGetDate: 
+  energy: 10.f
+  params: "NULL"
+  returns: s
+  signature: string llGetDate()
+  sleep: 0.f
+  synopsis: Gets the date as YYYY-MM-DD
+llGetEnergy: 
+  energy: 10.f
+  params: "NULL"
+  returns: f
+  signature: float llGetEnergy()
+  sleep: 0.f
+  synopsis: Returns how much energy is in the object as a percentage of maximum
+llGetForce: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetForce()
+  sleep: 0.f
+  synopsis: gets the force (if the script is physical)
+llGetFreeMemory: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: integer llGetFreeMemory()
+  sleep: 0.f
+  synopsis: returns the available heap space for the current script
+llGetFreeURLs: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: integer llGetFreeURLs()
+  sleep: 0.f
+  synopsis: returns the available urls for the current script
+llGetGMTclock: 
+  energy: 10.f
+  params: ""
+  returns: f
+  signature: float llGetGMTclock()
+  sleep: 0.f
+  synopsis: Gets the time in seconds since midnight in GMT
+llGetGeometricCenter: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetGeometricCenter()
+  sleep: 0.f
+  synopsis: Returns the geometric center of the linked set the script is attached to.
+llGetHTTPHeader: 
+  energy: 10.f
+  params: ks
+  returns: s
+  signature: string llGetHTTPHeader(key id, string header)
+  sleep: 0.f
+  synopsis: Get the value for header for request id.
+llGetInventoryCreator: 
+  energy: 10.f
+  params: s
+  returns: k
+  signature: key llGetInventoryCreator(string item)
+  sleep: 0.f
+  synopsis: Returns the key for the creator of the inventory item.
+llGetInventoryKey: 
+  energy: 10.f
+  params: s
+  returns: k
+  signature: key llGetInventoryKey(string name)
+  sleep: 0.f
+  synopsis: Returns the key of the inventory name
+llGetInventoryName: 
+  energy: 10.f
+  params: ii
+  returns: s
+  signature: string llGetInventoryName(integer type, integer number)
+  sleep: 0.f
+  synopsis: Get the name of the inventory item number of type
+llGetInventoryNumber: 
+  energy: 10.f
+  params: i
+  returns: i
+  signature: integer llGetInventoryNumber(integer type)
+  sleep: 0.f
+  synopsis: "Get the number of items of a given type in the task's inventory.\\nValid types: INVENTORY_TEXTURE, INVENTORY_SOUND, INVENTORY_OBJECT, INVENTORY_SCRIPT, INVENTORY_CLOTHING, INVENTORY_BODYPART, INVENTORY_NOTECARD, INVENTORY_LANDMARK, INVENTORY_ALL"
+llGetInventoryPermMask: 
+  energy: 10.f
+  params: si
+  returns: i
+  signature: integer llGetInventoryPermMask(string item, integer mask)
+  sleep: 0.f
+  synopsis: Returns the requested permission mask for the inventory item.
+llGetInventoryType: 
+  energy: 10.f
+  params: s
+  returns: i
+  signature: integer llGetInventoryType(string name)
+  sleep: 0.f
+  synopsis: Returns the type of the inventory name
+llGetKey: 
+  energy: 10.f
+  params: "NULL"
+  returns: k
+  signature: key llGetKey()
+  sleep: 0.f
+  synopsis: Get the key for the task the script is attached to
+llGetLandOwnerAt: 
+  energy: 10.f
+  params: v
+  returns: k
+  signature: key llGetLandOwnerAt(vector pos)
+  sleep: 0.f
+  synopsis: Returns the key of the land owner, NULL_KEY if public
+llGetLinkKey: 
+  energy: 10.f
+  params: i
+  returns: k
+  signature: key llGetLinkKey(integer linknum)
+  sleep: 0.f
+  synopsis: Get the key of linknumber in link set
+llGetLinkName: 
+  energy: 10.f
+  params: i
+  returns: s
+  signature: string llGetLinkName(integer linknum)
+  sleep: 0.f
+  synopsis: Get the name of linknumber in link set
+llGetLinkNumber: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: integer llGetLinkNumber()
+  sleep: 0.f
+  synopsis: Returns what number in a link set the script is attached to (0 means no link, 1 the root, 2 for first child, &c)
+llGetListEntryType: 
+  energy: 10.f
+  params: li
+  returns: i
+  signature: integer llGetListEntryType(list src, integer index)
+  sleep: 0.f
+  synopsis: Returns the type of the index entry in the list\n(TYPE_INTEGER, TYPE_FLOAT, TYPE_STRING, TYPE_KEY, TYPE_VECTOR, TYPE_ROTATION, or TYPE_INVALID if index is off list)
+llGetListLength: 
+  energy: 10.f
+  params: l
+  returns: i
+  signature: integer llGetListLength(list src)
+  sleep: 0.f
+  synopsis: Get the number of elements in the list
+llGetLocalPos: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetLocalPos()
+  sleep: 0.f
+  synopsis: gets the position relative to the root (if the script isn't physical)
+llGetLocalRot: 
+  energy: 10.f
+  params: "NULL"
+  returns: q
+  signature: rotation llGetLocalRot()
+  sleep: 0.f
+  synopsis: gets the rotation local to the root (if the script isn't physical)
+llGetMass: 
+  energy: 10.f
+  params: "NULL"
+  returns: f
+  signature: float llGetMass()
+  sleep: 0.f
+  synopsis: Get the mass of task name that script is attached to
+llGetNextEmail: 
+  energy: 10.f
+  params: ss
+  returns: "NULL"
+  signature: llGetNextEmail(string address, string subject)
+  sleep: 0.f
+  synopsis: Get the next waiting email with appropriate address and/or subject (if blank they are ignored)
+llGetNotecardLine: 
+  energy: 10.f
+  params: si
+  returns: k
+  signature: key llGetNotecardLine(string name, integer line)
+  sleep: 0.1f
+  synopsis: Returns line line of notecard name via the dataserver event
+llGetNumberOfNotecardLines: 
+  energy: 10.f
+  params: s
+  returns: k
+  signature: key llGetNumberOfNotecardLines(string name)
+  sleep: 0.1f
+  synopsis: Returns number of lines in notecard 'name' via the dataserver event (cast return value to integer)
+llGetNumberOfPrims: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: integer llGetNumberOfPrims()
+  sleep: 0.f
+  synopsis: Returns the number of prims in a link set the script is attached to
+llGetNumberOfSides: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: integer llGetNumberOfSides()
+  sleep: 0.f
+  synopsis: Returns the number of sides
+llGetObjectDesc: 
+  energy: 10.f
+  params: "NULL"
+  returns: s
+  signature: string llGetObjectDesc()
+  sleep: 0.f
+  synopsis: Returns the description of the object the script is attached to
+llGetObjectDetails: 
+  energy: 10.f
+  params: kl
+  returns: l
+  signature: list llGetObjectDetails(key id, list params)
+  sleep: 0.f
+  synopsis: Gets the object details specified in params for the object with key id.\nDetails are OBJECT_NAME, _DESC, _POS, _ROT, _VELOCITY, _OWNER, _GROUP, _CREATOR.
+llGetObjectMass: 
+  energy: 10.f
+  params: k
+  returns: f
+  signature: float llGetObjectMass(key id)
+  sleep: 0.f
+  synopsis: Get the mass of the object with key id
+llGetObjectName: 
+  energy: 10.f
+  params: "NULL"
+  returns: s
+  signature: string llGetObjectName()
+  sleep: 0.f
+  synopsis: Returns the name of the object script is attached to
+llGetObjectPermMask: 
+  energy: 10.f
+  params: i
+  returns: i
+  signature: integer llGetObjectPermMask(integer mask)
+  sleep: 0.f
+  synopsis: Returns the requested permission mask for the root object the task is attached to.
+llGetObjectPrimCount: 
+  energy: 10.f
+  params: k
+  returns: i
+  signature: integer llGetObjectPrimCount(key object_id)
+  sleep: 0.f
+  synopsis: Returns the total number of prims for an object.
+llGetOmega: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetOmega()
+  sleep: 0.f
+  synopsis: gets the omega
+llGetOwner: 
+  energy: 10.f
+  params: "NULL"
+  returns: k
+  signature: key llGetOwner()
+  sleep: 0.f
+  synopsis: Returns the owner of the task
+llGetOwnerKey: 
+  energy: 10.f
+  params: k
+  returns: k
+  signature: key llGetOwnerKey(key id)
+  sleep: 0.f
+  synopsis: Find the owner of id
+llGetParcelDetails: 
+  energy: 10.f
+  params: vl
+  returns: l
+  signature: list llGetParcelDetails(vector pos, list params)
+  sleep: 0.f
+  synopsis: "Gets the parcel details specified in params for the parcel at pos.\\nParams is one or more of: PARCEL_DETAILS_NAME, _DESC, _OWNER, _GROUP, _AREA"
+llGetParcelFlags: 
+  energy: 10.f
+  params: v
+  returns: i
+  signature: integer llGetParcelFlags(vector pos)
+  sleep: 0.f
+  synopsis: Get the parcel flags (PARCEL_FLAG_*) for the parcel including the point pos.
+llGetParcelMaxPrims: 
+  energy: 10.f
+  params: vi
+  returns: i
+  signature: integer llGetParcelMaxPrims(vector pos, integer sim_wide)
+  sleep: 0.f
+  synopsis: Gets the maximum number of prims allowed on the parcel at pos.
+llGetParcelPrimCount: 
+  energy: 10.f
+  params: vii
+  returns: i
+  signature: integer llGetParcelPrimCount(vector pos, integer category, integer sim_wide)
+  sleep: 0.f
+  synopsis: "Gets the number of prims on the parcel of the given category.\\nCategories: PARCEL_COUNT_TOTAL, _OWNER, _GROUP, _OTHER, _SELECTED, _TEMP."
+llGetParcelPrimOwners: 
+  energy: 10.f
+  params: v
+  returns: l
+  signature: list llGetParcelPrimOwners(vector pos)
+  sleep: 2.0f
+  synopsis: Returns a list of all residents who own objects on the parcel and the number of objects they own.\nRequires owner-like permissions for the parcel.
+llGetPermissions: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: integer llGetPermissions()
+  sleep: 0.f
+  synopsis: return what permissions have been enabled
+llGetPermissionsKey: 
+  energy: 10.f
+  params: "NULL"
+  returns: k
+  signature: key llGetPermissionsKey()
+  sleep: 0.f
+  synopsis: Return agent that permissions are enabled for.  NULL_KEY if not enabled
+llGetPos: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetPos()
+  sleep: 0.f
+  synopsis: gets the position (if the script isn't physical)
+llGetPrimitiveParams: 
+  energy: 10.f
+  params: l
+  returns: l
+  signature: list llGetPrimitiveParams(list params)
+  sleep: 0.2f
+  synopsis: Gets primitive parameters specified in the params list.
+llGetRegionAgentCount: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: int llGetRegionAgentCount()
+  sleep: 0.f
+  synopsis: returns the number of agents in a region
+llGetRegionCorner: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetRegionCorner()
+  sleep: 0.f
+  synopsis: Returns a vector with the south west corner x,y position of the region the object is in
+llGetRegionFPS: 
+  energy: 10.f
+  params: "NULL"
+  returns: f
+  signature: float llGetRegionFPS()
+  sleep: 0.f
+  synopsis: returns the mean region frames per second
+llGetRegionFlags: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: integer llGetRegionFlags()
+  sleep: 0.f
+  synopsis: Get the region flags (REGION_FLAG_*) for the region the object is in.
+llGetRegionName: 
+  energy: 10.f
+  params: "NULL"
+  returns: s
+  signature: string llGetRegionName()
+  sleep: 0.f
+  synopsis: returns the current region name
+llGetRegionTimeDilation: 
+  energy: 10.f
+  params: "NULL"
+  returns: f
+  signature: float llGetRegionTimeDilation()
+  sleep: 0.f
+  synopsis: returns the current time dilation as a float between 0 and 1
+llGetRootPosition: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetRootPosition()
+  sleep: 0.f
+  synopsis: Gets the global position of the root object of the object script is attached to
+llGetRootRotation: 
+  energy: 10.f
+  params: "NULL"
+  returns: q
+  signature: rotation llGetRootRotation()
+  sleep: 0.f
+  synopsis: Gets the global rotation of the root object of the object script is attached to
+llGetRot: 
+  energy: 10.f
+  params: "NULL"
+  returns: q
+  signature: rotation llGetRot()
+  sleep: 0.f
+  synopsis: gets the rotation (if the script isn't physical)
+llGetScale: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetScale()
+  sleep: 0.f
+  synopsis: gets the scale
+llGetScriptName: 
+  energy: 10.f
+  params: "NULL"
+  returns: s
+  signature: llGetScriptName()
+  sleep: 0.f
+  synopsis: Returns the script name
+llGetScriptState: 
+  energy: 10.f
+  params: s
+  returns: i
+  signature: integer llGetScriptState(string name)
+  sleep: 0.f
+  synopsis: Resets TRUE if script name is running
+llGetSimulatorHostname: 
+  energy: 10.f
+  params: ""
+  returns: s
+  signature: string llGetSimulatorHostname()
+  sleep: 10.f
+  synopsis: Gets the hostname of the machine script is running on (same as string in viewer Help dialog)
+llGetStartParameter: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: integer llGetStartParameter()
+  sleep: 0.f
+  synopsis: Get's the start paramter passed to llRezObject
+llGetStatus: 
+  energy: 10.f
+  params: i
+  returns: i
+  signature: integer llGetStatus(integer status)
+  sleep: 0.f
+  synopsis: gets value of status (STATUS_PHYSICS, STATUS_PHANTOM, STATUS_BLOCK_GRAB,\nSTATUS_ROTATE_X, STATUS_ROTATE_Y, and/or STATUS_ROTATE_Z)
+llGetSubString: 
+  energy: 10.f
+  params: sii
+  returns: s
+  signature: string llGetSubString(string src, integer start, integer end)
+  sleep: 0.f
+  synopsis: returns the indicated substring
+llGetSunDirection: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetSunDirection()
+  sleep: 0.f
+  synopsis: Returns the sun direction on the simulator
+llGetTexture: 
+  energy: 10.f
+  params: i
+  returns: s
+  signature: string llGetTexture(integer face)
+  sleep: 0.f
+  synopsis: gets the texture of face (if it's a texture in the object inventory, otherwise the key in a string)
+llGetTextureOffset: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llGetTextureOffset(integer side)
+  sleep: 0.f
+  synopsis: Returns the texture offset of side in the x and y components of a vector
+llGetTextureRot: 
+  energy: 10.f
+  params: i
+  returns: f
+  signature: float llGetTextureRot(integer side)
+  sleep: 0.f
+  synopsis: Returns the texture rotation of side
+llGetTextureScale: 
+  energy: 10.f
+  params: i
+  returns: v
+  signature: vector llGetTextureScale(integer side)
+  sleep: 0.f
+  synopsis: Returns the texture scale of side in the x and y components of a vector
+llGetTime: 
+  energy: 10.f
+  params: "NULL"
+  returns: f
+  signature: float llGetTime()
+  sleep: 0.f
+  synopsis: gets the time in seconds since creation
+llGetTimeOfDay: 
+  energy: 10.f
+  params: ""
+  returns: f
+  signature: float llGetTimeOfDay()
+  sleep: 0.f
+  synopsis: gets the time in seconds since Second Life server midnight (or since server up-time; whichever is smaller)
+llGetTimestamp: 
+  energy: 10.f
+  params: "NULL"
+  returns: s
+  signature: string llGetTimestamp()
+  sleep: 0.f
+  synopsis: "Gets the timestamp in the format: YYYY-MM-DDThh:mm:ss.ff..fZ"
+llGetTorque: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetTorque()
+  sleep: 0.f
+  synopsis: gets the torque (if the script is physical)
+llGetUnixTime: 
+  energy: 10.f
+  params: "NULL"
+  returns: i
+  signature: integer llGetUnixTime()
+  sleep: 0.f
+  synopsis: Get the number of seconds elapsed since 00:00 hours, Jan 1, 1970 UTC from the system clock.
+llGetVel: 
+  energy: 10.f
+  params: "NULL"
+  returns: v
+  signature: vector llGetVel()
+  sleep: 0.f
+  synopsis: gets the velocity
+llGetWallclock: 
+  energy: 10.f
+  params: ""
+  returns: f
+  signature: float llGetWallclock()
+  sleep: 0.f
+  synopsis: gets the time in seconds since midnight
+llGiveInventory: 
+  energy: 10.f
+  params: ks
+  returns: "NULL"
+  signature: llGiveInventory(key destination, string inventory)
+  sleep: 0.f
+  synopsis: Give inventory to destination
+llGiveInventoryList: 
+  energy: 10.f
+  params: ksl
+  returns: "NULL"
+  signature: llGiveInventoryList(key destination, string category, list inventory)
+  sleep: 3.f
+  synopsis: Give inventory to destination in a new category
+llGiveMoney: 
+  energy: 10.f
+  params: ki
+  returns: i
+  signature: llGiveMoney(key destination, integer amount)
+  sleep: 0.f
+  synopsis: transfer amount of money from script owner to destination
+llGodLikeRezObject: 
+  energy: 10.f
+  params: kv
+  returns: "NULL"
+  signature: llGodLikeRezObject(key inventory, vector pos)
+  sleep: 0.f
+  synopsis: rez directly off of a UUID if owner has dog-bit set
+llGround: 
+  energy: 10.f
+  params: v
+  returns: f
+  signature: float llGround(vector v)
+  sleep: 0.f
+  synopsis: returns the ground height below the object position + v
+llGroundContour: 
+  energy: 10.f
+  params: v
+  returns: v
+  signature: vector llGroundCountour(vector v)
+  sleep: 0.f
+  synopsis: returns the ground contour below the object position + v
+llGroundNormal: 
+  energy: 10.f
+  params: v
+  returns: v
+  signature: vector llGroundNormal(vector v)
+  sleep: 0.f
+  synopsis: returns the ground normal below the object position + v
+llGroundRepel: 
+  energy: 10.f
+  params: fif
+  returns: "NULL"
+  signature: llGroundRepel(float height, integer water, float tau)
+  sleep: 0.f
+  synopsis: Critically damps to height if within height*0.5 of level (either above ground level or above the higher of land and water if water == TRUE)
+llGroundSlope: 
+  energy: 10.f
+  params: v
+  returns: v
+  signature: vector llGroundSlope(vector v)
+  sleep: 0.f
+  synopsis: returns the ground slope below the object position + v
+llHTTPRequest: 
+  energy: 10.f
+  params: sls
+  returns: k
+  signature: llHTTPRequest(string url, list parameters, string body)
+  sleep: 0.f
+  synopsis: Send an HTTP request.
+llHTTPResponse: 
+  energy: 10.f
+  params: kis
+  returns: "NULL"
+  signature: llHTTPResponse(key id, integer status, string body)
+  sleep: 0.f
+  synopsis: Responds to request id with status and body.
+llInsertString: 
+  energy: 10.f
+  params: sis
+  returns: s
+  signature: string llInsertString(string dst, integer position, string src)
+  sleep: 0.f
+  synopsis: inserts src into dst at position and returns the result
+llInstantMessage: 
+  energy: 10.f
+  params: ks
+  returns: "NULL"
+  signature: llInstantMessage(key user, string message)
+  sleep: 2.f
+  synopsis: IMs message to the user
+llIntegerToBase64: 
+  energy: 10.f
+  params: i
+  returns: s
+  signature: string llIntegerToBase64(integer number)
+  sleep: 0.0f
+  synopsis: Big endian encode of of integer as a Base64 string.
+llKey2Name: 
+  energy: 10.f
+  params: k
+  returns: s
+  signature: string llKey2Name(key id)
+  sleep: 0.f
+  synopsis: Returns the name of the object key, iff the object is in the current simulator, otherwise the empty string
+llList2CSV: 
+  energy: 10.f
+  params: l
+  returns: s
+  signature: string llList2CSV(list src)
+  sleep: 0.f
+  synopsis: Create a string of comma separated values from list
+llList2Float: 
+  energy: 10.f
+  params: li
+  returns: f
+  signature: float llList2Float(list src, integer index)
+  sleep: 0.f
+  synopsis: Copy the float at index in the list
+llList2Integer: 
+  energy: 10.f
+  params: li
+  returns: i
+  signature: integer llList2Integer(list src, integer index)
+  sleep: 0.f
+  synopsis: Copy the integer at index in the list
+llList2Key: 
+  energy: 10.f
+  params: li
+  returns: k
+  signature: key llList2Key(list src, integer index)
+  sleep: 0.f
+  synopsis: Copy the key at index in the list
+llList2List: 
+  energy: 10.f
+  params: lii
+  returns: l
+  signature: list llList2List(list src, integer start, integer end)
+  sleep: 0.f
+  synopsis: Copy the slice of the list from start to end
+llList2ListStrided: 
+  energy: 10.f
+  params: liii
+  returns: l
+  signature: list llList2ListStrided(list src, integer start, integer end, integer stride)
+  sleep: 0.f
+  synopsis: Copy the strided slice of the list from start to end
+llList2Rot: 
+  energy: 10.f
+  params: li
+  returns: q
+  signature: rotation llList2Rot(list src, integer index)
+  sleep: 0.f
+  synopsis: Copy the rotation at index in the list
+llList2String: 
+  energy: 10.f
+  params: li
+  returns: s
+  signature: string llList2String(list src, integer index)
+  sleep: 0.f
+  synopsis: Copy the string at index in the list
+llList2Vector: 
+  energy: 10.f
+  params: li
+  returns: v
+  signature: vector llList2Vector(list src, integer index)
+  sleep: 0.f
+  synopsis: Copy the vector at index in the list
+llListFindList: 
+  energy: 10.f
+  params: ll
+  returns: i
+  signature: integer llListFindList(list src, list test)
+  sleep: 0.f
+  synopsis: Returns the start of the first instance of test in src, -1 if not found
+llListInsertList: 
+  energy: 10.f
+  params: lli
+  returns: l
+  signature: list llListInsertList(list dest, list src, integer start)
+  sleep: 0.f
+  synopsis: Inserts src into dest at position start
+llListRandomize: 
+  energy: 10.f
+  params: li
+  returns: l
+  signature: list llListRandomize(list src, integer stride)
+  sleep: 0.f
+  synopsis: Returns a randomized list of blocks of size stride
+llListReplaceList: 
+  energy: 10.f
+  params: llii
+  returns: l
+  signature: list llListReplaceList(list dest, list src, integer start, integer end)
+  sleep: 0.f
+  synopsis: Replaces start through end of dest with src.
+llListSort: 
+  energy: 10.f
+  params: lii
+  returns: l
+  signature: list llListSort(list src, integer stride, integer ascending)
+  sleep: 0.f
+  synopsis: Sort the list into blocks of stride in ascending order if ascending == TRUE.  Note that sort only works between same types.
+llListStatistics: 
+  energy: 10.f
+  params: il
+  returns: f
+  signature: float llListStatistics(integer operation, list l)
+  sleep: 0.f
+  synopsis: Perform statistical aggregate functions on list l using LIST_STAT_* operations.
+llListen: 
+  energy: 10.f
+  params: isks
+  returns: i
+  signature: integer llListen(integer channel, string name, key id, string msg)
+  sleep: 0.f
+  synopsis: sets a callback for msg on channel from name and id (name, id, and/or msg can be empty) and returns an identifier that can be used to deactivate or remove the listen
+llListenControl: 
+  energy: 10.f
+  params: ii
+  returns: "NULL"
+  signature: llListenControl(integer number, integer active)
+  sleep: 0.f
+  synopsis: makes a listen event callback active or inactive
+llListenRemove: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llListenRemove(integer number)
+  sleep: 0.f
+  synopsis: removes listen event callback number
+llLoadURL: 
+  energy: 10.f
+  params: kss
+  returns: "NULL"
+  signature: llLoadURL(key avatar_id, string message, string url)
+  sleep: 10.f
+  synopsis: Shows dialog to avatar avatar_id offering to load web page at URL.  If user clicks yes, launches their web browser.
+llLog: 
+  energy: 10.f
+  params: f
+  returns: f
+  signature: float llLog(float val)
+  sleep: 0.f
+  synopsis: Returns the base e log of val if val > 0, otherwise returns 0.
+llLog10: 
+  energy: 10.f
+  params: f
+  returns: f
+  signature: float llLog10(float val)
+  sleep: 0.f
+  synopsis: Returns the base 10 log of val if val > 0, otherwise returns 0.
+llLookAt: 
+  energy: 10.f
+  params: vff
+  returns: "NULL"
+  signature: llLookAt(vector target, F32 strength, F32 damping)
+  sleep: 0.f
+  synopsis: Cause object name to point it's forward axis towards target
+llLoopSound: 
+  energy: 10.f
+  params: sf
+  returns: "NULL"
+  signature: llLoopSound(string sound, float volume)
+  sleep: 0.f
+  synopsis: plays attached sound looping indefinitely at volume (0.0 - 1.0)
+llLoopSoundMaster: 
+  energy: 10.f
+  params: sf
+  returns: "NULL"
+  signature: llLoopSoundMaster(string sound, float volume)
+  sleep: 0.f
+  synopsis: plays attached sound looping at volume (0.0 - 1.0), declares it a sync master
+llLoopSoundSlave: 
+  energy: 10.f
+  params: sf
+  returns: "NULL"
+  signature: llLoopSoundSlave(string sound, float volume)
+  sleep: 0.f
+  synopsis: plays attached sound looping at volume (0.0 - 1.0), synced to most audible sync master
+llMD5String: 
+  energy: 10.f
+  params: si
+  returns: s
+  signature: string llMD5String(string src, integer nonce)
+  sleep: 0.f
+  synopsis: Performs a RSA Data Security, Inc. MD5 Message-Digest Algorithm on string with nonce.  Returns a 32 character hex string.
+llMakeExplosion: 
+  energy: 10.f
+  params: iffffsv
+  returns: "NULL"
+  signature: llMakeExplosion(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)
+  sleep: 0.1f
+  synopsis: Make a round explosion of particles
+llMakeFire: 
+  energy: 10.f
+  params: iffffsv
+  returns: "NULL"
+  signature: llMakeFire(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)
+  sleep: 0.1f
+  synopsis: Make fire like particles
+llMakeFountain: 
+  energy: 10.f
+  params: iffffisvf
+  returns: "NULL"
+  signature: llMakeFountain(integer particles, float scale, float vel, float lifetime, float arc, integer bounce, string texture, vector offset, float bounce_offset)
+  sleep: 0.1f
+  synopsis: Make a fountain of particles
+llMakeSmoke: 
+  energy: 10.f
+  params: iffffsv
+  returns: "NULL"
+  signature: llMakeSmoke(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)
+  sleep: 0.1f
+  synopsis: Make smoke like particles
+llMapDestination: 
+  energy: 10.f
+  params: svv
+  returns: "NULL"
+  signature: llMapDestination(string simname, vector pos, vector look_at)
+  sleep: 1.f
+  synopsis: "Opens world map centered on region with pos highlighted.\\nOnly works for scripts attached to avatar, or during touch events.\\n(NOTE: look_at currently does nothing)"
+llMessageLinked: 
+  energy: 10.f
+  params: iisk
+  returns: "NULL"
+  signature: llMessageLinked(integer linknum, integer num, string str, key id)
+  sleep: 0.f
+  synopsis: Sends num, str, and id to members of the link set (LINK_ROOT sends to root task in a linked set,\nLINK_SET sends to all tasks,\nLINK_ALL_OTHERS to all other tasks,\nLINK_ALL_CHILDREN to all children,\nLINK_THIS to the task the script it is in)
+llMinEventDelay: 
+  energy: 10.f
+  params: f
+  returns: "NULL"
+  signature: llMinEventDelay(float delay)
+  sleep: 0.f
+  synopsis: Set the minimum time between events being handled
+llModPow: 
+  energy: 10.f
+  params: iii
+  returns: i
+  signature: integer llModPow(integer a, integer b, integer c)
+  sleep: 1.f
+  synopsis: Returns a raised to the b power, mod c. ( (a**b)%c ).  b is capped at 0xFFFF (16 bits).
+llModifyLand: 
+  energy: 10.f
+  params: ii
+  returns: "NULL"
+  signature: llModifyLand(integer action, integer size)
+  sleep: 0.f
+  synopsis: Modify land with action (LAND_LEVEL, LAND_RAISE, LAND_LOWER, LAND_SMOOTH, LAND_NOISE, LAND_REVERT)\non size (LAND_SMALL_BRUSH, LAND_MEDIUM_BRUSH, LAND_LARGE_BRUSH)
+llMoveToTarget: 
+  energy: 10.f
+  params: vf
+  returns: "NULL"
+  signature: llMoveToTarget(vector target, float tau)
+  sleep: 0.f
+  synopsis: critically damp to target in tau seconds (if the script is physical)
+llOffsetTexture: 
+  energy: 10.f
+  params: ffi
+  returns: "NULL"
+  signature: llOffsetTexture(float offsets, float offsett, integer face)
+  sleep: 0.2f
+  synopsis: sets the texture s, t offsets for the chosen face
+llOpenRemoteDataChannel: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llOpenRemoteDataChannel()
+  sleep: 1.f
+  synopsis: Creates a channel to listen for XML-RPC calls.  Will trigger a remote_data event with channel id once it is available.
+llOverMyLand: 
+  energy: 10.f
+  params: k
+  returns: i
+  signature: integer llOverMyLand(key id)
+  sleep: 0.f
+  synopsis: Returns TRUE if id is over land owner of object owns, FALSE otherwise
+llOwnerSay: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llOwnerSay(string msg)
+  sleep: 0.f
+  synopsis: says msg to owner only (if owner in sim)
+llParcelMediaCommandList: 
+  energy: 10.f
+  params: l
+  returns: "NULL"
+  signature: llParcelMediaCommandList(list command)
+  sleep: 2.f
+  synopsis: Sends a list of commands, some with arguments, to a parcel.
+llParcelMediaQuery: 
+  energy: 10.f
+  params: l
+  returns: l
+  signature: list llParcelMediaQuery(list query)
+  sleep: 2.f
+  synopsis: Sends a list of queries, returns a list of results.
+llParseString2List: 
+  energy: 10.f
+  params: sll
+  returns: l
+  signature: list llParseString2List(string src, list separators, list spacers)
+  sleep: 0.f
+  synopsis: Breaks src into a list, discarding separators, keeping spacers (separators and spacers must be lists of strings, maximum of 8 each)
+llParseStringKeepNulls: 
+  energy: 10.f
+  params: sll
+  returns: l
+  signature: list llParseStringKeepNulls(string src, list separators, list spacers)
+  sleep: 0.f
+  synopsis: Breaks src into a list, discarding separators, keeping spacers (separators and spacers must be lists of strings, maximum of 8 each), keeping any null values generated.
+llParticleSystem: 
+  energy: 10.f
+  params: l
+  returns: "NULL"
+  signature: llParticleSystem(list rules)
+  sleep: 0.f
+  synopsis: Creates a particle system based on rules.  Empty list removes particle system from object.\nList format is [ rule1, data1, rule2, data2 . . . rulen, datan ]
+llPassCollisions: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llPassCollisions(integer pass)
+  sleep: 0.f
+  synopsis: if pass == TRUE, collisions are passed from children on to parents (default is FALSE)
+llPassTouches: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llPassTouches(integer pass)
+  sleep: 0.f
+  synopsis: if pass == TRUE, touches are passed from children on to parents (default is FALSE)
+llPlaySound: 
+  energy: 10.f
+  params: sf
+  returns: "NULL"
+  signature: llPlaySound(string sound, float volume)
+  sleep: 0.f
+  synopsis: plays attached sound once at volume (0.0 - 1.0)
+llPlaySoundSlave: 
+  energy: 10.f
+  params: sf
+  returns: "NULL"
+  signature: llPlaySoundSlave(string sound, float volume)
+  sleep: 0.f
+  synopsis: plays attached sound once at volume (0.0 - 1.0), synced to next loop of most audible sync master
+llPointAt: 
+  energy: 10.f
+  params: v
+  returns: "NULL"
+  signature: llPointAt(vector pos)
+  sleep: 0.f
+  synopsis: Make agent that owns object point at pos
+llPow: 
+  energy: 10.f
+  params: ff
+  returns: f
+  signature: float llPow(float base, float exponent)
+  sleep: 0.f
+  synopsis: returns 0 and triggers Math Error for imaginary results
+llPreloadSound: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llPreloadSound(string sound)
+  sleep: 1.f
+  synopsis: preloads a sound on viewers within range
+llPushObject: 
+  energy: 10.f
+  params: kvvi
+  returns: "NULL"
+  signature: llPushObject(key id, vector impulse, vector ang_impulse, integer local)
+  sleep: 0.f
+  synopsis: Applies impulse and ang_impulse to object id
+llRefreshPrimURL: 
+  energy: 10.f
+  params: ""
+  returns: "NULL"
+  signature: llRefreshPrimURL()
+  sleep: 20.f
+  synopsis: Reloads the web page shown on the sides of the object.
+llRegionSay: 
+  energy: 10.f
+  params: is
+  returns: "NULL"
+  signature: llRegionSay(integer channel, string msg)
+  sleep: 0.f
+  synopsis: broadcasts msg to entire region on channel (not 0.)
+llReleaseCamera: 
+  energy: 10.f
+  params: k
+  returns: "NULL"
+  signature: llReleaseCamera(key avatar)
+  sleep: 0.f
+  synopsis: Return camera to agent
+llReleaseControls: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llReleaseControls()
+  sleep: 0.f
+  synopsis: Stop taking inputs
+llReleaseURL: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llReleaseURL(string url)
+  sleep: 0.f
+  synopsis: Releases the specified URL, it will no longer be usable.
+llRemoteDataReply: 
+  energy: 10.f
+  params: kksi
+  returns: "NULL"
+  signature: llRemoteDataReply(key channel, key message_id, string sdata, integer idata)
+  sleep: 3.f
+  synopsis: Send an XML-RPC reply to message_id on channel with payload of string sdata and integer idata
+llRemoteDataSetRegion: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llRemoteDataSetRegion()
+  sleep: 0.f
+  synopsis: If an object using remote data channels changes regions, you must call this function to reregister the remote data channels.\nYou do not need to make this call if you don't change regions.
+llRemoteLoadScript: 
+  energy: 10.f
+  params: ksii
+  returns: "NULL"
+  signature: Deprecated.  Please use llRemoteLoadScriptPin instead.
+  sleep: 3.f
+  synopsis: 
+llRemoteLoadScriptPin: 
+  energy: 10.f
+  params: ksiii
+  returns: "NULL"
+  signature: llRemoteLoadScriptPin(key target, string name, integer pin, integer running, integer start_param)
+  sleep: 3.f
+  synopsis: If the owner of the object this script is attached can modify target,\nthey are in the same region,\nand the matching pin is used,\ncopy script name onto target,\nif running == TRUE, start the script with param.
+llRemoveFromLandBanList: 
+  energy: 10.f
+  params: k
+  returns: "NULL"
+  signature: llRemoveFromLandBanList(key avatar)
+  sleep: 0.1f
+  synopsis: Remove avatar from the land ban list
+llRemoveFromLandPassList: 
+  energy: 10.f
+  params: k
+  returns: "NULL"
+  signature: llRemoveFromLandPassList(key avatar)
+  sleep: 0.1f
+  synopsis: Remove avatar from the land pass list
+llRemoveInventory: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llRemoveInventory(string inventory)
+  sleep: 0.f
+  synopsis: Remove the named inventory item
+llRemoveVehicleFlags: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llRemoveVehicleFlags(integer flags)
+  sleep: 0.f
+  synopsis: removes the enabled bits in 'flags'
+llRequestAgentData: 
+  energy: 10.f
+  params: ki
+  returns: k
+  signature: key llRequestAgentData(key id, integer data)
+  sleep: 0.1f
+  synopsis: Requests data about agent id.  When data is available the dataserver event will be raised
+llRequestInventoryData: 
+  energy: 10.f
+  params: s
+  returns: k
+  signature: key llRequestInventoryData(string name)
+  sleep: 1.f
+  synopsis: Requests data from object's inventory object.  When data is available the dataserver event will be raised
+llRequestPermissions: 
+  energy: 10.f
+  params: ki
+  returns: "NULL"
+  signature: llRequestPermissions(key agent, integer perm)
+  sleep: 0.f
+  synopsis: "ask agent to allow the script to do perm (NB: Debit, ownership, link, joint, and permission requests can only go to the task's owner)"
+llRequestSecureURL: 
+  energy: 10.f
+  params: "NULL"
+  returns: k
+  signature: key llRequestSecureURL()
+  sleep: 0.f
+  synopsis: Requests one HTTPS:// (SSL) url for use by this object\nTriggers an http_server event with results.
+llRequestSimulatorData: 
+  energy: 10.f
+  params: si
+  returns: k
+  signature: key llRequestSimulatorData(string simulator, integer data)
+  sleep: 1.f
+  synopsis: Requests data about simulator.  When data is available the dataserver event will be raised
+llRequestURL: 
+  energy: 10.f
+  params: "NULL"
+  returns: k
+  signature: key llRequestURL()
+  sleep: 0.f
+  synopsis: Requests one HTTP:// url for use by this object\nTriggers an http_server event with results.
+llResetLandBanList: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llResetLandBanList()
+  sleep: 0.1f
+  synopsis: Removes all residents from the land ban list.
+llResetLandPassList: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llResetLandPassList()
+  sleep: 0.1f
+  synopsis: Removes all residents from the land access/pass list.
+llResetOtherScript: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llResetOtherScript(string name)
+  sleep: 0.f
+  synopsis: Resets script name
+llResetScript: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llResetScript()
+  sleep: 0.f
+  synopsis: Resets the script
+llResetTime: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llResetTime()
+  sleep: 0.f
+  synopsis: sets the time to zero
+llRezAtRoot: 
+  energy: 200.f
+  params: svvqi
+  returns: "NULL"
+  signature: llRezAtRoot(string inventory, vector pos, vector vel, rotation rot, integer param)
+  sleep: 0.1f
+  synopsis: Instantiate owner's inventory object at pos with velocity vel and rotation rot with start parameter param.\nThe last selected root object's location will be set to pos
+llRezObject: 
+  energy: 200.f
+  params: svvqi
+  returns: "NULL"
+  signature: llRezObject(string inventory, vector pos, vector vel, rotation rot, integer param)
+  sleep: 0.1f
+  synopsis: Instanciate owners inventory object at pos with velocity vel and rotation rot with start parameter param
+llRot2Angle: 
+  energy: 10.f
+  params: q
+  returns: f
+  signature: float llRot2Angle(rotation rot)
+  sleep: 0.f
+  synopsis: Returns the rotation angle represented by rot
+llRot2Axis: 
+  energy: 10.f
+  params: q
+  returns: v
+  signature: vector llRot2Axis(rotation rot)
+  sleep: 0.f
+  synopsis: Returns the rotation axis represented by rot
+llRot2Euler: 
+  energy: 10.f
+  params: q
+  returns: v
+  signature: vector llRot2Euler(rotation q)
+  sleep: 0.f
+  synopsis: returns the Euler representation (roll, pitch, yaw) of q
+llRot2Fwd: 
+  energy: 10.f
+  params: q
+  returns: v
+  signature: vector llRot2Fwd(rotation q)
+  sleep: 0.f
+  synopsis: returns the forward vector defined by q
+llRot2Left: 
+  energy: 10.f
+  params: q
+  returns: v
+  signature: vector llRot2Left(rotation q)
+  sleep: 0.f
+  synopsis: returns the left vector defined by q
+llRot2Up: 
+  energy: 10.f
+  params: q
+  returns: v
+  signature: vector llRot2Up(rotation q)
+  sleep: 0.f
+  synopsis: returns the up vector defined by q
+llRotBetween: 
+  energy: 10.f
+  params: vv
+  returns: q
+  signature: rotation llRotBetween(vector v1, vector v2)
+  sleep: 0.f
+  synopsis: returns the rotation to rotate v1 to v2
+llRotLookAt: 
+  energy: 10.f
+  params: qff
+  returns: "NULL"
+  signature: llRotLookAt(rotation target, F32 strength, F32 damping)
+  sleep: 0.f
+  synopsis: Cause object name to point it's forward axis towards target
+llRotTarget: 
+  energy: 10.f
+  params: qf
+  returns: i
+  signature: integer llRotTarget(rotation rot, float error)
+  sleep: 0.f
+  synopsis: set rotations with error of rot as a rotational target and return an ID for the rotational target
+llRotTargetRemove: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llRotTargetRemove(integer number)
+  sleep: 0.f
+  synopsis: removes rotational target number
+llRotateTexture: 
+  energy: 10.f
+  params: fi
+  returns: "NULL"
+  signature: llRotateTexture(float rotation, integer face)
+  sleep: 0.2f
+  synopsis: sets the texture rotation for the chosen face
+llRound: 
+  energy: 10.f
+  params: f
+  returns: i
+  signature: integer llRound(float val)
+  sleep: 0.f
+  synopsis: returns val rounded to the nearest integer
+llSHA1String: 
+  energy: 10.f
+  params: s
+  returns: s
+  signature: string llSHA1String(string sr)
+  sleep: 0.f
+  synopsis: Performs a SHA1 security Hash.  Returns a 40 character hex string.
+llSameGroup: 
+  energy: 10.f
+  params: k
+  returns: i
+  signature: integer llSameGroup(key id)
+  sleep: 0.f
+  synopsis: Returns TRUE if ID is in the same sim and has the same active group, otherwise FALSE
+llSay: 
+  energy: 10.f
+  params: is
+  returns: "NULL"
+  signature: llSay(integer channel, string msg)
+  sleep: 0.f
+  synopsis: says msg on channel
+llScaleTexture: 
+  energy: 10.f
+  params: ffi
+  returns: "NULL"
+  signature: llScaleTexture(float scales, float scalet, integer face)
+  sleep: 0.2f
+  synopsis: sets the texture s, t scales for the chosen face
+llScriptDanger: 
+  energy: 10.f
+  params: v
+  returns: i
+  signature: integer llScriptDanger(vector pos)
+  sleep: 0.f
+  synopsis: Returns true if pos is over public land, sandbox land, land that doesn't allow everyone to edit and build, or land that doesn't allow outside scripts
+llSendRemoteData: 
+  energy: 10.f
+  params: ksis
+  returns: k
+  signature: key llSendRemoteData(key channel, string dest, integer idata, string sdata)
+  sleep: 3.f
+  synopsis: Send an XML-RPC request to dest through channel with payload of channel (in a string), integer idata and string sdata.\nA message identifier key is returned.\nAn XML-RPC reply will trigger a remote_data event and reference the message id.\nThe message_id is returned.
+llSensor: 
+  energy: 10.f
+  params: skiff
+  returns: "NULL"
+  signature: llSensor(string name, key id, integer type, float range, float arc)
+  sleep: 0.f
+  synopsis: Performs a single scan for name and id with type (AGENT, ACTIVE, PASSIVE, and/or SCRIPTED) within range meters and arc radians of forward vector (name, id, and/or keytype can be empty or 0)
+llSensorRemove: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llSensorRemove()
+  sleep: 0.f
+  synopsis: removes sensor
+llSensorRepeat: 
+  energy: 10.f
+  params: skifff
+  returns: "NULL"
+  signature: llSensorRepeat(string name, key id, integer type, float range, float arc, float rate)
+  sleep: 0.f
+  synopsis: sets a callback for name and id with type (AGENT, ACTIVE, PASSIVE, and/or SCRIPTED) within range meters and arc radians of forward vector (name, id, and/or keytype can be empty or 0) and repeats every rate seconds
+llSetAlpha: 
+  energy: 10.f
+  params: fi
+  returns: "NULL"
+  signature: llSetAlpha(float alpha, integer face)
+  sleep: 0.f
+  synopsis: sets the alpha
+llSetBuoyancy: 
+  energy: 10.f
+  params: f
+  returns: "NULL"
+  signature: llSetBuoyancy(float buoyancy)
+  sleep: 0.f
+  synopsis: Set the tasks buoyancy (0 is none, < 1.0 sinks, 1.0 floats, > 1.0 rises)
+llSetCameraAtOffset: 
+  energy: 10.f
+  params: v
+  returns: "NULL"
+  signature: llSetCameraAtOffset(vector offset)
+  sleep: 0.f
+  synopsis: Sets the camera at offset used in this object if an avatar sits on it
+llSetCameraEyeOffset: 
+  energy: 10.f
+  params: v
+  returns: "NULL"
+  signature: llSetCameraEyeOffset(vector offset)
+  sleep: 0.f
+  synopsis: Sets the camera eye offset used in this object if an avatar sits on it
+llSetCameraParams: 
+  energy: 10.f
+  params: l
+  returns: "NULL"
+  signature: llSetCameraParams(list rules)
+  sleep: 0.f
+  synopsis: Sets multiple camera parameters at once.\nList format is [ rule1, data1, rule2, data2 . . . rulen, datan ]
+llSetClickAction: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llSetClickAction(integer action)
+  sleep: 0.f
+  synopsis: Sets the action performed when a prim is clicked upon.
+llSetColor: 
+  energy: 10.f
+  params: vi
+  returns: "NULL"
+  signature: llSetColor(vector color, integer face)
+  sleep: 0.f
+  synopsis: sets the color
+llSetDamage: 
+  energy: 10.f
+  params: f
+  returns: "NULL"
+  signature: llSetDamage(float damage)
+  sleep: 0.f
+  synopsis: Sets the amount of damage that will be done to an object that this task hits.  Task will be killed.
+llSetForce: 
+  energy: 10.f
+  params: vi
+  returns: "NULL"
+  signature: llSetForce(vector force, integer local)
+  sleep: 0.f
+  synopsis: sets force on object, in local coords if local == TRUE (if the script is physical)
+llSetForceAndTorque: 
+  energy: 10.f
+  params: vvi
+  returns: "NULL"
+  signature: llSetForceAndTorque(vector force, vector torque, integer local)
+  sleep: 0.f
+  synopsis: sets the force and torque of object, in local coords if local == TRUE (if the script is physical)
+llSetHoverHeight: 
+  energy: 10.f
+  params: fif
+  returns: "NULL"
+  signature: llSetHoverHeight(float height, integer water, float tau)
+  sleep: 0.f
+  synopsis: Critically damps to a height (either above ground level or above the higher of land and water if water == TRUE)
+llSetInventoryPermMask: 
+  energy: 10.f
+  params: sii
+  returns: "NULL"
+  signature: llSetInventoryPermMask(string item, integer mask, integer value)
+  sleep: 0.f
+  synopsis: Sets the given permission mask to the new value on the inventory item.
+llSetLinkAlpha: 
+  energy: 10.f
+  params: ifi
+  returns: "NULL"
+  signature: llSetLinkAlpha(integer linknumber, float alpha, integer face)
+  sleep: 0.f
+  synopsis: If a prim exists in the link chain at linknumber, set face to alpha
+llSetLinkColor: 
+  energy: 10.f
+  params: ivi
+  returns: "NULL"
+  signature: llSetLinkColor(integer linknumber, vector color, integer face)
+  sleep: 0.f
+  synopsis: If a task exists in the link chain at linknumber, set face to color
+llSetLinkPrimitiveParams: 
+  energy: 10.f
+  params: il
+  returns: "NULL"
+  signature: llSetLinkPrimitiveParams(integer linknumber, list rules)
+  sleep: 0.2f
+  synopsis: Set primitive parameters for linknumber based on rules.
+llSetLinkTexture: 
+  energy: 10.f
+  params: isi
+  returns: "NULL"
+  signature: llSetLinkTexture(integer link_pos, string texture, integer face)
+  sleep: 0.2f
+  synopsis: Sets the texture of face for link_pos
+llSetLocalRot: 
+  energy: 10.f
+  params: q
+  returns: "NULL"
+  signature: llSetLocalRot(rotation rot)
+  sleep: 0.2f
+  synopsis: sets the rotation of a child prim relative to the root prim
+llSetObjectDesc: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llSetObjectDesc(string name)
+  sleep: 0.f
+  synopsis: Sets the object's description
+llSetObjectName: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llSetObjectName(string name)
+  sleep: 0.f
+  synopsis: Sets the objects name
+llSetObjectPermMask: 
+  energy: 10.f
+  params: ii
+  returns: "NULL"
+  signature: llSetObjectPermMask(integer mask, integer value)
+  sleep: 0.f
+  synopsis: Sets the given permission mask to the new value on the root object the task is attached to.
+llSetParcelMusicURL: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llSetParcelMusicURL(string url)
+  sleep: 2.f
+  synopsis: Sets the streaming audio URL for the parcel object is on
+llSetPayPrice: 
+  energy: 10.f
+  params: il
+  returns: "NULL"
+  signature: llSetPayPrice(integer price, list quick_pay_buttons)
+  sleep: 0.f
+  synopsis: Sets the default amount when someone chooses to pay this object.
+llSetPos: 
+  energy: 10.f
+  params: v
+  returns: "NULL"
+  signature: llSetPos(vector pos)
+  sleep: 0.2f
+  synopsis: sets the position (if the script isn't physical)
+llSetPrimURL: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llSetPrimURL(string url)
+  sleep: 20.f
+  synopsis: Updates the URL for the web page shown on the sides of the object.
+llSetPrimitiveParams: 
+  energy: 10.f
+  params: l
+  returns: "NULL"
+  signature: llSetPrimitiveParams(list rules)
+  sleep: 0.2f
+  synopsis: Set primitive parameters based on rules.
+llSetRemoteScriptAccessPin: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llSetRemoteScriptAccessPin(integer pin)
+  sleep: 0.2f
+  synopsis: If pin is set to a non-zero number, the task will accept remote script\nloads via llRemoteLoadScriptPin if it passes in the correct pin.\nOthersise, llRemoteLoadScriptPin is ignored.
+llSetRot: 
+  energy: 10.f
+  params: q
+  returns: "NULL"
+  signature: llSetRot(rotation rot)
+  sleep: 0.2f
+  synopsis: sets the rotation (if the script isn't physical)
+llSetScale: 
+  energy: 10.f
+  params: v
+  returns: "NULL"
+  signature: llSetScale(vector scale)
+  sleep: 0.f
+  synopsis: sets the scale
+llSetScriptState: 
+  energy: 10.f
+  params: si
+  returns: "NULL"
+  signature: llSetScriptState(string name, integer run)
+  sleep: 0.f
+  synopsis: Control the state of a script name.
+llSetSitText: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llSetSitText(string text)
+  sleep: 0.f
+  synopsis: Displays text rather than sit in pie menu
+llSetSoundQueueing: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llSetSoundQueueing(integer queue)
+  sleep: 0.f
+  synopsis: determines whether attached sound calls wait for the current sound to finish (0 = no [default], nonzero = yes)
+llSetSoundRadius: 
+  energy: 10.f
+  params: f
+  returns: "NULL"
+  signature: llSetSoundRadius(float radius)
+  sleep: 0.f
+  synopsis: establishes a hard cut-off radius for audibility of scripted sounds (both attached and triggered)
+llSetStatus: 
+  energy: 10.f
+  params: ii
+  returns: "NULL"
+  signature: llSetStatus(integer status, integer value)
+  sleep: 0.f
+  synopsis: sets status (STATUS_PHYSICS, STATUS_PHANTOM, STATUS_BLOCK_GRAB,\nSTATUS_ROTATE_X, STATUS_ROTATE_Y, and/or STATUS_ROTATE_Z) to value
+llSetText: 
+  energy: 10.f
+  params: svf
+  returns: "NULL"
+  signature: llSetText(string text, vector color, float alpha)
+  sleep: 0.f
+  synopsis: Set text floating over object
+llSetTexture: 
+  energy: 10.f
+  params: si
+  returns: "NULL"
+  signature: llSetTexture(string texture, integer face)
+  sleep: 0.2f
+  synopsis: sets the texture of face
+llSetTextureAnim: 
+  energy: 10.f
+  params: iiiifff
+  returns: "NULL"
+  signature: llSetTextureAnim(integer mode, integer face, integer sizex, integer sizey, float start, float length, float rate)
+  sleep: 0.f
+  synopsis: Animate the texture on the specified face/faces
+llSetTimerEvent: 
+  energy: 10.f
+  params: f
+  returns: "NULL"
+  signature: llSetTimerEvent(float sec)
+  sleep: 0.f
+  synopsis: Cause the timer event to be triggered every sec seconds
+llSetTorque: 
+  energy: 10.f
+  params: vi
+  returns: "NULL"
+  signature: llSetTorque(vector torque, integer local)
+  sleep: 0.f
+  synopsis: sets the torque of object, in local coords if local == TRUE (if the script is physical)
+llSetTouchText: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llSetTouchText(string text)
+  sleep: 0.f
+  synopsis: Displays text in pie menu that acts as a touch
+llSetVehicleFlags: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llSetVehicleFlags(integer flags)
+  sleep: 0.f
+  synopsis: sets the enabled bits in 'flags'
+llSetVehicleFloatParam: 
+  energy: 10.f
+  params: if
+  returns: "NULL"
+  signature: llSetVehicleFloatParam(integer param, float value)
+  sleep: 0.f
+  synopsis: sets the specified vehicle float parameter
+llSetVehicleRotationParam: 
+  energy: 10.f
+  params: iq
+  returns: "NULL"
+  signature: llSetVehicleVectorParam(integer param, rotation rot)
+  sleep: 0.f
+  synopsis: sets the specified vehicle rotation parameter
+llSetVehicleType: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llSetVehicleType(integer type)
+  sleep: 0.f
+  synopsis: sets vehicle to one of the default types
+llSetVehicleVectorParam: 
+  energy: 10.f
+  params: iv
+  returns: "NULL"
+  signature: llSetVehicleVectorParam(integer param, vector vec)
+  sleep: 0.f
+  synopsis: sets the specified vehicle vector parameter
+llShout: 
+  energy: 10.f
+  params: is
+  returns: "NULL"
+  signature: llShout(integer channel, string msg)
+  sleep: 0.f
+  synopsis: shouts msg on channel
+llSin: 
+  energy: 10.f
+  params: f
+  returns: f
+  signature: float llSin(float theta)
+  sleep: 0.f
+  synopsis: theta in radians
+llSitTarget: 
+  energy: 10.f
+  params: vq
+  returns: "NULL"
+  signature: llSitTarget(vector offset, rotation rot)
+  sleep: 0.f
+  synopsis: Set the sit location for this object (if offset == <0,0,0> clear it)
+llSleep: 
+  energy: 0.f
+  params: f
+  returns: "NULL"
+  signature: llSleep(float sec)
+  sleep: 0.f
+  synopsis: Put script to sleep for sec seconds
+llSound: 
+  energy: 10.f
+  params: sfii
+  returns: "NULL"
+  signature: llSound(string sound, float volume, integer queue, integer loop)
+  sleep: 0.f
+  synopsis: plays sound at volume and whether it should loop or not
+llSoundPreload: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llSoundPreload(string sound)
+  sleep: 0.f
+  synopsis: preloads a sound on viewers within range
+llSqrt: 
+  energy: 10.f
+  params: f
+  returns: f
+  signature: float llSqrt(float val)
+  sleep: 0.f
+  synopsis: returns 0 and triggers a Math Error for imaginary results
+llStartAnimation: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llStartAnimation(string anim)
+  sleep: 0.f
+  synopsis: Start animation anim for agent that owns object
+llStopAnimation: 
+  energy: 10.f
+  params: s
+  returns: "NULL"
+  signature: llStopAnimation(string anim)
+  sleep: 0.f
+  synopsis: Stop animation anim for agent that owns object
+llStopHover: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llStopHover()
+  sleep: 0.f
+  synopsis: Stop hovering to a height
+llStopLookAt: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llStopLookAt()
+  sleep: 0.f
+  synopsis: Stop causing object name to point at a target
+llStopMoveToTarget: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llStopMoveToTarget()
+  sleep: 0.f
+  synopsis: Stops critically damped motion
+llStopPointAt: 
+  energy: 10.f
+  params: "NULL"
+  returns: "NULL"
+  signature: llStopPointAt()
+  sleep: 0.f
+  synopsis: Stop agent that owns object pointing
+llStopSound: 
+  energy: 10.f
+  params: ""
+  returns: "NULL"
+  signature: llStopSound()
+  sleep: 0.f
+  synopsis: Stops currently attached sound
+llStringLength: 
+  energy: 10.f
+  params: s
+  returns: i
+  signature: integer llStringLength(string str)
+  sleep: 0.f
+  synopsis: Returns the length of string
+llStringToBase64: 
+  energy: 10.f
+  params: s
+  returns: s
+  signature: string llStringToBase64(string str)
+  sleep: 0.f
+  synopsis: Converts a string to the Base 64 representation of the string.
+llStringTrim: 
+  energy: 10.f
+  params: si
+  returns: s
+  signature: string llStringTrim(string src, integer trim_type)
+  sleep: 0.f
+  synopsis: Trim leading and/or trailing spaces from a string.\nUses trim_type of STRING_TRIM, STRING_TRIM_HEAD or STRING_TRIM_TAIL.
+llSubStringIndex: 
+  energy: 10.f
+  params: ss
+  returns: i
+  signature: integer llSubStringIndex(string source, string pattern)
+  sleep: 0.f
+  synopsis: Finds index in source where pattern first appears (returns -1 if not found)
+llTakeCamera: 
+  energy: 10.f
+  params: k
+  returns: "NULL"
+  signature: llTakeCamera(key avatar)
+  sleep: 0.f
+  synopsis: Move avatar's viewpoint to task
+llTakeControls: 
+  energy: 10.f
+  params: iii
+  returns: "NULL"
+  signature: llTakeControls(integer controls, integer accept, integer pass_on)
+  sleep: 0.f
+  synopsis: Take controls from agent task has permissions for.  If (accept == (controls & input)), send input to task.  If pass_on send to agent also.
+llTan: 
+  energy: 10.f
+  params: f
+  returns: f
+  signature: float llTan(float theta)
+  sleep: 0.f
+  synopsis: theta radians
+llTarget: 
+  energy: 10.f
+  params: vf
+  returns: i
+  signature: integer llTarget(vector position, float range)
+  sleep: 0.f
+  synopsis: set positions within range of position as a target and return an ID for the target
+llTargetOmega: 
+  energy: 10.f
+  params: vff
+  returns: "NULL"
+  signature: llTargetOmega(vector axis, float spinrate, float gain)
+  sleep: 0.f
+  synopsis: Attempt to spin at spinrate with strength gain
+llTargetRemove: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llTargetRemove(integer number)
+  sleep: 0.f
+  synopsis: removes target number
+llTeleportAgentHome: 
+  energy: 100.f
+  params: k
+  returns: "NULL"
+  signature: llTeleportAgentHome(key id)
+  sleep: 5.f
+  synopsis: Teleports agent on owner's land to agent's home location
+llTextBox: 
+  energy: 10.f
+  params: ksi
+  returns: "NULL"
+  signature: llTextBox(key avatar, string message, integer chat_channel
+  sleep: 1.f
+  synopsis: Shows a dialog box on the avatar's screen with the message.\nA text box asks for input, and if entered the text is chatted on chat_channel.
+llToLower: 
+  energy: 10.f
+  params: s
+  returns: s
+  signature: string llToLower(string src)
+  sleep: 0.f
+  synopsis: convert src to all lower case and returns the result
+llToUpper: 
+  energy: 10.f
+  params: s
+  returns: s
+  signature: string llToUpper(string src)
+  sleep: 0.f
+  synopsis: convert src to all upper case and returns the result
+llTriggerSound: 
+  energy: 10.f
+  params: sf
+  returns: "NULL"
+  signature: llTriggerSound(string sound, float volume)
+  sleep: 0.f
+  synopsis: plays sound at volume (0.0 - 1.0), centered at but not attached to object
+llTriggerSoundLimited: 
+  energy: 10.f
+  params: sfvv
+  returns: "NULL"
+  signature: llTriggerSoundLimited(string sound, float volume, vector tne, vector bsw)
+  sleep: 0.f
+  synopsis: plays sound at volume (0.0 - 1.0), centered at but not attached to object, limited to AABB defined by vectors top-north-east and bottom-south-west
+llUnSit: 
+  energy: 10.f
+  params: k
+  returns: "NULL"
+  signature: key llUnSit(key id)
+  sleep: 0.f
+  synopsis: If agent identified by id is sitting on the object the script is attached to or is over land owned by the objects owner, the agent is forced to stand up
+llUnescapeURL: 
+  energy: 10.f
+  params: s
+  returns: s
+  signature: string llUnescapeURL(string url)
+  sleep: 0.f
+  synopsis: Returns and unescaped/unencoded version of url, replacing %20 with spaces etc.
+llVecDist: 
+  energy: 10.f
+  params: vv
+  returns: f
+  signature: float llVecDist(vector v1, vector v2)
+  sleep: 0.f
+  synopsis: returns the 3D distance between v1 and v2
+llVecMag: 
+  energy: 10.f
+  params: v
+  returns: f
+  signature: float llVecMag(vector v)
+  sleep: 0.f
+  synopsis: returns the magnitude of v
+llVecNorm: 
+  energy: 10.f
+  params: v
+  returns: v
+  signature: vector llVecNorm(vector v)
+  sleep: 0.f
+  synopsis: returns the v normalized
+llVolumeDetect: 
+  energy: 10.f
+  params: i
+  returns: "NULL"
+  signature: llVolumeDetect(integer detect)
+  sleep: 0.f
+  synopsis: If detect = TRUE, object becomes phantom but triggers collision_start and collision_end events\nwhen other objects start and stop interpenetrating.\nMust be applied to the root object.
+llWater: 
+  energy: 10.f
+  params: v
+  returns: f
+  signature: float llWater(vector v)
+  sleep: 0.f
+  synopsis: returns the water height below the object position + v
+llWhisper: 
+  energy: 10.f
+  params: is
+  returns: "NULL"
+  signature: llWhisper(integer channel, string msg)
+  sleep: 0.f
+  synopsis: whispers msg on channel
+llWind: 
+  energy: 10.f
+  params: v
+  returns: v
+  signature: vector llWind(vector v)
+  sleep: 0.f
+  synopsis: returns the wind velocity at the object position + v
+llXorBase64Strings: 
+  energy: 10.f
+  params: ss
+  returns: s
+  signature: string llXorBase64Strings(string s1, string s2)
+  sleep: 0.3f
+  synopsis: DEPRECATED!  Please use llXorBase64StringsCorrect instead!!  Incorrectly performs an exclusive or on two Base 64 strings and returns a Base 64 string.  s2 repeats if it is shorter than s1.  Retained for backwards compatability.
+llXorBase64StringsCorrect: 
+  energy: 10.f
+  params: ss
+  returns: s
+  signature: string llXorBase64StringsCorrect(string s1, string s2)
+  sleep: 0.f
+  synopsis: Correctly performs an exclusive or on two Base 64 strings and returns a Base 64 string.  s2 repeats if it is shorter than s1.
+money: 
+  signature: money(key id, integer amount)
+  synopsis: Triggered when L$ is given to task
+moving_end: 
+  signature: moving_end()
+  synopsis: Triggered when task stops moving
+moving_start: 
+  signature: moving_start()
+  synopsis: Triggered when task begins moving
+no_sensor: 
+  signature: no_sensor()
+  synopsis: Result of the llSensor library function call
+not_at_rot_target: 
+  signature: not_at_rot_target()
+  synopsis: Result of LLRotTarget library function call
+not_at_target: 
+  signature: not_at_target()
+  synopsis: Result of llTarget library function call
+object_rez: 
+  signature: object_rez(key id)
+  synopsis: Triggered when task rezes in another task
+on_rez: 
+  signature: on_rez(integer start_param)
+  synopsis: Triggered when task is rezed in from inventory or another task
+remote_data: 
+  signature: remote_data(integer event_type, key channel, key message_id, string sender,integer idata, string sdata)
+  synopsis: Triggered by various XML-RPC calls (event_type will be one of REMOTE_DATA_CHANNEL, REMOTE_DATA_REQUEST, REMOTE_DATA_REPLY)
+run_time_permissions: 
+  signature: run_time_permissions(integer perm)
+  synopsis: Triggered when an agent grants run time permissions to task
+sensor: 
+  signature: sensor(integer num_detected)
+  synopsis: Result of the llSensor library function call
+state_entry: 
+  signature: state_entry()
+  synopsis: Triggered on any state transition and startup
+state_exit: 
+  signature: state_exit()
+  synopsis: Triggered on any state transition
+timer: 
+  signature: timer()
+  synopsis: Result of the llSetTimerEvent library function call.
+touch: 
+  signature: touch(integer num_detected)
+  synopsis: Triggered while agent is clicking on task
+touch_end: 
+  signature: touch_end(integer num_detected)
+  synopsis: Triggered when agent stops clicking on task
+touch_start: 
+  signature: touch_start(integer num_detected)
+  synopsis: Triggered by the start of agent clicking on task

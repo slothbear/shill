@@ -1,0 +1,5 @@
+name: "MoinMoin Wiki"
+description: |
+    original file from Thilo pfennig.  I added functions, events, and
+    all constants to this file, but I have not been able to test it.  They
+    use keyword types 'ResWord2' and 'Special'.

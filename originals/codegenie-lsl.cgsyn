@@ -1,0 +1,151 @@
+# LSL syntax file for Code-Genie 3.0.  For use with SecondLife.com Scripting Language.
+# Input by Noel "HB" Wade (aka Tread Whiplash in SecondLife) on 1/16/2005
+# Please feel free to use, copy, modify, etc. - just give credit where its due! :-)
+
+CaseInsensitive  false
+
+KeywordGroup  functions
+	llAbs  llAcos  llAddToLandPassList  llAdjustSoundVolume  llAllowInventoryDrop  llAngleBetween  llApplyImpulse  
+	llApplyRotationalImpulse  llAsin  llAtan2  llAttachToAvatar  llAvatarOnSitTarget  llAxes2Rot  llAxisAngle2Rot  
+	llBase64ToInteger  llBase64ToString  llBreakAllLinks  llBreakLink  llCSV2List  llCeil  llCloseRemoteDataChannel  
+	llCloud  llCollisionFilter  llCollisionSound  llCollisionSprite  llCos  llCreateLink  llDeleteSubList  llDeleteSubString  
+	llDetachFromAvatar  llDetectedGrab  llDetectedGroup  llDetectedKey  llDetectedLinkNumber  llDetectedName  llDetectedOwner  
+	llDetectedPos  llDetectedRot  llDetectedType  llDetectedVel  llDialog  llDie  llDumpList2String  llEdgeOfWorld  llEjectFromLand  
+	llEmail  llEuler2Rot  llFabs  llFloor  llFrand  llGetAccel  llGetAgentInfo  llGetAgentSize  llGetAlpha  llGetAndResetTime  
+	llGetAnimation  llGetAnimationList  llGetAttached  llGetBoundingBox  llGetCenterOfMass  llGetCreator  llGetColor  llGetDate  
+	llGetEnergy  llGetForce  llGetFreeMemory  llGetGeometricCenter  llGetGMTclock  llGetInventoryKey  llGetInventoryName  
+	llGetInventoryNumber  llGetKey  llGetLandOwnerAt  llGetLinkKey  llGetLinkName  llGetLinkNumber  llGetListEntryType  llGetListLength  
+	llGetLocalPos  llGetLocalRot  llGetMass  llGetNextEmail  llGetNotecardLine  llGetNumberOfNotecardLines  llGetNumberOfPrims  
+	llGetNumberOfSides  llGetObjectDesc  llGetObjectName  llGetOmega  llGetOwner  llGetOwnerKey  llGetPermissions  llGetPermissionsKey  
+	llGetPos  llGetPrimitiveParams  llGetRegionCorner  llGetRegionFPS  llGetRegionName  llGetRegionTimeDilation  llGetRootPosition  
+	llGetRootRotation  llGetRot  llGetScale  llGetScriptName  llGetScriptState  llGetSimulatorHostname  llGetStartParameter  llGetStatus  
+	llGetSubString  llGetSunDirection  llGetTexture  llGetTextureOffset  llGetTextureRot  llGetTextureScale  llGetTime  llGetTimeOfDay  
+	llGetTimestamp  llGetTorque  llGetVel  llGetWallclock  llGiveInventory  llGiveInventoryList  llGiveMoney  llGodLikeRezObject  
+	llGround  llGroundContour  llGroundNormal  llGroundRepel  llGroundSlope  llInsertString  llInstantMessage  llIntegerToBase64  
+	llKey2Name  llList2CSV  llList2Float  llList2Integer  llList2Key  llList2List  llList2ListStrided  llList2Rot  llList2String  
+	llList2Vector  llListFindList  llListInsertList  llListRandomize  llListSort  llListen  llListenControl  llListenRemove  llLog  
+	llLog10  llLookAt  llLoopSound  llLoopSoundMaster  llLoopSoundSlave  llMD5String  llMessageLinked  llMinEventDelay  llModifyLand  
+	llMoveToTarget  llOffsetTexture  llOpenRemoteDataChannel  llOverMyLand  llParseString2List  llParseStringKeepNulls  llParticleSystem  
+	llPassCollisions  llPassTouches  llPlaySound  llPlaySoundSlave  llPointAt  llPow  llPreloadSound  llPushObject  llReleaseCamera  
+	llReleaseControls  llRemoteDataReply  llRemoteDataSetRegion  llRemoteLoadScript  llRemoteLoadScriptPin  llRemoveInventory  
+	llRemoveVehicleFlags  llRequestAgentData  llRequestInventoryData  llRequestPermissions  llResetOtherScript  llResetScript  
+	llResetTime  llRezAtRoot  llRezObject  llRot2Angle  llRot2Axis  llRot2Euler  llRot2Fwd  llRot2Left  llRot2Up  llRotBetween  
+	llRotLookAt  llRotTarget  llRotTargetRemove  llRotateTexture  llRound  llSameGroup  llSay  llScaleTexture  llScriptDanger  
+	llSendRemoteData  llSensor  llSensorRemove  llSensorRepeat  llSetAlpha  llSetBuoyancy  llSetCameraAtOffset  llSetCameraEyeOffset  
+	llSetColor  llSetDamage  llSetForce  llSetForceAndTorque  llSetHoverHeight  llSetInventoryPermMask  llSetLinkAlpha  llSetLinkColor  
+	llSetLocalRot  llSetObjectDesc  llSetObjectName  llSetObjectPermMask  llSetParcelMusicURL  llSetPos  llSetPrimitiveParams  
+	llSetRemoteScriptAccessPin  llSetRot  llSetScale  llSetScriptState  llSetSitText  llSetSoundQueueing  llSetSoundRadius  llSetStatus  
+	llSetText  llSetTexture  llSetTextureAnim  llSetTimerEvent  llSetTorque  llSetTouchText  llSetVehicleFlags  llSetVehicleFloatParam  
+	llSetVehicleRotationParam  llSetVehicleType  llSetVehicleVectorParam  llShout  llSin  llSitTarget  llSleep  llSqrt  llStartAnimation  
+	llStopAnimation  llStopHover  llStopLookAt  llStopMoveToTarget  llStopPointAt  llStopSound  llStringLength  llStringToBase64  
+	llSubStringIndex  llTakeCamera  llTakeControls  llTan  llTarget  llTargetOmega  llTargetRemove  llTeleportAgentHome  llToLower  
+	llToUpper  llTriggerSound  llTriggerSoundLimited  llUnSit  llVecDist  llVecMag  llVecNorm  llVolumeDetect  llWater  llWhisper  
+	llWind  llXorBase64Strings
+
+
+FgColor       functions  #CC0000
+Format        functions  b
+
+
+KeywordGroup  events
+    at_rot_target  at_target  attach  changed  collision  collision_end  collision_start  control  dataserver  email  
+    land_collision  land_collision_end  land_collision_start  link_message  listen  money  moving_end  moving_start  
+    no_sensor  not_at_rot_target  not_at_target  object_rez  on_rez  remote_data  run_time_permissions  sensor  state_entry  
+    state_exit  timer  touch  touch_end  touch_start
+
+FgColor       events  #00A5E0
+Format        events  b
+
+
+KeywordGroup  avoid
+	jump  llSoundPreload  llSound  llMakeExplosion  llMakeFire  llMakeFountain  llMakeSmoke  llRemoteLoadScript
+
+FgColor       avoid  #BCAD00
+Format        avoid  bu
+
+
+KeywordGroup  lang_constr
+    state  for  if  else  return  while  do
+
+FgColor       lang_constr  #0006F6
+Format        lang_constr  b
+
+
+KeywordGroup default
+	default
+FgColor       default  #660000
+Format        default  b
+
+
+KeywordGroup  base_types
+    integer  list  key  string  float  vector  rotation
+
+FgColor       base_types  #008209
+Format        base_types  b
+
+KeywordGroup  constants
+    PI  TWO_PI  PI_BY_TWO  DEG_TO_RAD  RAD_TO_DEG  SQRT2  TRUE  FALSE  NULL_KEY  EOF  
+    ZERO_ROTATION  ZERO_VECTOR  AGENT  ACTIVE  PASSIVE  SCRIPTED  PSYS_PART_BOUNCE_MASK  
+    PSYS_PART_WIND_MASK  PSYS_PART_INTERP_COLOR_MASK  PSYS_PART_INTERP_SCALE_MASK  
+    PSYS_PART_FOLLOW_SRC_MASK  PSYS_PART_FOLLOW_VELOCITY_MASK  PSYS_PART_TARGET_POS_MASK  
+    PSYS_PART_EMISSIVE_MASK  PSYS_PART_TRAIL_MASK  PSYS_SRC_PATTERN  PSYS_SRC_PATTERN_DROP  
+    PSYS_SRC_PATTERN_EXPLODE  PSYS_SRC_PATTERN_ANGLE  PSYS_SRC_PATTERN_ANGLE_CONE  
+    PSYS_SRC_PATTERN_ANGLE_CONE_EMPTY  PSYS_PART_START_COLOR  PSYS_PART_END_COLOR  
+    PSYS_PART_START_ALPHA  PSYS_PART_END_ALPHA  PSYS_PART_START_SCALE  PSYS_PART_END_SCALE  
+    PSYS_PART_MAX_AGE  PSYS_SRC_INNERANGLE  PSYS_SRC_OUTERANGLE  PSYS_SRC_ANGLE_BEGIN  
+    PSYS_SRC_ANGLE_END  PSYS_SRC_BURST_RATE  PSYS_SRC_BURST_PART_COUNT  PSYS_SRC_BURST_RADIUS  
+    PSYS_SRC_BURST_SPEED_MIN  PSYS_SRC_BURST_SPEED_MAX  PSYS_SRC_MAX_AGE  PSYS_SRC_ACCEL  
+    PSYS_SRC_TEXTURE  PSYS_SRC_TARGET_KEY  PSYS_SRC_OMEGA  PSYS_PART_FLAGS
+
+
+FgColor       constants  #ED00F0
+Format        constants  b
+
+
+KeywordGroup  user_functions
+
+FgColor       user_functions  #ff6600
+Format        user_functions  b
+
+
+BlockStart   comment_sing  //
+BlockNotEnd  comment_sing  \\n
+BlockEnd     comment_sing  \n
+
+FgColor      comment_sing  #FF9A09
+Format		 comment_sing  i
+
+Operator  ops  !+-=|&><*%.
+FgColor  ops  #0006F6
+Format  ops  b
+
+
+BlockStart   string_1  "
+BlockNotEnd  string_1  \\"
+BlockEnd 	 string_1  \\\\"
+BlockEnd     string_1  "
+
+FgColor      string_1  #00BC0D
+
+
+BlockStart   string_2  '
+BlockNotEnd  string_2  \'
+BlockEnd     string_2  '
+
+FgColor      string_2  #00BC0D
+
+Nest functions
+Nest events
+Nest avoid
+Nest lang_constr
+Nest default
+Nest base_types
+Nest constants
+Nest user_functions
+Nest comment_sing
+Nest ops
+Nest string_1
+Nest string_2
+
+
+# eof

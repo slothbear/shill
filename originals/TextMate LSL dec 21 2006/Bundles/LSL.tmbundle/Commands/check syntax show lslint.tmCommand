@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>TM_TMPFILE="$(mktemp /tmp/tm_lslint_XXXXXX.txt)" || exit
+~/Library/Application\ Support/TextMate/lslint -v &amp;&gt; "$TM_TMPFILE" 
+lslintout=`cat $TM_TMPFILE`
+rm -f "$TM_TMPFILE"
+
+# I HATE SHELL !!!
+osascript &lt;&lt;-APPLESCRIPT
+set aa to "$lslintout"
+
+set s to "&lt;!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\"
+	\"http://www.w3.org/TR/REC-html40/loose.dtd\"&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;lslint output&lt;/title&gt;&lt;/head&gt;
+&lt;body bgcolor=rgb(218,218,218)&gt;&lt;h1 align=\"center\"&gt;lslint output&lt;/h1&gt;"
+
+repeat with a in (paragraphs of aa)
+	tell application "TextMate"
+		if a does not contain "ERROR::" and a does not contain "WARN::" then
+			set s to s&amp;"&lt;p&gt;"&amp;a&amp;"&lt;/p&gt;"&amp;return
+		else
+			set s to s  &amp; "&lt;p&gt;&lt;a href=\"txmt://open?line=" &amp; second word of a &amp; "&amp;column=" &amp; third word of a &amp; "\"&gt;"&amp;a&amp;"&lt;/a&gt;&lt;/p&gt;"  &amp; return
+		end if
+	end tell
+end
+return s&amp;"&lt;/body&gt;&lt;/html&gt;"
+APPLESCRIPT</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>^~l</string>
+	<key>name</key>
+	<string>check syntax show lslint</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>uuid</key>
+	<string>B17B2DD8-64EE-4A47-A029-5C0AB4FDD2AC</string>
+</dict>
+</plist>

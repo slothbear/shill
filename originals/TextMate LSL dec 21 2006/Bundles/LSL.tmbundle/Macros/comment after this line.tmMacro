@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>moveToEndOfLine:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>insertNewline:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>command</key>
+				<string>echo -n '// ${0:comment here}'</string>
+				<key>input</key>
+				<string>none</string>
+				<key>name</key>
+				<string>comment down</string>
+				<key>output</key>
+				<string>insertAsSnippet</string>
+				<key>scope</key>
+				<string>source.esl, source.lsl</string>
+				<key>uuid</key>
+				<string>C874CA03-7B78-4228-9747-EAAED82B2173</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>~
+</string>
+	<key>name</key>
+	<string>comment after this line</string>
+	<key>scope</key>
+	<string>source.esl, source.lsl</string>
+	<key>uuid</key>
+	<string>CCD30B2C-B4B4-49F7-8913-1C6E0E237016</string>
+</dict>
+</plist>
