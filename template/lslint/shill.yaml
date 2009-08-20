@@ -1,0 +1,7 @@
+name: "lslint"
+description: |
+    <a href="http://w-hat.com/lslint/">lslint</a>
+    Note their published builtins file preserves the order from the original SL client source file
+    which is (roughly) the order the function was added to Second Life.  Shill generates things
+    in alphabetical order.  The file only lists functions so lslint still may not be able to 
+    recognize the new event http_request.

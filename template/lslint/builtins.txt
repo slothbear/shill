@@ -1,0 +1,21 @@
+void %SHILL_UPDATE_NOTICE%
+<%  
+    aro = Array.new
+	# skip events; lslint houses them internally
+	signatures.reject do |func, sig| sig["energy"].nil?
+	  next if sig["returns"].nil? #FIXME
+	
+	  ture = sig["signature"]
+	  if ture =~ /^(float|integer|key|list|rotation|string|vector|Deprecated.) (.*)/
+	    ture = "#{$1.ljust(8)} #$2 "
+	  else
+		ture = "void     #{ture}"
+	  end
+	
+	  aro << ture
+	end
+
+	# Sort (ignoring case)
+	sorted_keys = aro.sort_by {|itemx| itemx.split[1]}
+-%>
+<%= sorted_keys.join("\n") %>
