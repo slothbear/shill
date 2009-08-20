@@ -1,4 +1,4 @@
-# LSL keywords updated 19 Aug 2009 for LSL 1.23.4 by http://adammarker.org/shill
+# LSL keywords updated 20 Aug 2009 for LSL 1.23.4 by http://adammarker.org/shill
 --- 
 at_rot_target: 
   signature: at_rot_target(integer tnum, rotation targetrot, rotation ourrot)
@@ -391,7 +391,7 @@ llDialog:
   energy: 10.f
   params: ksli
   returns: "NULL"
-  signature: llDialog(key avatar, string message, list buttons, integer chat_channel
+  signature: llDialog(key avatar, string message, list buttons, integer chat_channel)
   sleep: 1.f
   synopsis: Shows a dialog box on the avatar's screen with the message.\nUp to 12 strings in the list form buttons.\nIf a button is clicked, the name is chatted on chat_channel.
 llDie: 
@@ -909,7 +909,7 @@ llGetRegionAgentCount:
   energy: 10.f
   params: "NULL"
   returns: i
-  signature: int llGetRegionAgentCount()
+  signature: integer llGetRegionAgentCount()
   sleep: 0.f
   synopsis: returns the number of agents in a region
 llGetRegionCorner: 
@@ -979,7 +979,7 @@ llGetScriptName:
   energy: 10.f
   params: "NULL"
   returns: s
-  signature: llGetScriptName()
+  signature: string llGetScriptName()
   sleep: 0.f
   synopsis: Returns the script name
 llGetScriptState: 
@@ -1119,7 +1119,7 @@ llGiveMoney:
   energy: 10.f
   params: ki
   returns: i
-  signature: llGiveMoney(key destination, integer amount)
+  signature: integer llGiveMoney(key destination, integer amount)
   sleep: 0.f
   synopsis: transfer amount of money from script owner to destination
 llGodLikeRezObject: 
@@ -1140,7 +1140,7 @@ llGroundContour:
   energy: 10.f
   params: v
   returns: v
-  signature: vector llGroundCountour(vector v)
+  signature: vector llGroundContour(vector v)
   sleep: 0.f
   synopsis: returns the ground contour below the object position + v
 llGroundNormal: 
@@ -1168,7 +1168,7 @@ llHTTPRequest:
   energy: 10.f
   params: sls
   returns: k
-  signature: llHTTPRequest(string url, list parameters, string body)
+  signature: key llHTTPRequest(string url, list parameters, string body)
   sleep: 0.f
   synopsis: Send an HTTP request.
 llHTTPResponse: 
@@ -1357,7 +1357,7 @@ llLookAt:
   energy: 10.f
   params: vff
   returns: "NULL"
-  signature: llLookAt(vector target, F32 strength, F32 damping)
+  signature: llLookAt(vector target, float strength, float damping)
   sleep: 0.f
   synopsis: Cause object name to point it's forward axis towards target
 llLoopSound: 
@@ -1626,13 +1626,6 @@ llRemoteDataSetRegion:
   signature: llRemoteDataSetRegion()
   sleep: 0.f
   synopsis: If an object using remote data channels changes regions, you must call this function to reregister the remote data channels.\nYou do not need to make this call if you don't change regions.
-llRemoteLoadScript: 
-  energy: 10.f
-  params: ksii
-  returns: "NULL"
-  signature: Deprecated.  Please use llRemoteLoadScriptPin instead.
-  sleep: 3.f
-  synopsis: 
 llRemoteLoadScriptPin: 
   energy: 10.f
   params: ksiii
@@ -1812,7 +1805,7 @@ llRotLookAt:
   energy: 10.f
   params: qff
   returns: "NULL"
-  signature: llRotLookAt(rotation target, F32 strength, F32 damping)
+  signature: llRotLookAt(rotation target, float strength, float damping)
   sleep: 0.f
   synopsis: Cause object name to point it's forward axis towards target
 llRotTarget: 
@@ -1847,7 +1840,7 @@ llSHA1String:
   energy: 10.f
   params: s
   returns: s
-  signature: string llSHA1String(string sr)
+  signature: string llSHA1String(string src)
   sleep: 0.f
   synopsis: Performs a SHA1 security Hash.  Returns a 40 character hex string.
 llSameGroup: 
@@ -2197,7 +2190,7 @@ llSetVehicleRotationParam:
   energy: 10.f
   params: iq
   returns: "NULL"
-  signature: llSetVehicleVectorParam(integer param, rotation rot)
+  signature: llSetVehicleRotationParam(integer param, rotation rot)
   sleep: 0.f
   synopsis: sets the specified vehicle rotation parameter
 llSetVehicleType: 
@@ -2393,7 +2386,7 @@ llTextBox:
   energy: 10.f
   params: ksi
   returns: "NULL"
-  signature: llTextBox(key avatar, string message, integer chat_channel
+  signature: llTextBox(key avatar, string message, integer chat_channel)
   sleep: 1.f
   synopsis: Shows a dialog box on the avatar's screen with the message.\nA text box asks for input, and if entered the text is chatted on chat_channel.
 llToLower: 
@@ -2428,7 +2421,7 @@ llUnSit:
   energy: 10.f
   params: k
   returns: "NULL"
-  signature: key llUnSit(key id)
+  signature: llUnSit(key id)
   sleep: 0.f
   synopsis: If agent identified by id is sitting on the object the script is attached to or is over land owned by the objects owner, the agent is forced to stand up
 llUnescapeURL: 
@@ -2487,13 +2480,6 @@ llWind:
   signature: vector llWind(vector v)
   sleep: 0.f
   synopsis: returns the wind velocity at the object position + v
-llXorBase64Strings: 
-  energy: 10.f
-  params: ss
-  returns: s
-  signature: string llXorBase64Strings(string s1, string s2)
-  sleep: 0.3f
-  synopsis: DEPRECATED!  Please use llXorBase64StringsCorrect instead!!  Incorrectly performs an exclusive or on two Base 64 strings and returns a Base 64 string.  s2 repeats if it is shorter than s1.  Retained for backwards compatability.
 llXorBase64StringsCorrect: 
   energy: 10.f
   params: ss

@@ -1,5 +1,4 @@
-# LSL keywords updated 19 Aug 2009 for LSL 1.23.4 by http://adammarker.org/shill
- Please use llRemoteLoadScriptPin instead.[Deprecated.] 
+# LSL keywords updated 20 Aug 2009 for LSL 1.23.4 by http://adammarker.org/shill
 ACTIVE
 AGENT
 AGENT_ALWAYS_RUN
@@ -119,7 +118,6 @@ HTTP_MIMETYPE
 http_request(key id, string method, string body)Triggered when task receives an http request against a public URL
 http_response(key request_id, integer status, list metadata, string body)Triggered when task receives a response to one of its llHTTPRequests
 HTTP_VERIFY_CERT
-int llGetRegionAgentCount()returns the number of agents in a region
 INVENTORY_ALL
 INVENTORY_ANIMATION
 INVENTORY_BODYPART
@@ -209,7 +207,7 @@ llDetectedTouchST(integer number)[vector] returns the s and t coordinates in the
 llDetectedTouchUV(integer number)[vector] returns the u and v coordinates in the first two components of a vector, for a triggered touch event
 llDetectedType(integer number)[integer] returns the type (AGENT, ACTIVE, PASSIVE, SCRIPTED) of detected object (returns 0 if number is not valid sensed object)
 llDetectedVel(integer number)[vector] returns the velocity of detected object number (returns <0,0,0> if number is not valid sensed object)
-llDialog(key avatar, string message, list buttons, integer chat_channelShows a dialog box on the avatar's screen with the message.\nUp to 12 strings in the list form buttons.\nIf a button is clicked, the name is chatted on chat_channel.
+llDialog(key avatar, string message, list buttons, integer chat_channel)Shows a dialog box on the avatar's screen with the message.\nUp to 12 strings in the list form buttons.\nIf a button is clicked, the name is chatted on chat_channel.
 llDie()deletes the object
 llDumpList2String(list src, string separator)[string] Write the list out in a single string using separator between values
 llEdgeOfWorld(vector pos, vector dir)[integer] Checks to see whether the border hit by dir from pos is the edge of the world (has no neighboring simulator)
@@ -283,6 +281,7 @@ llGetPermissions()[integer] return what permissions have been enabled
 llGetPermissionsKey()[key] Return agent that permissions are enabled for.  NULL_KEY if not enabled
 llGetPos()[vector] gets the position (if the script isn't physical)
 llGetPrimitiveParams(list params)[list] Gets primitive parameters specified in the params list.
+llGetRegionAgentCount()[integer] returns the number of agents in a region
 llGetRegionCorner()[vector] Returns a vector with the south west corner x,y position of the region the object is in
 llGetRegionFlags()[integer] Get the region flags (REGION_FLAG_*) for the region the object is in.
 llGetRegionFPS()[float] returns the mean region frames per second
@@ -292,7 +291,7 @@ llGetRootPosition()[vector] Gets the global position of the root object of the o
 llGetRootRotation()[rotation] Gets the global rotation of the root object of the object script is attached to
 llGetRot()[rotation] gets the rotation (if the script isn't physical)
 llGetScale()[vector] gets the scale
-llGetScriptName()Returns the script name
+llGetScriptName()[string] Returns the script name
 llGetScriptState(string name)[integer] Resets TRUE if script name is running
 llGetSimulatorHostname()[string] Gets the hostname of the machine script is running on (same as string in viewer Help dialog)
 llGetStartParameter()[integer] Get's the start paramter passed to llRezObject
@@ -312,14 +311,14 @@ llGetVel()[vector] gets the velocity
 llGetWallclock()[float] gets the time in seconds since midnight
 llGiveInventory(key destination, string inventory)Give inventory to destination
 llGiveInventoryList(key destination, string category, list inventory)Give inventory to destination in a new category
-llGiveMoney(key destination, integer amount)transfer amount of money from script owner to destination
+llGiveMoney(key destination, integer amount)[integer] transfer amount of money from script owner to destination
 llGodLikeRezObject(key inventory, vector pos)rez directly off of a UUID if owner has dog-bit set
 llGround(vector v)[float] returns the ground height below the object position + v
-llGroundCountour(vector v)[vector] returns the ground contour below the object position + v
+llGroundContour(vector v)[vector] returns the ground contour below the object position + v
 llGroundNormal(vector v)[vector] returns the ground normal below the object position + v
 llGroundRepel(float height, integer water, float tau)Critically damps to height if within height*0.5 of level (either above ground level or above the higher of land and water if water == TRUE)
 llGroundSlope(vector v)[vector] returns the ground slope below the object position + v
-llHTTPRequest(string url, list parameters, string body)Send an HTTP request.
+llHTTPRequest(string url, list parameters, string body)[key] Send an HTTP request.
 llHTTPResponse(key id, integer status, string body)Responds to request id with status and body.
 llInsertString(string dst, integer position, string src)[string] inserts src into dst at position and returns the result
 llInstantMessage(key user, string message)IMs message to the user
@@ -346,7 +345,7 @@ llListStatistics(integer operation, list l)[float] Perform statistical aggregate
 llLoadURL(key avatar_id, string message, string url)Shows dialog to avatar avatar_id offering to load web page at URL.  If user clicks yes, launches their web browser.
 llLog(float val)[float] Returns the base e log of val if val > 0, otherwise returns 0.
 llLog10(float val)[float] Returns the base 10 log of val if val > 0, otherwise returns 0.
-llLookAt(vector target, F32 strength, F32 damping)Cause object name to point it's forward axis towards target
+llLookAt(vector target, float strength, float damping)Cause object name to point it's forward axis towards target
 llLoopSound(string sound, float volume)plays attached sound looping indefinitely at volume (0.0 - 1.0)
 llLoopSoundMaster(string sound, float volume)plays attached sound looping at volume (0.0 - 1.0), declares it a sync master
 llLoopSoundSlave(string sound, float volume)plays attached sound looping at volume (0.0 - 1.0), synced to most audible sync master
@@ -411,7 +410,7 @@ llRot2Left(rotation q)[vector] returns the left vector defined by q
 llRot2Up(rotation q)[vector] returns the up vector defined by q
 llRotateTexture(float rotation, integer face)sets the texture rotation for the chosen face
 llRotBetween(vector v1, vector v2)[rotation] returns the rotation to rotate v1 to v2
-llRotLookAt(rotation target, F32 strength, F32 damping)Cause object name to point it's forward axis towards target
+llRotLookAt(rotation target, float strength, float damping)Cause object name to point it's forward axis towards target
 llRotTarget(rotation rot, float error)[integer] set rotations with error of rot as a rotational target and return an ID for the rotational target
 llRotTargetRemove(integer number)removes rotational target number
 llRound(float val)[integer] returns val rounded to the nearest integer
@@ -464,10 +463,10 @@ llSetTorque(vector torque, integer local)sets the torque of object, in local coo
 llSetTouchText(string text)Displays text in pie menu that acts as a touch
 llSetVehicleFlags(integer flags)sets the enabled bits in 'flags'
 llSetVehicleFloatParam(integer param, float value)sets the specified vehicle float parameter
+llSetVehicleRotationParam(integer param, rotation rot)sets the specified vehicle rotation parameter
 llSetVehicleType(integer type)sets vehicle to one of the default types
-llSetVehicleVectorParam(integer param, rotation rot)sets the specified vehicle rotation parameter
 llSetVehicleVectorParam(integer param, vector vec)sets the specified vehicle vector parameter
-llSHA1String(string sr)[string] Performs a SHA1 security Hash.  Returns a 40 character hex string.
+llSHA1String(string src)[string] Performs a SHA1 security Hash.  Returns a 40 character hex string.
 llShout(integer channel, string msg)shouts msg on channel
 llSin(float theta)[float] theta in radians
 llSitTarget(vector offset, rotation rot)Set the sit location for this object (if offset == <0,0,0> clear it)
@@ -493,13 +492,13 @@ llTarget(vector position, float range)[integer] set positions within range of po
 llTargetOmega(vector axis, float spinrate, float gain)Attempt to spin at spinrate with strength gain
 llTargetRemove(integer number)removes target number
 llTeleportAgentHome(key id)Teleports agent on owner's land to agent's home location
-llTextBox(key avatar, string message, integer chat_channelShows a dialog box on the avatar's screen with the message.\nA text box asks for input, and if entered the text is chatted on chat_channel.
+llTextBox(key avatar, string message, integer chat_channel)Shows a dialog box on the avatar's screen with the message.\nA text box asks for input, and if entered the text is chatted on chat_channel.
 llToLower(string src)[string] convert src to all lower case and returns the result
 llToUpper(string src)[string] convert src to all upper case and returns the result
 llTriggerSound(string sound, float volume)plays sound at volume (0.0 - 1.0), centered at but not attached to object
 llTriggerSoundLimited(string sound, float volume, vector tne, vector bsw)plays sound at volume (0.0 - 1.0), centered at but not attached to object, limited to AABB defined by vectors top-north-east and bottom-south-west
 llUnescapeURL(string url)[string] Returns and unescaped/unencoded version of url, replacing %20 with spaces etc.
-llUnSit(key id)[key] If agent identified by id is sitting on the object the script is attached to or is over land owned by the objects owner, the agent is forced to stand up
+llUnSit(key id)If agent identified by id is sitting on the object the script is attached to or is over land owned by the objects owner, the agent is forced to stand up
 llVecDist(vector v1, vector v2)[float] returns the 3D distance between v1 and v2
 llVecMag(vector v)[float] returns the magnitude of v
 llVecNorm(vector v)[vector] returns the v normalized
@@ -507,7 +506,6 @@ llVolumeDetect(integer detect)If detect = TRUE, object becomes phantom but trigg
 llWater(vector v)[float] returns the water height below the object position + v
 llWhisper(integer channel, string msg)whispers msg on channel
 llWind(vector v)[vector] returns the wind velocity at the object position + v
-llXorBase64Strings(string s1, string s2)[string] DEPRECATED!  Please use llXorBase64StringsCorrect instead!!  Incorrectly performs an exclusive or on two Base 64 strings and returns a Base 64 string.  s2 repeats if it is shorter than s1.  Retained for backwards compatability.
 llXorBase64StringsCorrect(string s1, string s2)[string] Correctly performs an exclusive or on two Base 64 strings and returns a Base 64 string.  s2 repeats if it is shorter than s1.
 LOOP
 MASK_BASE
