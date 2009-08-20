@@ -717,7 +717,6 @@
 		<keyword>llReleaseURL</keyword>
 		<keyword>llRemoteDataReply</keyword>
 		<keyword>llRemoteDataSetRegion</keyword>
-		<keyword>llRemoteLoadScript</keyword>
 		<keyword>llRemoteLoadScriptPin</keyword>
 		<keyword>llRemoveFromLandBanList</keyword>
 		<keyword>llRemoveFromLandPassList</keyword>
@@ -840,7 +839,6 @@
 		<keyword>llWater</keyword>
 		<keyword>llWhisper</keyword>
 		<keyword>llWind</keyword>
-		<keyword>llXorBase64Strings</keyword>
 		<keyword>llXorBase64StringsCorrect</keyword>
 	</keyword-list>
 

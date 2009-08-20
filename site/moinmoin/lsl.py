@@ -740,7 +740,6 @@ class Parser(ParserBase):
 			'llReleaseURL',
 			'llRemoteDataReply',
 			'llRemoteDataSetRegion',
-			'llRemoteLoadScript',
 			'llRemoteLoadScriptPin',
 			'llRemoveFromLandBanList',
 			'llRemoveFromLandPassList',
@@ -863,7 +862,6 @@ class Parser(ParserBase):
 			'llWater',
 			'llWhisper',
 			'llWind',
-			'llXorBase64Strings',
 			'llXorBase64StringsCorrect',
 			'last-function-with-no-comma'	
 		]

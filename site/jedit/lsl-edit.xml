@@ -317,7 +317,6 @@
 			<KEYWORD2>llReleaseURL</KEYWORD2>
 			<KEYWORD2>llRemoteDataReply</KEYWORD2>
 			<KEYWORD2>llRemoteDataSetRegion</KEYWORD2>
-			<KEYWORD2>llRemoteLoadScript</KEYWORD2>
 			<KEYWORD2>llRemoteLoadScriptPin</KEYWORD2>
 			<KEYWORD2>llRemoveFromLandBanList</KEYWORD2>
 			<KEYWORD2>llRemoveFromLandPassList</KEYWORD2>
@@ -440,7 +439,6 @@
 			<KEYWORD2>llWater</KEYWORD2>
 			<KEYWORD2>llWhisper</KEYWORD2>
 			<KEYWORD2>llWind</KEYWORD2>
-			<KEYWORD2>llXorBase64Strings</KEYWORD2>
 			<KEYWORD2>llXorBase64StringsCorrect</KEYWORD2>
 			
 <!-- *** *** *** *** *** *** END FUNCTION LIST *** *** *** *** *** *** -->

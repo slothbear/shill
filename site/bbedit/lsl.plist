@@ -667,7 +667,6 @@
 		<string>llReleaseURL</string>
 		<string>llRemoteDataReply</string>
 		<string>llRemoteDataSetRegion</string>
-		<string>llRemoteLoadScript</string>
 		<string>llRemoteLoadScriptPin</string>
 		<string>llRemoveFromLandBanList</string>
 		<string>llRemoveFromLandPassList</string>
@@ -790,7 +789,6 @@
 		<string>llWater</string>
 		<string>llWhisper</string>
 		<string>llWind</string>
-		<string>llXorBase64Strings</string>
 		<string>llXorBase64StringsCorrect</string>
 		<string>at_rot_target</string>
 		<string>at_target</string>

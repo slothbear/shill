@@ -690,7 +690,6 @@ llReleaseControls
 llReleaseURL
 llRemoteDataReply
 llRemoteDataSetRegion
-llRemoteLoadScript
 llRemoteLoadScriptPin
 llRemoveFromLandBanList
 llRemoveFromLandPassList
@@ -813,5 +812,4 @@ llVolumeDetect
 llWater
 llWhisper
 llWind
-llXorBase64Strings
 llXorBase64StringsCorrect

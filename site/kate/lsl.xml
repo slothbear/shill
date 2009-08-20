@@ -249,7 +249,6 @@
 			<item> llReleaseURL </item>
 			<item> llRemoteDataReply </item>
 			<item> llRemoteDataSetRegion </item>
-			<item> llRemoteLoadScript </item>
 			<item> llRemoteLoadScriptPin </item>
 			<item> llRemoveFromLandBanList </item>
 			<item> llRemoveFromLandPassList </item>
@@ -372,7 +371,6 @@
 			<item> llWater </item>
 			<item> llWhisper </item>
 			<item> llWind </item>
-			<item> llXorBase64Strings </item>
 			<item> llXorBase64StringsCorrect </item>
 		</list>
 		<list name="constants">

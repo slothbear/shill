@@ -241,7 +241,6 @@
 				llReleaseURL
 				llRemoteDataReply
 				llRemoteDataSetRegion
-				llRemoteLoadScript
 				llRemoteLoadScriptPin
 				llRemoveFromLandBanList
 				llRemoveFromLandPassList
@@ -364,7 +363,6 @@
 				llWater
 				llWhisper
 				llWind
-				llXorBase64Strings
 				llXorBase64StringsCorrect
 			</Keywords>
             <Keywords name="Words3">

@@ -2076,9 +2076,6 @@ llRemoteDataReply
 !TEXT=llRemoteDataSetRegion
 llRemoteDataSetRegion
 !
-!TEXT=llRemoteLoadScript
-llRemoteLoadScript
-!
 !TEXT=llRemoteLoadScriptPin
 llRemoteLoadScriptPin
 !
@@ -2444,9 +2441,6 @@ llWhisper
 !
 !TEXT=llWind
 llWind
-!
-!TEXT=llXorBase64Strings
-llXorBase64Strings
 !
 !TEXT=llXorBase64StringsCorrect
 llXorBase64StringsCorrect

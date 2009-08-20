@@ -1,4 +1,4 @@
-# LSL keywords updated 19 Aug 2009 for LSL 1.23.4 by http://adammarker.org/shill
+# LSL keywords updated 20 Aug 2009 for LSL 1.23.4 by http://adammarker.org/shill
 --- 
 constants: 
 - ACTIVE
@@ -677,7 +677,6 @@ functions:
 - llReleaseURL
 - llRemoteDataReply
 - llRemoteDataSetRegion
-- llRemoteLoadScript
 - llRemoteLoadScriptPin
 - llRemoveFromLandBanList
 - llRemoveFromLandPassList
@@ -800,5 +799,4 @@ functions:
 - llWater
 - llWhisper
 - llWind
-- llXorBase64Strings
 - llXorBase64StringsCorrect

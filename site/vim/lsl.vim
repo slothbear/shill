@@ -718,7 +718,6 @@ syn keyword lFunction llReleaseControls
 syn keyword lFunction llReleaseURL
 syn keyword lFunction llRemoteDataReply
 syn keyword lFunction llRemoteDataSetRegion
-syn keyword lFunction llRemoteLoadScript
 syn keyword lFunction llRemoteLoadScriptPin
 syn keyword lFunction llRemoveFromLandBanList
 syn keyword lFunction llRemoveFromLandPassList
@@ -841,7 +840,6 @@ syn keyword lFunction llVolumeDetect
 syn keyword lFunction llWater
 syn keyword lFunction llWhisper
 syn keyword lFunction llWind
-syn keyword lFunction llXorBase64Strings
 syn keyword lFunction llXorBase64StringsCorrect
 
 " Deprecated functions
