@@ -1,5 +1,3 @@
-/* This file contains fixes for inaccuracies in function definitions. */
-
 /** 
  * @file lscript_library.cpp
  * @brief external library interface
@@ -177,13 +175,13 @@ void LLScriptLibrary::init()
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llInsertString", "s", "sis", "string llInsertString(string dst, integer position, string src)\ninserts src into dst at position and returns the result"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llToUpper", "s", "s", "string llToUpper(string src)\nconvert src to all upper case and returns the result"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llToLower", "s", "s", "string llToLower(string src)\nconvert src to all lower case and returns the result"));
-	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGiveMoney", "i", "ki", "integer llGiveMoney(key destination, integer amount)\ntransfer amount of money from script owner to destination"));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGiveMoney", "i", "ki", "llGiveMoney(key destination, integer amount)\ntransfer amount of money from script owner to destination"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.1f, dummy_func, "llMakeExplosion", NULL, "iffffsv", "llMakeExplosion(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)\nMake a round explosion of particles"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.1f, dummy_func, "llMakeFountain", NULL, "iffffisvf", "llMakeFountain(integer particles, float scale, float vel, float lifetime, float arc, integer bounce, string texture, vector offset, float bounce_offset)\nMake a fountain of particles"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.1f, dummy_func, "llMakeSmoke", NULL, "iffffsv", "llMakeSmoke(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)\nMake smoke like particles"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.1f, dummy_func, "llMakeFire", NULL, "iffffsv", "llMakeFire(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)\nMake fire like particles"));
 	addFunction(new LLScriptLibraryFunction(200.f, 0.1f, dummy_func, "llRezObject", NULL, "svvqi", "llRezObject(string inventory, vector pos, vector vel, rotation rot, integer param)\nInstanciate owners inventory object at pos with velocity vel and rotation rot with start parameter param"));
-	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llLookAt", NULL, "vff", "llLookAt(vector target, float strength, float damping)\nCause object name to point it's forward axis towards target"));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llLookAt", NULL, "vff", "llLookAt(vector target, F32 strength, F32 damping)\nCause object name to point it's forward axis towards target"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llStopLookAt", NULL, NULL, "llStopLookAt()\nStop causing object name to point at a target"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSetTimerEvent", NULL, "f", "llSetTimerEvent(float sec)\nCause the timer event to be triggered every sec seconds"));
 	addFunction(new LLScriptLibraryFunction(0.f, 0.f, dummy_func, "llSleep", NULL, "f", "llSleep(float sec)\nPut script to sleep for sec seconds"));
@@ -205,7 +203,7 @@ void LLScriptLibrary::init()
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llStopHover", NULL, NULL, "llStopHover()\nStop hovering to a height"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llMinEventDelay", NULL, "f", "llMinEventDelay(float delay)\nSet the minimum time between events being handled"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSoundPreload", NULL, "s", "llSoundPreload(string sound)\npreloads a sound on viewers within range"));
-	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llRotLookAt", NULL, "qff", "llRotLookAt(rotation target, float strength, float damping)\nCause object name to point it's forward axis towards target"));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llRotLookAt", NULL, "qff", "llRotLookAt(rotation target, F32 strength, F32 damping)\nCause object name to point it's forward axis towards target"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llStringLength", "i", "s", "integer llStringLength(string str)\nReturns the length of string"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llStartAnimation", NULL, "s", "llStartAnimation(string anim)\nStart animation anim for agent that owns object"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llStopAnimation", NULL, "s", "llStopAnimation(string anim)\nStop animation anim for agent that owns object"));
@@ -245,7 +243,7 @@ void LLScriptLibrary::init()
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llMessageLinked", NULL, "iisk", "llMessageLinked(integer linknum, integer num, string str, key id)\nSends num, str, and id to members of the link set (LINK_ROOT sends to root task in a linked set,\nLINK_SET sends to all tasks,\nLINK_ALL_OTHERS to all other tasks,\nLINK_ALL_CHILDREN to all children,\nLINK_THIS to the task the script it is in)"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llPushObject", NULL, "kvvi", "llPushObject(key id, vector impulse, vector ang_impulse, integer local)\nApplies impulse and ang_impulse to object id"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llPassCollisions", NULL, "i", "llPassCollisions(integer pass)\nif pass == TRUE, collisions are passed from children on to parents (default is FALSE)"));
-	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetScriptName", "s", NULL, "string llGetScriptName()\nReturns the script name"));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetScriptName", "s", NULL, "llGetScriptName()\nReturns the script name"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetNumberOfSides", "i", NULL, "integer llGetNumberOfSides()\nReturns the number of sides"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llAxisAngle2Rot", "q", "vf", "rotation llAxisAngle2Rot(vector axis, float angle)\nReturns the rotation generated angle about axis"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llRot2Axis", "v", "q", "vector llRot2Axis(rotation rot)\nReturns the rotation axis represented by rot"));
@@ -298,10 +296,10 @@ void LLScriptLibrary::init()
 	addFunction(new LLScriptLibraryFunction(10.f, 0.1f, dummy_func, "llGetNotecardLine", "k", "si", "key llGetNotecardLine(string name, integer line)\nReturns line line of notecard name via the dataserver event"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetAgentSize", "v", "k", "vector llGetAgentSize(key id)\nIf the agent is in the same sim as the object, returns the size of the avatar"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSameGroup", "i", "k", "integer llSameGroup(key id)\nReturns TRUE if ID is in the same sim and has the same active group, otherwise FALSE"));
-	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llUnSit", NULL, "k", "llUnSit(key id)\nIf agent identified by id is sitting on the object the script is attached to or is over land owned by the objects owner, the agent is forced to stand up"));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llUnSit", NULL, "k", "key llUnSit(key id)\nIf agent identified by id is sitting on the object the script is attached to or is over land owned by the objects owner, the agent is forced to stand up"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGroundSlope", "v", "v", "vector llGroundSlope(vector v)\nreturns the ground slope below the object position + v"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGroundNormal", "v", "v", "vector llGroundNormal(vector v)\nreturns the ground normal below the object position + v"));
-	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGroundContour", "v", "v", "vector llGroundContour(vector v)\nreturns the ground contour below the object position + v"));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGroundContour", "v", "v", "vector llGroundCountour(vector v)\nreturns the ground contour below the object position + v"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetAttached", "i", NULL, "integer llGetAttached()\nreturns the object attachment point or 0 if not attached"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetFreeMemory", "i", NULL, "integer llGetFreeMemory()\nreturns the available heap space for the current script"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetRegionName", "s", NULL, "string llGetRegionName()\nreturns the current region name"));
@@ -316,7 +314,7 @@ void LLScriptLibrary::init()
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSetVehicleType", NULL, "i", "llSetVehicleType(integer type)\nsets vehicle to one of the default types"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSetVehicleFloatParam", NULL, "if", "llSetVehicleFloatParam(integer param, float value)\nsets the specified vehicle float parameter"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSetVehicleVectorParam", NULL, "iv", "llSetVehicleVectorParam(integer param, vector vec)\nsets the specified vehicle vector parameter"));
-	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSetVehicleRotationParam", NULL, "iq", "llSetVehicleRotationParam(integer param, rotation rot)\nsets the specified vehicle rotation parameter"));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSetVehicleRotationParam", NULL, "iq", "llSetVehicleVectorParam(integer param, rotation rot)\nsets the specified vehicle rotation parameter"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSetVehicleFlags", NULL, "i", "llSetVehicleFlags(integer flags)\nsets the enabled bits in 'flags'"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llRemoveVehicleFlags", NULL, "i", "llRemoveVehicleFlags(integer flags)\nremoves the enabled bits in 'flags'"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSitTarget", NULL, "vq", "llSitTarget(vector offset, rotation rot)\nSet the sit location for this object (if offset == <0,0,0> clear it)"));
@@ -329,11 +327,11 @@ void LLScriptLibrary::init()
 
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llDumpList2String", "s", "ls", "string llDumpList2String(list src, string separator)\nWrite the list out in a single string using separator between values"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llScriptDanger", "i", "v", "integer llScriptDanger(vector pos)\nReturns true if pos is over public land, sandbox land, land that doesn't allow everyone to edit and build, or land that doesn't allow outside scripts"));
-	addFunction(new LLScriptLibraryFunction(10.f, 1.f, dummy_func, "llDialog", NULL, "ksli", "llDialog(key avatar, string message, list buttons, integer chat_channel)\nShows a dialog box on the avatar's screen with the message.\nUp to 12 strings in the list form buttons.\nIf a button is clicked, the name is chatted on chat_channel."));
+	addFunction(new LLScriptLibraryFunction(10.f, 1.f, dummy_func, "llDialog", NULL, "ksli", "llDialog(key avatar, string message, list buttons, integer chat_channel\nShows a dialog box on the avatar's screen with the message.\nUp to 12 strings in the list form buttons.\nIf a button is clicked, the name is chatted on chat_channel."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llVolumeDetect", NULL, "i", "llVolumeDetect(integer detect)\nIf detect = TRUE, object becomes phantom but triggers collision_start and collision_end events\nwhen other objects start and stop interpenetrating.\nMust be applied to the root object."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llResetOtherScript", NULL, "s", "llResetOtherScript(string name)\nResets script name"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetScriptState", "i", "s", "integer llGetScriptState(string name)\nResets TRUE if script name is running"));
-//	addFunction(new LLScriptLibraryFunction(10.f, 3.f, dummy_func, "llRemoteLoadScript", NULL, "ksii", "Deprecated.  Please use llRemoteLoadScriptPin instead."));
+	addFunction(new LLScriptLibraryFunction(10.f, 3.f, dummy_func, "llRemoteLoadScript", NULL, "ksii", "Deprecated.  Please use llRemoteLoadScriptPin instead."));
 
 	addFunction(new LLScriptLibraryFunction(10.f, 0.2f, dummy_func, "llSetRemoteScriptAccessPin", NULL, "i", "llSetRemoteScriptAccessPin(integer pin)\nIf pin is set to a non-zero number, the task will accept remote script\nloads via llRemoteLoadScriptPin if it passes in the correct pin.\nOthersise, llRemoteLoadScriptPin is ignored."));
 	addFunction(new LLScriptLibraryFunction(10.f, 3.f, dummy_func, "llRemoteLoadScriptPin", NULL, "ksiii", "llRemoteLoadScriptPin(key target, string name, integer pin, integer running, integer start_param)\nIf the owner of the object this script is attached can modify target,\nthey are in the same region,\nand the matching pin is used,\ncopy script name onto target,\nif running == TRUE, start the script with param."));
@@ -347,7 +345,7 @@ void LLScriptLibrary::init()
 	addFunction(new LLScriptLibraryFunction(10.f, 0.2f, dummy_func, "llSetPrimitiveParams", NULL, "l", "llSetPrimitiveParams(list rules)\nSet primitive parameters based on rules."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llStringToBase64", "s", "s", "string llStringToBase64(string str)\nConverts a string to the Base 64 representation of the string."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llBase64ToString", "s", "s", "string llBase64ToString(string str)\nConverts a Base 64 string to a conventional string.  If the conversion creates any unprintable characters, they are converted to spaces."));
-//	addFunction(new LLScriptLibraryFunction(10.f, 0.3f, dummy_func, "llXorBase64Strings", "s", "ss", "string llXorBase64Strings(string s1, string s2)\nDEPRECATED!  Please use llXorBase64StringsCorrect instead!!  Incorrectly performs an exclusive or on two Base 64 strings and returns a Base 64 string.  s2 repeats if it is shorter than s1.  Retained for backwards compatability."));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.3f, dummy_func, "llXorBase64Strings", "s", "ss", "string llXorBase64Strings(string s1, string s2)\nDEPRECATED!  Please use llXorBase64StringsCorrect instead!!  Incorrectly performs an exclusive or on two Base 64 strings and returns a Base 64 string.  s2 repeats if it is shorter than s1.  Retained for backwards compatability."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llRemoteDataSetRegion", NULL, NULL, "llRemoteDataSetRegion()\nIf an object using remote data channels changes regions, you must call this function to reregister the remote data channels.\nYou do not need to make this call if you don't change regions."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llLog10", "f", "f", "float llLog10(float val)\nReturns the base 10 log of val if val > 0, otherwise returns 0."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llLog", "f", "f", "float llLog(float val)\nReturns the base e log of val if val > 0, otherwise returns 0."));
@@ -420,7 +418,7 @@ void LLScriptLibrary::init()
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetRegionFlags", "i", NULL, "integer llGetRegionFlags()\nGet the region flags (REGION_FLAG_*) for the region the object is in."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llXorBase64StringsCorrect", "s", "ss", "string llXorBase64StringsCorrect(string s1, string s2)\nCorrectly performs an exclusive or on two Base 64 strings and returns a Base 64 string.  s2 repeats if it is shorter than s1."));
 
-	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llHTTPRequest", "k", "sls", "key llHTTPRequest(string url, list parameters, string body)\nSend an HTTP request."));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llHTTPRequest", "k", "sls", "llHTTPRequest(string url, list parameters, string body)\nSend an HTTP request."));
 
 	addFunction(new LLScriptLibraryFunction(10.f, 0.1f, dummy_func, "llResetLandBanList", NULL, NULL, "llResetLandBanList()\nRemoves all residents from the land ban list."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.1f, dummy_func, "llResetLandPassList", NULL, NULL, "llResetLandPassList()\nRemoves all residents from the land access/pass list."));
@@ -441,8 +439,8 @@ void LLScriptLibrary::init()
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetObjectDetails", "l", "kl", "list llGetObjectDetails(key id, list params)\nGets the object details specified in params for the object with key id.\nDetails are OBJECT_NAME, _DESC, _POS, _ROT, _VELOCITY, _OWNER, _GROUP, _CREATOR."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSetClickAction", NULL, "i", "llSetClickAction(integer action)\nSets the action performed when a prim is clicked upon."));
 
-	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetRegionAgentCount", "i", NULL, "integer llGetRegionAgentCount()\nreturns the number of agents in a region"));
-	addFunction(new LLScriptLibraryFunction(10.f, 1.f, dummy_func, "llTextBox", NULL, "ksi", "llTextBox(key avatar, string message, integer chat_channel)\nShows a dialog box on the avatar's screen with the message.\nA text box asks for input, and if entered the text is chatted on chat_channel."));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetRegionAgentCount", "i", NULL, "int llGetRegionAgentCount()\nreturns the number of agents in a region"));
+	addFunction(new LLScriptLibraryFunction(10.f, 1.f, dummy_func, "llTextBox", NULL, "ksi", "llTextBox(key avatar, string message, integer chat_channel\nShows a dialog box on the avatar's screen with the message.\nA text box asks for input, and if entered the text is chatted on chat_channel."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetAgentLanguage", "s", "k", "string llGetAgentLanguage(key id)\nGets the agents preferred language.."));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llDetectedTouchUV", "v", "i", "vector llDetectedTouchUV(integer number)\nreturns the u and v coordinates in the first two components of a vector, for a triggered touch event"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llDetectedTouchFace", "i", "i", "integer llDetectedTouchFace(integer number)\nreturns the index of the face on the object for a triggered touch event"));
@@ -451,7 +449,7 @@ void LLScriptLibrary::init()
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llDetectedTouchBinormal", "v", "i", "vector llDetectedTouchBinormal(integer number)\nreturns the surface binormal for a triggered touch event"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llDetectedTouchST", "v", "i", "vector llDetectedTouchST(integer number)\nreturns the s and t coordinates in the first two components of a vector, for a triggered touch event"));
 
-	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSHA1String", "s", "s", "string llSHA1String(string src)\nPerforms a SHA1 security Hash.  Returns a 40 character hex string."));
+	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llSHA1String", "s", "s", "string llSHA1String(string sr)\nPerforms a SHA1 security Hash.  Returns a 40 character hex string."));
 
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llGetFreeURLs", "i", NULL, "integer llGetFreeURLs()\nreturns the available urls for the current script"));
 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llRequestURL", "k", NULL, "key llRequestURL()\nRequests one HTTP:// url for use by this object\nTriggers an http_server event with results."));
