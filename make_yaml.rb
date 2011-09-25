@@ -14,7 +14,7 @@ end
 
 def dechunk(collection)
   result = Hash.new
-  collection.each do |line|
+  collection.lines do |line|
     next if line.strip.size == 0
     next if line =~ /^\s*(#|\[)/  # skip comments and [headers]
     key, value = line.chomp.split(" ",2)
