@@ -1,40 +1,40 @@
 # LSL keywords updated 20 Aug 2009 for LSL 1.23.4 by http://adammarker.org/shill
 ---
 events:
-  - at_rot_target
-  - at_target
-  - attach
-  - changed
-  - collision
-  - collision_end
-  - collision_start
-  - control
-  - dataserver
-  - email
-  - http_request
-  - http_response
-  - land_collision
-  - land_collision_end
-  - land_collision_start
-  - link_message
-  - listen
-  - money
-  - moving_end
-  - moving_start
-  - no_sensor
-  - not_at_rot_target
-  - not_at_target
-  - object_rez
-  - on_rez
-  - remote_data
-  - run_time_permissions
-  - sensor
-  - state_entry
-  - state_exit
-  - timer
-  - touch
-  - touch_end
-  - touch_start
+- at_rot_target
+- at_target
+- attach
+- changed
+- collision
+- collision_end
+- collision_start
+- control
+- dataserver
+- email
+- http_request
+- http_response
+- land_collision
+- land_collision_end
+- land_collision_start
+- link_message
+- listen
+- money
+- moving_end
+- moving_start
+- no_sensor
+- not_at_rot_target
+- not_at_target
+- object_rez
+- on_rez
+- remote_data
+- run_time_permissions
+- sensor
+- state_entry
+- state_exit
+- timer
+- touch
+- touch_end
+- touch_start
 constants: 
 - ACTIVE
 - AGENT
