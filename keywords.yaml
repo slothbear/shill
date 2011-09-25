@@ -1,6 +1,6 @@
 # LSL keywords updated 20 Aug 2009 for LSL 1.23.4 by http://adammarker.org/shill
----
-events:
+--- 
+events: 
 - at_rot_target
 - at_target
 - attach
