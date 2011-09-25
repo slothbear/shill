@@ -16,6 +16,9 @@ or
  * http://svn.secondlife.com/trac/linden/browser/trunk/indra/lscript/lscript_library/lscript_library.cpp
  24Sep11: https://bitbucket.org/lindenlab/viewer-release/src/22b2640dcf86/indra/lscript/lscript_library/lscript_library.cpp
 
+Function text summaries:
+https://bitbucket.org/lindenlab/viewer-release/raw/22b2640dcf86/indra/newview/skins/default/xui/en/strings.xml
+
 Do everything.
  * cd shill
  * erb index.html.erb >site/index.html
