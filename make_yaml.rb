@@ -1,6 +1,6 @@
 require 'yaml'
 
-LSL_VERSION = '1.23.4'
+LSL_VERSION = '3.0.3'
 UPDATE_NOTICE = "LSL keywords updated #{Time.new.strftime("%d %b %Y")} for LSL #{LSL_VERSION} by http://adammarker.org/shill"
 
 # remove quotes from beginning and end of the item.
