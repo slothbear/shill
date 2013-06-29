@@ -1,10 +1,10 @@
 require 'erb'
-require 'rdoc/template'
+require 'rdoc'
 require 'yaml'
 
-LSL_VERSION = '1.23.4'  #TODO:  duplicated in files, ? set from signatures or module or...
+LSL_VERSION = '3.0.3'  #TODO:  duplicated in files, ? set from signatures or module or...
 
-rdoc_trove = { 'SHILL_UPDATE_NOTICE' => 
+rdoc_trove = { 'SHILL_UPDATE_NOTICE' =>
   "LSL keywords updated #{Time.new.strftime("%d %b %Y")} for LSL #{LSL_VERSION} by http://adammarker.org/shill" }
 
 # Load raw materials of keywords and function/event signatures
@@ -17,9 +17,9 @@ keywords.each do |type, list|
   rdoc_trove[type] = list.collect {|keyword| {'name' => keyword} }
 
   case type
-  when 'functions': functions = list
-  when 'constants': constants = list
-  when 'events':    events = list
+  when 'functions' then functions = list
+  when 'constants' then constants = list
+  when 'events'    then events = list
   end
 end
 
@@ -45,7 +45,7 @@ ARGV.each do |template_path|
     syntax_path = template_path.sub('template/', 'site/')
     syntax_folder = File.dirname(syntax_path)
     Dir::mkdir(syntax_folder) unless File::exists? syntax_folder
-    
+
     File.open(syntax_path, 'w') do |syntax_file|
       rdoc_result = ''
       page = TemplatePage.new(template_file.read)

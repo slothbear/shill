@@ -144,7 +144,7 @@ google_ui_features = "rc:10";
 		<td>notes</td>	
 	</tr>
 
-<!-- ERB generated table: Thu Aug 20 17:33:52 -0400 2009 -->
+<!-- ERB generated table: 2011-09-25 01:17:25 -0400 -->
     
 	
 
@@ -622,17 +622,29 @@ vim's autocomplete function.
 		<a href="signatures.yaml"
 		onClick="pageTracker._trackEvent('download', 'shill', 'signatures.yaml');"
 		>signatures.yaml</a>
+		<br/><br/>
+		<a href="shill.rb"
+			onClick="pageTracker._trackEvent('download', 'shill', 'shill.rb');"
+			>shill.rb</a>
 		<br/>
 		</td>
 		<td>
 		Shill's master lists of functions, events, and constants.  They are formatted
 		using
 		<a href="http://yaml.org">YAML</a>, a simple markup language.
-		<b><em>keywords</em></b> contains just the event, function, and constant names.
-		<b><em>signatures</em></b> has signatures and short help
+
+		<ul>
+		<li><b><em>keywords</em></b> contains just the event, function, and constant names.</li>
+
+		<li><b><em>signatures</em></b> has signatures and short help
 		for functions and events
 		(currently only used by SciTE-ez).
-		See <em>implementation notes</em> below for more details.
+		See <em>implementation notes</em> below for more details.</li>
+
+		<li><b><em>shill.rb</em></b>
+		reads the YAML files and inserts the keyword lists into the
+		editor configuration files.</li>
+		</ul>
 		</td>
 	</tr>	
 
@@ -785,6 +797,25 @@ google_kw_type = "broad";
 <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </center>
+
+<script type="text/javascript">
+  var uservoiceJsHost = ("https:" == document.location.protocol) ? "https://uservoice.com" : "http://cdn.uservoice.com";
+  document.write(unescape("%3Cscript src='" + uservoiceJsHost + "/javascripts/widgets/tab.js' type='text/javascript'%3E%3C/script%3E"))
+</script>
+<script type="text/javascript">
+UserVoice.Tab.show({
+  /* required */
+  key: 'shill',
+  host: 'shill.uservoice.com',
+  forum: '8535',
+  /* optional */
+  alignment: 'left',
+  background_color:'#f00',
+  text_color: 'white',
+  hover_color: '#06C',
+  lang: 'en'
+})
+</script>
 
 </body>
 </html>

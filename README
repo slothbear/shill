@@ -10,8 +10,14 @@ Download the source for the Second Life client.
 Extract the source files containing the keywords and functions into /LLsources.
  * linden/indra/newview/app_settings/keywords.ini
  * linden/indra/lscript/lscript_library/lscript_library.cpp
+24Sep11:
+ https://bitbucket.org/lindenlab/viewer-release/raw/22b2640dcf86/indra/newview/app_settings/keywords.ini
 or
  * http://svn.secondlife.com/trac/linden/browser/trunk/indra/lscript/lscript_library/lscript_library.cpp
+ 24Sep11: https://bitbucket.org/lindenlab/viewer-release/src/22b2640dcf86/indra/lscript/lscript_library/lscript_library.cpp
+
+Function text summaries:
+https://bitbucket.org/lindenlab/viewer-release/raw/22b2640dcf86/indra/newview/skins/default/xui/en/strings.xml
 
 Do everything.
  * cd shill

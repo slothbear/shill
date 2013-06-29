@@ -1,27 +1,7 @@
 require 'yaml'
 
-LSL_VERSION = '1.23.4'
+LSL_VERSION = '3.0.3'
 UPDATE_NOTICE = "LSL keywords updated #{Time.new.strftime("%d %b %Y")} for LSL #{LSL_VERSION} by http://adammarker.org/shill"
-
-# duck punch from http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180768?help-en
-class Hash
-  def to_yaml( opts = {} )
-    YAML::quick_emit( object_id, opts ) do |out|
-      out.map( taguri, to_yaml_style ) do |map|
-        sorted_keys = keys
-        sorted_keys = begin
-          sorted_keys.sort
-        rescue
-          sorted_keys.sort_by {|k| k.to_s} rescue sorted_keys
-        end
-
-        sorted_keys.each do |k|
-          map.add( k, fetch(k) )
-        end
-      end
-    end
-  end
-end
 
 # remove quotes from beginning and end of the item.
 def dequote(string)
@@ -34,7 +14,7 @@ end
 
 def dechunk(collection)
   result = Hash.new
-  collection.each do |line|
+  collection.lines do |line|
     next if line.strip.size == 0
     next if line =~ /^\s*(#|\[)/  # skip comments and [headers]
     key, value = line.chomp.split(" ",2)
@@ -52,28 +32,18 @@ end
 
 def get_functions(functions_file)
   result = Hash.new
-# 	addFunction(new LLScriptLibraryFunction(10.f, 0.f, dummy_func, "llVecNorm", "v", "v", "vector llVecNorm(vector v)\nreturns the v normalized"));
+#               energy, sleep, dummy_func, name, return type, parameters, gods-only
+#	  addFunction(10.f, 0.f, dummy_func, "llSay", NULL, "is");
   open(functions_file).each do | line |
     next if line =~ /^\s*\/\//        # skip comment lines
-    next unless line =~ /new LLScriptLibraryFunction\(/
+    next unless line =~ /addFunction\(\d/
 
-    energy, sleep, dummy, func_name, return_type, parameters, help_text = line.split(/,\s*/, 7)
-
-    # clean up the varied syntax, notation, and general junk
-    func_name = dequote(func_name)
-    energy = energy.split('(').last
-    # dequote the front, and separate sig and syn on newline
-    junk, signature, synopsis = help_text.chomp.split(/"|\\n/,3)
-    # Dequote or remove parens at end of function call.
-    synopsis = synopsis.split(/"|\)\);/).first
-
-    result[func_name] = {
+    energy, sleep, _, func_name, return_type, parameters = line.split(/,\s*/, 6)
+    result[dequote(func_name)] = {
         "energy" => energy,
         "sleep" => sleep,
         "returns" => dequote(return_type),
         "params" => dequote(parameters),
-        "signature" => signature, 
-        "synopsis" => synopsis
         }
   end
   result
@@ -101,4 +71,4 @@ keywords = {
   }
   
 write_yaml(keywords, "keywords.yaml")
-write_yaml(function_trove.merge(event_trove), "signatures.yaml")
+# write_yaml(function_trove.merge(event_trove), "signatures.yaml")
