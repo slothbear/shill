@@ -1,4 +1,4 @@
-# LSL keywords updated 20 Aug 2009 for LSL 1.23.4 by http://adammarker.org/shill
+# LSL keywords updated 25 Sep 2011 for LSL 3.0.3 by http://adammarker.org/shill
 --- 
 events: 
 - at_rot_target
@@ -57,6 +57,7 @@ functions:
 - llBreakLink
 - llCeil
 - llClearCameraParams
+- llClearPrimMedia
 - llCloseRemoteDataChannel
 - llCloud
 - llCollisionFilter
@@ -112,7 +113,9 @@ functions:
 - llGetColor
 - llGetCreator
 - llGetDate
+- llGetDisplayName
 - llGetEnergy
+- llGetEnv
 - llGetForce
 - llGetFreeMemory
 - llGetFreeURLs
@@ -130,6 +133,8 @@ functions:
 - llGetLinkKey
 - llGetLinkName
 - llGetLinkNumber
+- llGetLinkNumberOfSides
+- llGetLinkPrimitiveParams
 - llGetListEntryType
 - llGetListLength
 - llGetLocalPos
@@ -158,6 +163,7 @@ functions:
 - llGetPermissionsKey
 - llGetPos
 - llGetPrimitiveParams
+- llGetPrimMediaParams
 - llGetRegionAgentCount
 - llGetRegionCorner
 - llGetRegionFlags
@@ -184,6 +190,7 @@ functions:
 - llGetTimestamp
 - llGetTorque
 - llGetUnixTime
+- llGetUsername
 - llGetVel
 - llGetWallclock
 - llGiveInventory
@@ -201,6 +208,7 @@ functions:
 - llInstantMessage
 - llIntegerToBase64
 - llKey2Name
+- llLinkParticleSystem
 - llList2CSV
 - llList2Float
 - llList2Integer
@@ -256,22 +264,26 @@ functions:
 - llPushObject
 - llRefreshPrimURL
 - llRegionSay
+- llRegionSayTo
 - llReleaseCamera
 - llReleaseControls
 - llReleaseURL
 - llRemoteDataReply
 - llRemoteDataSetRegion
+- llRemoteLoadScript
 - llRemoteLoadScriptPin
 - llRemoveFromLandBanList
 - llRemoveFromLandPassList
 - llRemoveInventory
 - llRemoveVehicleFlags
 - llRequestAgentData
+- llRequestDisplayName
 - llRequestInventoryData
 - llRequestPermissions
 - llRequestSecureURL
 - llRequestSimulatorData
 - llRequestURL
+- llRequestUsername
 - llResetLandBanList
 - llResetLandPassList
 - llResetOtherScript
@@ -314,7 +326,9 @@ functions:
 - llSetLinkAlpha
 - llSetLinkColor
 - llSetLinkPrimitiveParams
+- llSetLinkPrimitiveParamsFast
 - llSetLinkTexture
+- llSetLinkTextureAnim
 - llSetLocalRot
 - llSetObjectDesc
 - llSetObjectName
@@ -323,6 +337,7 @@ functions:
 - llSetPayPrice
 - llSetPos
 - llSetPrimitiveParams
+- llSetPrimMediaParams
 - llSetPrimURL
 - llSetRemoteScriptAccessPin
 - llSetRot
@@ -383,12 +398,14 @@ functions:
 - llWater
 - llWhisper
 - llWind
+- llXorBase64Strings
 - llXorBase64StringsCorrect
 constants: 
 - ACTIVE
 - AGENT
 - AGENT_ALWAYS_RUN
 - AGENT_ATTACHMENTS
+- AGENT_AUTOPILOT
 - AGENT_AWAY
 - AGENT_BUSY
 - AGENT_CROUCHING
@@ -408,13 +425,13 @@ constants:
 - ATTACH_CHIN
 - ATTACH_HEAD
 - ATTACH_LEAR
+- ATTACH_LEFT_PEC
 - ATTACH_LEYE
 - ATTACH_LFOOT
 - ATTACH_LHAND
 - ATTACH_LHIP
 - ATTACH_LLARM
 - ATTACH_LLLEG
-- ATTACH_LPEC
 - ATTACH_LSHOULDER
 - ATTACH_LUARM
 - ATTACH_LULEG
@@ -426,9 +443,9 @@ constants:
 - ATTACH_RFOOT
 - ATTACH_RHAND
 - ATTACH_RHIP
+- ATTACH_RIGHT_PEC
 - ATTACH_RLARM
 - ATTACH_RLLEG
-- ATTACH_RPEC
 - ATTACH_RSHOULDER
 - ATTACH_RUARM
 - ATTACH_RULEG
@@ -450,6 +467,7 @@ constants:
 - CHANGED_COLOR
 - CHANGED_INVENTORY
 - CHANGED_LINK
+- CHANGED_MEDIA
 - CHANGED_OWNER
 - CHANGED_REGION
 - CHANGED_REGION_START
@@ -465,6 +483,7 @@ constants:
 - CLICK_ACTION_PLAY
 - CLICK_ACTION_SIT
 - CLICK_ACTION_TOUCH
+- CLICK_ACTION_ZOOM
 - CONTROL_BACK
 - CONTROL_DOWN
 - CONTROL_FWD
@@ -553,9 +572,12 @@ constants:
 - PARCEL_DETAILS_AREA
 - PARCEL_DETAILS_DESC
 - PARCEL_DETAILS_GROUP
+- PARCEL_DETAILS_ID
 - PARCEL_DETAILS_NAME
 - PARCEL_DETAILS_OWNER
+- PARCEL_DETAILS_SEE_AVATARS
 - PARCEL_FLAG_ALLOW_ALL_OBJECT_ENTRY
+- PARCEL_FLAG_ALLOW_CREATE_GROUP_OBJECTS
 - PARCEL_FLAG_ALLOW_CREATE_OBJECTS
 - PARCEL_FLAG_ALLOW_DAMAGE
 - PARCEL_FLAG_ALLOW_FLY
@@ -640,6 +662,33 @@ constants:
 - PRIM_MATERIAL_RUBBER
 - PRIM_MATERIAL_STONE
 - PRIM_MATERIAL_WOOD
+- PRIM_MEDIA_ALT_IMAGE_ENABLE
+- PRIM_MEDIA_AUTO_LOOP
+- PRIM_MEDIA_AUTO_PLAY
+- PRIM_MEDIA_AUTO_SCALE
+- PRIM_MEDIA_AUTO_ZOOM
+- PRIM_MEDIA_CONTROLS
+- PRIM_MEDIA_CONTROLS_MINI
+- PRIM_MEDIA_CONTROLS_STANDARD
+- PRIM_MEDIA_CURRENT_URL
+- PRIM_MEDIA_FIRST_CLICK_INTERACT
+- PRIM_MEDIA_HEIGHT_PIXELS
+- PRIM_MEDIA_HOME_URL
+- PRIM_MEDIA_MAX_HEIGHT_PIXELS
+- PRIM_MEDIA_MAX_URL_LENGTH
+- PRIM_MEDIA_MAX_WHITELIST_COUNT
+- PRIM_MEDIA_MAX_WHITELIST_SIZE
+- PRIM_MEDIA_MAX_WIDTH_PIXELS
+- PRIM_MEDIA_PARAM_MAX
+- PRIM_MEDIA_PERM_ANYONE
+- PRIM_MEDIA_PERM_GROUP
+- PRIM_MEDIA_PERM_NONE
+- PRIM_MEDIA_PERM_OWNER
+- PRIM_MEDIA_PERMS_CONTROL
+- PRIM_MEDIA_PERMS_INTERACT
+- PRIM_MEDIA_WHITELIST
+- PRIM_MEDIA_WHITELIST_ENABLE
+- PRIM_MEDIA_WIDTH_PIXELS
 - PRIM_PHANTOM
 - PRIM_PHYSICS
 - PRIM_POINT_LIGHT
@@ -729,8 +778,14 @@ constants:
 - SMOOTH
 - SQRT2
 - STATUS_BLOCK_GRAB
+- STATUS_BOUNDS_ERROR
 - STATUS_CAST_SHADOWS
 - STATUS_DIE_AT_EDGE
+- STATUS_INTERNAL_ERROR
+- STATUS_MALFORMED_PARAMS
+- STATUS_NOT_FOUND
+- STATUS_NOT_SUPPORTED
+- STATUS_OK
 - STATUS_PHANTOM
 - STATUS_PHYSICS
 - STATUS_RETURN_AT_EDGE
@@ -738,11 +793,14 @@ constants:
 - STATUS_ROTATE_Y
 - STATUS_ROTATE_Z
 - STATUS_SANDBOX
+- STATUS_TYPE_MISMATCH
+- STATUS_WHITELIST_FAILED
 - STRING_TRIM
 - STRING_TRIM_HEAD
 - STRING_TRIM_TAIL
 - TEXTURE_BLANK
 - TEXTURE_DEFAULT
+- TEXTURE_MEDIA
 - TEXTURE_PLYWOOD
 - TEXTURE_TRANSPARENT
 - TOUCH_INVALID_FACE
